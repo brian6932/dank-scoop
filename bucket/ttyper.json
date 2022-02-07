@@ -14,7 +14,10 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/max-niederman/ttyper/releases/download/v$version/ttyper-x86_64-pc-windows-msvc.zip"
+                "url": "https://github.com/max-niederman/ttyper/releases/download/v$version/ttyper-x86_64-pc-windows-msvc.zip",
+                "hash": {
+                    "url": "$url.sha256"
+                }
             }
         }
     }
