@@ -2,9 +2,8 @@
     "version": "1.4.3",
     "description": "Hardware information tool for Windows",
     "homepage": "https://github.com/CherryPill/system_info",
-    "url": "https://github.com/CherryPill/system_info/releases/download/v1.4.3/SystemInfo_v1.4.3-release.exe",
+    "url": "https://github.com/CherryPill/system_info/releases/download/v1.4.3/SystemInfo_v1.4.3-release.exe#/SystemInfo.exe",
     "hash": "C97BEC7781487825DA96D0FDFBA0A7CBD72A7EFB08063DDFE112F94AF2327BE1",
-    "pre_install": "Get-ChildItem \"$dir\" | Rename-Item -NewName { $_.name -Replace '_v[\\d.]+-release','' }",
     "shortcuts": [
         [
             "SystemInfo.exe",
@@ -14,6 +13,6 @@
     "bin": "SystemInfo.exe",
     "checkver": "github",
     "autoupdate": {
-        "url": "https://github.com/CherryPill/system_info/releases/download/v$version/SystemInfo_v$version-release.exe"
+        "url": "https://github.com/CherryPill/system_info/releases/download/v$version/SystemInfo_v$version-release.exe#/SystemInfo.exe"
     }
 }
