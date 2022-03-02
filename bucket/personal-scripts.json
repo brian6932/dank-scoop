@@ -1,13 +1,15 @@
 {
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "Just some personal scripts that I wanted to add to scoop",
     "homepage": "https://github.com/brian6932/personal-scripts/",
-    "url": "https://github.com/brian6932/personal-scripts/releases/download/0.0.1/personal-scripts.zip",
-    "hash": "D5B56144FEF38B5A2C3C069B929F620D30E7B40F9866D7C0CB43D159DC1A82DD",
+    "url": "https://github.com/brian6932/personal-scripts/releases/download/0.0.2/personal-scripts.zip",
+    "hash": "4EE66DF4A77553837FCD395C041580EFDA655B147E3A59A0CB0E292C3F4E8B0D",
     "bin": [
         "envDupe.ps1",
         "HShield.ps1",
-        "VODLink.ps1"
+        "VODLink.ps1",
+        "CLGrab.ps1"
+
     ],
     "checkver": "github",
     "autoupdate": {
