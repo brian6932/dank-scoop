@@ -1,0 +1,19 @@
+{
+    "version": "3.8",
+    "description": "Lightweight Spotify client using Qt",
+    "homepage": "https://github.com/kraxarn/spotify-qt",
+    "license": "GPL-3.0-only",
+    "url": "https://github.com/kraxarn/spotify-qt/releases/download/v3.8/spotify-qt-mingw64-v3.8-1.zip",
+    "hash": "EF2B8E5E141A7621E910F952789BD13229D50B58E94F1D0A1EACE871A47B14F9",
+    "shortcuts": [
+        [
+            "spotify-qt.exe",
+            "spotify-qt"
+        ]
+    ],
+    "bin": "spotify-qt.exe",
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/kraxarn/spotify-qt/releases/download/v$version/spotify-qt-mingw64-v$version.zip"
+    }
+}
