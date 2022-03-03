@@ -12,7 +12,6 @@
         ]
     ],
     "bin": "Kryptor.exe",
-    "checkver": "github",
     "autoupdate": {
         "url": "https://github.com/samuel-lucas6/Kryptor/releases/download/v$version/KryptorGUI-Portable.zip"
     }
