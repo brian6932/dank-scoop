@@ -3,13 +3,13 @@
     "description": "Just some personal scripts that I wanted to add to scoop",
     "homepage": "https://github.com/brian6932/personal-scripts/",
     "url": "https://github.com/brian6932/personal-scripts/releases/download/0.0.3/personal-scripts.zip",
+    "license": "Unknown",
     "hash": "0C455EEC571720D1E39C26F39FF75F819DCC80AC6D0E63871DE225F5CC50D230",
     "bin": [
         "envDupe.ps1",
         "HShield.ps1",
         "VODLink.ps1",
         "CLGrab.ps1"
-
     ],
     "checkver": "github",
     "autoupdate": {
