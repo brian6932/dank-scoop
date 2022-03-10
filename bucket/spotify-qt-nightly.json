@@ -21,8 +21,8 @@
     ],
     "bin": "spotify-qt.exe",
     "checkver": {
-        "url": "https://github.com/kraxarn/spotify-qt-nightly/releases/latest",
-        "regex": "spotify-qt-v([\\d.]+-\\w{7})-win(?:64|32)\\.zip"
+        "url": "https://github.com/kraxarn/spotify-qt-nightly/releases",
+        "regex": "/download/latest/spotify-qt-v(?<version>[\\w.-]+)-win(?:64|32)\\.zip"
     },
     "autoupdate": {
         "architecture": {
