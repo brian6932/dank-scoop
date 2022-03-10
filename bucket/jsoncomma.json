@@ -1,0 +1,16 @@
+{
+    "version": "0.1.11",
+    "description": "https://jsoncomma.github.io/",
+    "homepage": "https://github.com/jsoncomma/jsoncomma",
+    "license": "Unknown",
+    "url": "https://github.com/jsoncomma/jsoncomma/releases/download/v0.1.11/jsoncomma_v0.1.11_Windows_x86_64.tar.gz",
+    "hash": "3FDFF95DD309A986481ED2CE10B58C5BA51B31407ECDDD0E347B8BB815783558",
+    "bin": "jsoncomma.exe",
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/jsoncomma/jsoncomma/releases/download/v$version/jsoncomma_v$version_Windows_x86_64.tar.gz",
+        "hash": {
+            "url": "$baseurl.checksums.txt"
+        }
+    }
+}
