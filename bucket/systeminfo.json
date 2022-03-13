@@ -11,7 +11,6 @@
             "SystemInfo"
         ]
     ],
-    "bin": "SystemInfo.exe",
     "checkver": "github",
     "autoupdate": {
         "url": "https://github.com/CherryPill/system_info/releases/download/v$version/SystemInfo_v$version-release.exe#/SystemInfo.exe"

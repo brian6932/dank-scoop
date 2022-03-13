@@ -9,10 +9,7 @@
             "hash": "2C12D71898AC6365FE61BEB87390F6398286C5B28F28117D9FC4508F07DA9AA8"
         }
     },
-    "bin": [
-        "OpenHardwareMonitor.exe",
-        "OpenHardwareMonitorReport.exe"
-    ],
+    "bin": "OpenHardwareMonitorReport.exe",
     "shortcuts": [
         [
             "OpenHardwareMonitor.exe",
