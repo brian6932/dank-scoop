@@ -25,7 +25,7 @@
     ],
     "checkver": {
         "url": "https://dev.azure.com/jurplel/qView/_release?_a=deployments&view=mine&definitionId=2",
-        "regex": "\\{\"id\":\"(?<version>\\d+)\",\"name\":\"(?<date>\\d{4}-\\d{2}-\\d{2}\\.\\d)\"\\}"
+        "regex": "\\{\"id\":\"(?<version>\\d+)\",\"name\":\"(?<date>[\\d.-]+)\"\\}"
     },
     "autoupdate": {
         "architecture": {
