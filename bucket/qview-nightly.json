@@ -1,0 +1,40 @@
+{
+    "version": "1088",
+    "description": "Practical and minimal image viewer",
+    "homepage": "https://dev.azure.com/jurplel/qView/",
+    "license": "GPL-3.0-only",
+    "architecture": {
+        "64bit": {
+            "url": "https://dev.azure.com/jurplel/79795e5b-716b-4a59-a698-8605132587c5/_apis/build/builds/1088/artifacts?artifactName=qView-nightly-win64-2022-01-15.4&api-version=7.0&%24format=zip#/qView-win64.zip",
+            "hash": "81593523702EBAA053F83E1089492E796C7A5BFB02393EF19436A62C5713910A",
+            "extract_dir": "qView-nightly-win64-2022-01-15.4"
+        },
+        "32bit": {
+            "url": "https://dev.azure.com/jurplel/79795e5b-716b-4a59-a698-8605132587c5/_apis/build/builds/1088/artifacts?artifactName=qView-nightly-win32-2022-01-15.4&api-version=7.0&%24format=zip#/qView-win32.zip",
+            "hash": "36DC94FD3ADE55FD8DBEA5E5EFCFC9643A39C67AFDD2686EE30D21B713E4A24B",
+            "extract_dir": "qView-nightly-win32-2022-01-15.4"
+        }
+    },
+    "pre_install": "Get-ChildItem \"$dir\\qView-nightly-*.exe\" | Rename-Item -NewName { $_.name -Replace '.+','qView.exe' }",
+    "bin": "qView.exe",
+    "shortcuts": [
+        [
+            "qView.exe",
+            "qView"
+        ]
+    ],
+    "checkver": {
+        "url": "https://dev.azure.com/jurplel/qView/_release?_a=deployments&view=mine&definitionId=2",
+        "regex": "\\{\"id\":\"(?<version>\\d+)\",\"name\":\"(?<date>\\d{4}-\\d{2}-\\d{2}\\.\\d)\"\\}"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://dev.azure.com/jurplel/79795e5b-716b-4a59-a698-8605132587c5/_apis/build/builds/$version/artifacts?artifactName=qView-nightly-win64-$matchDate&api-version=7.0&%24format=zip"
+            },
+            "32bit": {
+                "url": "https://dev.azure.com/jurplel/79795e5b-716b-4a59-a698-8605132587c5/_apis/build/builds/$version/artifacts?artifactName=qView-nightly-win32-$matchDate&api-version=7.0&%24format=zip"
+            }
+        }
+    }
+}
