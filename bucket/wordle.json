@@ -1,10 +1,10 @@
 {
-    "version": "0.2.1",
+    "version": "0.4.0",
     "description": "Wordle TUI in Rust",
     "homepage": "https://github.com/conradludgate/wordle",
     "license": "MIT",
-    "url": "https://github.com/conradludgate/wordle/releases/download/v0.2.1/wordle-v0.2.1-x86_64-pc-windows-msvc.zip",
-    "hash": "bdcf123b14aa6513d6b420704f3746c1f2c4bd3020d874f616b936bd472dce9c",
+    "url": "https://github.com/conradludgate/wordle/releases/download/v0.4.0/wordle-v0.4.0-x86_64-pc-windows-msvc.zip",
+    "hash": "9BF49287419834F19549F41B739A93705F5417A3CB1B49FAA6DA793ABECD8E89",
     "bin": "wordle.exe",
     "checkver": "github",
     "autoupdate": {
