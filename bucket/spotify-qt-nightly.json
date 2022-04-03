@@ -1,16 +1,16 @@
 {
-    "version": "3.8-6291cb8",
+    "version": "3.8-f18cb42",
     "description": "Nightly builds for spotify-qt",
     "homepage": "https://github.com/kraxarn/spotify-qt-nightly",
     "license": "GPL-3.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/kraxarn/spotify-qt-nightly/releases/download/latest/spotify-qt-v3.8-6291cb8-win64.zip",
-            "hash": "57d7ce248786102ede3438d0b0d4e278e4fee98ac2ca3ac327ef153cb6d2be68"
+            "url": "https://github.com/kraxarn/spotify-qt-nightly/releases/download/latest/spotify-qt-v3.8-f18cb42-win64.zip",
+            "hash": "86f23a6c9bbfdb965993b92adcb92589216e1738b5f100390bc35a2ab7226369"
         },
         "32bit": {
-            "url": "https://github.com/kraxarn/spotify-qt-nightly/releases/download/latest/spotify-qt-v3.8-6291cb8-win32.zip",
-            "hash": "f2fb52bbff59912d14743159056aebe9d4dd82fb65996fc08d6a34fbfba0aee8"
+            "url": "https://github.com/kraxarn/spotify-qt-nightly/releases/download/latest/spotify-qt-v3.8-f18cb42-win32.zip",
+            "hash": "26d9ed4607a04f96de4cf6c91ba9be252dad389a68902475d4dc5fe5ba2230a7"
         }
     },
     "shortcuts": [
