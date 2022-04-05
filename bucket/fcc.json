@@ -2,7 +2,7 @@
     "version": "0.6.0",
     "description": "File concatenation utility",
     "homepage": "https://github.com/mapkts/fcc",
-    "license": "Apache-2.0",
+    "license": "Apache-2.0,MIT",
     "architecture": {
         "64bit": {
             "url": "https://github.com/mapkts/fcc/releases/download/v0.6.0/fcc-v0.6.0-x86_64-pc-windows-msvc.zip",
