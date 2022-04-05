@@ -3,7 +3,11 @@
     "description": "The successor of GNU Wget.",
     "homepage": "https://github.com/ibook86/wget2-windows",
     "license": "GPL-3.0-only,LGPL-3.0-only",
-    "url": "https://nightly.link/ibook86/wget2-windows/workflows/build/main/wget2.zip",
+    "architecture": {
+        "64bit": {
+            "url": "https://nightly.link/ibook86/wget2-windows/workflows/build/main/wget2.zip"
+        }
+    },
     "bin": [
         "iconv.exe",
         "idn2.exe",

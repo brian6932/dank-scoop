@@ -17,8 +17,16 @@
         ],
         "Streamlink Twitch GUI": "extras/streamlink-twitch-gui"
     },
-    "url": "https://github.com/streamlink/windows-installer/releases/download/3.2.0-1/streamlink-3.2.0-1-py310-x86_64.exe#/dl.7z",
-    "hash": "1198FB66CEB84CE68FE419B9272FC66325812811D79C865AC1D0CBE92AB2C4E1",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/streamlink/windows-installer/releases/download/3.2.0-1/streamlink-3.2.0-1-py310-x86_64.exe#/dl.7z",
+            "hash": "1198FB66CEB84CE68FE419B9272FC66325812811D79C865AC1D0CBE92AB2C4E1"
+        },
+        "32bit": {
+            "url": "https://github.com/streamlink/windows-installer/releases/download/3.2.0-1/streamlink-3.2.0-1-py310-x86.exe#/dl.7z",
+            "hash": "4D7F902FC1D6B71BE8510F358291F1A2F0E01B36AF2116DBE7AB93FB180D7A94"
+        }
+    },
     "pre_install": [
         "if (!(Test-Path \"$env:APPDATA\\streamlink\\config\")) {",
         "    info 'Copying default ''config'' to ''%APPDATA%\\streamlink\\config'''",
@@ -36,9 +44,16 @@
     ],
     "checkver": {
         "github": "https://github.com/streamlink/windows-installer",
-        "regex": "streamlink-([\\d.-]+)-py310-x86_64\\.exe"
+        "regex": "streamlink-([\\d.-]+)-py310-x86(?:_64)?\\.exe"
     },
     "autoupdate": {
-        "url": "https://github.com/streamlink/windows-installer/releases/download/$version/streamlink-$version-py310-x86_64.exe#/dl.7z"
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/streamlink/windows-installer/releases/download/$version/streamlink-$version-py310-x86_64.exe#/dl.7z"
+            },
+            "32bit": {
+                "url": "https://github.com/streamlink/windows-installer/releases/download/$version/streamlink-$version-py310-x86.exe#/dl.7z"
+            }
+        }
     }
 }

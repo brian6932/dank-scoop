@@ -3,14 +3,34 @@
     "description": "https://jsoncomma.github.io/",
     "homepage": "https://github.com/jsoncomma/jsoncomma",
     "license": "Unknown",
-    "url": "https://github.com/jsoncomma/jsoncomma/releases/download/v0.1.11/jsoncomma_v0.1.11_Windows_x86_64.tar.gz",
-    "hash": "3FDFF95DD309A986481ED2CE10B58C5BA51B31407ECDDD0E347B8BB815783558",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/jsoncomma/jsoncomma/releases/download/v0.1.11/jsoncomma_v0.1.11_Windows_x86_64.tar.gz",
+            "hash": "3FDFF95DD309A986481ED2CE10B58C5BA51B31407ECDDD0E347B8BB815783558"
+        },
+        "32bit": {
+            "url": "https://github.com/jsoncomma/jsoncomma/releases/download/v0.1.11/jsoncomma_v0.1.11_Windows_i386.tar.gz",
+            "hash": "2700CF3D31096AEFFF80CCB6F93C2076D6ED71ABB827B6941961C63FD4AE0B02"
+        }
+    },
     "bin": "jsoncomma.exe",
     "checkver": "github",
     "autoupdate": {
-        "url": "https://github.com/jsoncomma/jsoncomma/releases/download/v$version/jsoncomma_v$version_Windows_x86_64.tar.gz",
-        "hash": {
-            "url": "$baseurl.checksums.txt"
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/jsoncomma/jsoncomma/releases/download/v$version/jsoncomma_v$version_Windows_x86_64.tar.gz",
+                "hash": {
+                    "url": "$baseurl.checksums.txt",
+                    "regex": "$sha256\\s+$basename"
+                }
+            },
+            "32bit": {
+                "url": "https://github.com/jsoncomma/jsoncomma/releases/download/v$version/jsoncomma_v$version_Windows_i386.tar.gz",
+                "hash": {
+                    "url": "$baseurl.checksums.txt",
+                    "regex": "$sha256\\s+$basename"
+                }
+            }
         }
     }
 }

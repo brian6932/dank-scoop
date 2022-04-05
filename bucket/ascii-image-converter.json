@@ -23,14 +23,14 @@
                 "url": "https://github.com/TheZoraiz/ascii-image-converter/releases/download/v$version/ascii-image-converter_Windows_amd64_64bit.zip",
                 "hash": {
                     "url": "$baseurl/sha256_checksums.txt",
-                    "regex": "$sha256\\s+ascii-image-converter_Windows_amd64_64bit.zip"
+                    "regex": "$sha256\\s+$basename"
                 }
             },
             "32bit": {
                 "url": "https://github.com/TheZoraiz/ascii-image-converter/releases/download/v$version/ascii-image-converter_Windows_i386_32bit.zip",
                 "hash": {
                     "url": "$baseurl/sha256_checksums.txt",
-                    "regex": "$sha256\\s+ascii-image-converter_Windows_i386_32bit.zip"
+                    "regex": "$sha256\\s+$basename"
                 }
             }
         }
