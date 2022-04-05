@@ -35,7 +35,8 @@
         "bin\\streamlinkw.exe"
     ],
     "checkver": {
-        "github": "https://github.com/streamlink/windows-installer"
+        "github": "https://github.com/streamlink/windows-installer",
+        "regex": "streamlink-([\\d.-]+)-py310-x86_64\\.exe"
     },
     "autoupdate": {
         "url": "https://github.com/streamlink/windows-installer/releases/download/$version/streamlink-$version-py310-x86_64.exe#/dl.7z"
