@@ -1,16 +1,16 @@
 {
-    "version": "0.6.0",
+    "version": "0.7.0",
     "description": "File concatenation utility",
     "homepage": "https://github.com/mapkts/fcc",
     "license": "Apache-2.0,MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/mapkts/fcc/releases/download/v0.6.0/fcc-v0.6.0-x86_64-pc-windows-msvc.zip",
-            "hash": "C6B9DDB107170452DC841ACA1F01FF920A0FC18BF779777B39158803CB8EBFD1"
+            "url": "https://github.com/mapkts/fcc/releases/download/v0.7.0/fcc-v0.7.0-x86_64-pc-windows-msvc.zip",
+            "hash": "4a8ee294590c7a640832e0b1be7be5d21d8053de11423388651b409b0be554b8"
         },
         "32bit": {
-            "url": "https://github.com/mapkts/fcc/releases/download/v0.6.0/fcc-v0.6.0-i686-pc-windows-msvc.zip",
-            "hash": "2B4C06297ED623CDDE10495027899A22BC37EAACDFE154B4E8E6C2DECDB29116"
+            "url": "https://github.com/mapkts/fcc/releases/download/v0.7.0/fcc-v0.7.0-i686-pc-windows-msvc.zip",
+            "hash": "3576b46274e749514c0072bb217e4cae1f28fe5515dec3bfee5c4b5ac8374df8"
         }
     },
     "bin": "fcc.exe",
