@@ -1,0 +1,26 @@
+{
+    "version": "1.7.0-Beta1",
+    "description": "Solution to synchronize video playback across multiple instances of mpv, VLC, MPC-HC, MPC-BE and mplayer2 over the Internet.",
+    "homepage": "https://syncplay.pl/",
+    "license": "Apache-2.0",
+    "suggest": {
+        "vcredist": "extras/vcredist2022"
+    },
+    "url": "https://github.com/Syncplay/syncplay/releases/download/1.70-Beta1/Syncplay_1.7.0_Beta1_Portable.zip",
+    "hash": "42856F2965E7AFC32197516202CC35D107C46607959A2512806C121C29DD6086",
+    "bin": "Syncplay.exe",
+    "shortcuts": [
+        [
+            "Syncplay.exe",
+            "Syncplay"
+        ]
+    ],
+    "persist": "syncplay.ini",
+    "checkver": {
+        "url": "https://api.github.com/repos/Syncplay/syncplay/releases",
+        "jp": ".[0].tag_name"
+    },
+    "autoupdate": {
+        "url": "https://github.com/Syncplay/syncplay/releases/download/$version/Syncplay_$matchHead_$preReleaseVersion_Portable.zip"
+    }
+}
