@@ -6,7 +6,7 @@
     "suggest": {
         "vcredist": "extras/vcredist2022"
     },
-    "url": "https://github.com/Syncplay/syncplay/releases/download/1.70-Beta1/Syncplay_1.7.0_Beta1_Portable.zip",
+    "url": "https://github.com/Syncplay/syncplay/releases/download/1.7.0-Beta1/Syncplay_1.7.0_Beta1_Portable.zip",
     "hash": "42856F2965E7AFC32197516202CC35D107C46607959A2512806C121C29DD6086",
     "bin": "Syncplay.exe",
     "shortcuts": [
