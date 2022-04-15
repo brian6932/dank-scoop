@@ -18,7 +18,7 @@
     "persist": "syncplay.ini",
     "checkver": {
         "url": "https://api.github.com/repos/Syncplay/syncplay/releases",
-        "jp": ".[0].tag_name"
+        "jsonpath": "$.[0].tag_name"
     },
     "autoupdate": {
         "url": "https://github.com/Syncplay/syncplay/releases/download/$version/Syncplay_$matchHead_$preReleaseVersion_Portable.zip"
