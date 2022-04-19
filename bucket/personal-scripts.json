@@ -1,10 +1,10 @@
 {
-    "version": "0.0.6",
+    "version": "0.0.7",
     "description": "Just some personal scripts that I wanted to add to scoop",
     "homepage": "https://github.com/brian6932/personal-scripts/",
-    "url": "https://github.com/brian6932/personal-scripts/releases/download/0.0.6/personal-scripts.zip",
+    "url": "https://github.com/brian6932/personal-scripts/releases/download/0.0.7/personal-scripts.zip",
     "license": "Unknown",
-    "hash": "4cd266afc0b1ff512046a8c5ad3ee33722c82cb9a3d3feddd7d267b1eb23899f",
+    "hash": "d21b539a1700c149c1778e6f2b303cd2ef0d22c3c2f298a5377972c475412f11",
     "bin": [
         "envDupe.ps1",
         "HShield.ps1",
