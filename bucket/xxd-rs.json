@@ -9,8 +9,8 @@
             "hash": "BE1741B4442E3D008997347095379EFB185085BDB78AC11D7A1537917563A6B4"
         }
     },
-    "pre_install": "Get-ChildItem \"$dir\\xxd-rs-x86_64-pc-windows-gnu.exe\" | Rename-Item -NewName { $_.name -Replace '-rs-x86_64-pc-windows-gnu','' }",
-    "bin": "xxd.exe",
+    "pre_install": "Get-ChildItem \"$dir\\xxd-rs-x86_64-pc-windows-gnu.exe\" | Rename-Item -NewName { $_.name -Replace '-x86_64-pc-windows-gnu','' }",
+    "bin": "xxd-rs.exe",
     "checkver": {
         "url": "https://github.com/Nicoretti/xxd-rs/releases",
         "regex": "xxd-rs-([\\d.]+)"
