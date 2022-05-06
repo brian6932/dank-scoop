@@ -18,6 +18,6 @@
         "regex": "http:\\/\\/qttabbar.wdfiles.com\\/local--files\\/qttabbar1\\/QTTabBar%20(?<version>\\d+)%20Beta(?<betaver>\\d*)\\.zip"
     },
     "autoupdate": {
-        "url": "http://qttabbar.wdfiles.com/local--files/qttabbar1/QTTabBar%$version%20Beta$betaver.zip"
+        "url": "http://qttabbar.wdfiles.com/local--files/qttabbar1/QTTabBar%20$version%20Beta$betaver.zip"
     }
 }
