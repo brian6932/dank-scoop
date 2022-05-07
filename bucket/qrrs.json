@@ -1,6 +1,6 @@
 {
     "version": "0.1.8",
-    "description": "CLI QR code generator and reader written in rust ",
+    "description": "CLI QR code generator and reader written in rust",
     "homepage": "https://github.com/Lenivaya/qrrs",
     "license": "MIT",
     "architecture": {
