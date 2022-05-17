@@ -1,17 +1,17 @@
 {
-    "version": "1.4.4",
+    "version": "1.4.5",
     "description": "📺(tv) Tidy Viewer is a cross-platform CLI csv pretty printer that uses column styling to maximize viewer enjoyment.",
     "homepage": "https://github.com/alexhallam/tv",
     "license": "Unlicense",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/alexhallam/tv/releases/download/1.4.4/tidy-viewer--x86_64-pc-windows-msvc.zip",
-            "hash": "6AAAEC6E5BDDC68E4DE780089DE8A9723C67BECD73F7972B50B8E53EDEA58460",
+            "url": "https://github.com/alexhallam/tv/releases/download/1.4.5/tidy-viewer--x86_64-pc-windows-msvc.zip",
+            "hash": "c94ef3c4740be217f98bc3446191016838acb35f879d0e719dd3df277a6ba587",
             "extract_dir": "tidy-viewer--x86_64-pc-windows-msvc"
         },
         "32bit": {
-            "url": "https://github.com/alexhallam/tv/releases/download/1.4.4/tidy-viewer--i686-pc-windows-msvc.zip",
-            "hash": "E4F24716643C267CD05402AE0D33B4DC18DCE70868D7BEC4BFF6CBD66C598C26",
+            "url": "https://github.com/alexhallam/tv/releases/download/1.4.5/tidy-viewer--i686-pc-windows-msvc.zip",
+            "hash": "d029d8ca65bd9f3ed25b7b25dbce2a56d6fab24864ef6ba304cc0d9254fa75d8",
             "extract_dir": "tidy-viewer--i686-pc-windows-msvc"
         }
     },
@@ -21,10 +21,10 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/alexhallam/tv/releases/download/v$version/tidy-viewer--x86_64-pc-windows-msvc.zip"
+                "url": "https://github.com/alexhallam/tv/releases/download/$version/tidy-viewer--x86_64-pc-windows-msvc.zip"
             },
             "32bit": {
-                "url": "https://github.com/alexhallam/tv/releases/download/v$version/tidy-viewer--i686-pc-windows-msvc.zip"
+                "url": "https://github.com/alexhallam/tv/releases/download/$version/tidy-viewer--i686-pc-windows-msvc.zip"
             }
         }
     }
