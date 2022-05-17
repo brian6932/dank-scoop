@@ -1,0 +1,21 @@
+{
+    "version": "0.1.1",
+    "description": "Very simple CLI for many GraphQL schemas in the cloud. Provides autocompletion for GraphQL queries",
+    "homepage": "https://github.com/graphql-editor/gql",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/graphql-editor/gql/releases/download/v0.1.1/gql-windows-amd64-v0.1.1.tar.gz",
+            "hash": "F89EF7FC1736B9BD61C3F7F883CD4F221E61A239C11F9A2164C2D5E8A5A2F57E"
+        }
+    },
+    "bin": "gql.exe",
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/graphql-editor/gql/releases/download/v$version/gql-windows-amd64-v$version.tar.gz"
+            }
+        }
+    }
+}
