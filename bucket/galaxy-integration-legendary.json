@@ -1,10 +1,10 @@
 {
-    "version": "0.2",
+    "version": "0.3.1",
     "description": "Legendary Integration for GOG Galaxy",
     "homepage": "https://github.com/currall/galaxy-integration-legendary",
     "license": "Unknown",
-    "url": "https://github.com/currall/galaxy-integration-legendary/releases/download/v0.2/GalaxyPluginEpic.zip",
-    "hash": "B466E0BE75B1F39F8D2B9325BF39F88A3A591586A1A8B31764B6F6D1DD111DCB",
+    "url": "https://github.com/currall/galaxy-integration-legendary/releases/download/v0.3.1/GalaxyPluginEpic.zip",
+    "hash": "d5e3fbfd666ead56b1243356ceae695bfd0acbc061ced0838c8fa69586392f50",
     "post_install": [
         "$installPath = '~\\AppData\\Local\\GOG.com\\Galaxy\\plugins\\installed\\GalaxyPluginEpic'",
         "if ((Test-Path $installPath) -eq $false) { New-Item -ItemType dir $installPath }",
