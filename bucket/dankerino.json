@@ -1,5 +1,5 @@
 {
-    "version": "2461309777",
+    "version": "2450787607",
     "description": "Chat client for twitch.tv. See releases for download. Only nightlies are supported (fork of Chatterino 2).",
     "homepage": "https://github.com/Mm2PL/dankerino",
     "license": "MIT",
@@ -18,7 +18,7 @@
     ],
     "bin": "chatterino.exe",
     "checkver": {
-        "url": "https://api.github.com/repos/mm2pl/dankerino/actions/workflows/build.yml/runs",
+        "url": "https://api.github.com/repos/mm2pl/dankerino/actions/workflows/build.yml/runs?branch=dankerino",
         "jsonpath": "$.workflow_runs[0].id"
     },
     "autoupdate": {
