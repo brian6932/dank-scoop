@@ -18,7 +18,7 @@
     ],
     "bin": "chatterino.exe",
     "checkver": {
-        "url": "https://api.github.com/repos/mm2pl/dankerino/actions/workflows/build.yml/runs?branch=dankerino",
+        "url": "https://api.github.com/repos/mm2pl/dankerino/actions/workflows/build.yml/runs?branch=dankerino&status=success",
         "jsonpath": "$.workflow_runs[0].id"
     },
     "autoupdate": {
