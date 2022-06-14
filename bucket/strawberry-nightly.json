@@ -21,6 +21,10 @@
             "Strawberry Music Player"
         ]
     ],
+    "uninstaller": {
+        "file": "Uninstall.exe",
+        "args": "/S"
+    },
     "checkver": {
         "url": "https://api.github.com/repos/strawberrymusicplayer/strawberry/actions/workflows/ccpp.yml/runs?branch=master&status=success",
         "jsonpath": "$.workflow_runs[0].id"
