@@ -1,20 +1,24 @@
 {
-    "version": "0.4.3",
+    "version": "1.0.0-pre.1",
     "description": "Terminal-based typing test.",
     "homepage": "https://github.com/max-niederman/ttyper",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/max-niederman/ttyper/releases/download/v0.4.3/ttyper-x86_64-pc-windows-msvc.zip",
-            "hash": "e32d454cd1bca14afd0f0f2b0d819f37a3d5727180a8e130273418bf85ca894b"
+            "url": "https://github.com/max-niederman/ttyper/releases/download/v1.0.0-pre.1/ttyper-x86_64-pc-windows-msvc.zip",
+            "hash": "ac8973dccf90557e611908bc8c7e295d281f01def4b897b48f072815635eea57"
         },
         "32bit": {
-            "url": "https://github.com/max-niederman/ttyper/releases/download/v0.4.3/ttyper-i686-pc-windows-msvc.zip",
-            "hash": "37ddf9cf9e71c821dcc89c0ed37c9956d1e3b33a1f1193ece0805a63cb7a583c"
+            "url": "https://github.com/max-niederman/ttyper/releases/download/v1.0.0-pre.1/ttyper-i686-pc-windows-msvc.zip",
+            "hash": "8d754cf084f98c25995051902a6df4d30658b4df6932535746c6d7b57814d1b9"
         }
     },
     "bin": "ttyper.exe",
-    "checkver": "github",
+    "checkver": {
+        "url": "https://api.github.com/repos/max-niederman/ttyper/releases",
+        "jsonpath": "$.[0].tag_name",
+        "regex": "v([\\w.-]+)"
+    },
     "autoupdate": {
         "architecture": {
             "64bit": {
