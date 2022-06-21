@@ -10,7 +10,8 @@
         "HShield.ps1",
         "VODLink.ps1",
         "CLGrab.ps1",
-        "LCBC.ps1"
+        "LCBC.ps1",
+        "iu.ps1"
     ],
     "checkver": "github",
     "autoupdate": {
