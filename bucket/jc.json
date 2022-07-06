@@ -1,10 +1,10 @@
 {
-    "version": "1.20.1",
+    "version": "1.20.2",
     "description": "CLI tool and python library that converts the output of popular command-line tools and file-types to JSON, YAML, or Dictionaries.",
     "homepage": "https://github.com/kellyjonbrazil/jc",
     "license": "MIT",
-    "url": "https://github.com/kellyjonbrazil/jc/releases/download/v1.20.1/jc-1.20.1-windows.zip",
-    "hash": "71d19608cb5332095f69ab77a19b2b25e5f9cc6467f7cf3851f4469729c99f65",
+    "url": "https://github.com/kellyjonbrazil/jc/releases/download/v1.20.2/jc-1.20.2-windows.zip",
+    "hash": "304ea1974e258c2ddba3265b6bcece15155cb05da224516ea3dec4f84220d553",
     "bin": "jc.exe",
     "checkver": "github",
     "autoupdate": {
