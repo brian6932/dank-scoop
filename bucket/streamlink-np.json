@@ -1,5 +1,5 @@
 {
-    "version": "4.1.0-3",
+    "version": "4.2.0-1",
     "description": "A command-line utility that pipes video streams from various services into a video player.",
     "homepage": "https://streamlink.github.io/",
     "license": "BSD-2-Clause",
@@ -19,12 +19,12 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/streamlink/windows-installer/releases/download/4.1.0-3/streamlink-4.1.0-3-py310-x86_64.exe#/dl.7z",
-            "hash": "92838b43b5a4127f7a5e17b45b5af04915f12976a96a0705e4271f786be5522c"
+            "url": "https://github.com/streamlink/windows-installer/releases/download/4.2.0-1/streamlink-4.2.0-1-py310-x86_64.exe#/dl.7z",
+            "hash": "a114ecf6e016f9e82181dd14d1761534d2c44619b9c651069754d016ea62b5c7"
         },
         "32bit": {
-            "url": "https://github.com/streamlink/windows-installer/releases/download/4.1.0-3/streamlink-4.1.0-3-py310-x86.exe#/dl.7z",
-            "hash": "f0bbfe2ee6e8b2ce0f0d678e4892b950eaab5dac85cdc7c2069be8eef04367b6"
+            "url": "https://github.com/streamlink/windows-installer/releases/download/4.2.0-1/streamlink-4.2.0-1-py310-x86.exe#/dl.7z",
+            "hash": "7a9d9206b9f105fd310345f8ddfdf2dc6f8b336826177db8c866056ba2cd5027"
         }
     },
     "pre_install": [
