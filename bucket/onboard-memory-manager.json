@@ -1,0 +1,13 @@
+{
+    "homepage": "https://support.logi.com/hc/en-us/articles/360059641133",
+    "version": "nightly",
+    "license": "Unknown",
+    "description": "A utility for pro gamers to quickly view, customize, and fine-tune the onboard memory of a compatible Logitech G mouse",
+    "url": "https://download01.logi.com/web/ftp/pub/techsupport/gaming/Onboard%20Memory%20Manager.exe",
+    "shortcuts": [
+        [
+            "Onboard%20Memory%20Manager.exe",
+            "Onboard Memory Manager"
+        ]
+    ]
+}
