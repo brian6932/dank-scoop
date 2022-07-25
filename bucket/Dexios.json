@@ -1,0 +1,21 @@
+{
+    "version": "8.6.2",
+    "description": "A secure file encryption utility, written in Rust.",
+    "homepage": "https://github.com/brxken128/dexios",
+    "license": "BSD 2-Clause",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/brxken128/dexios/releases/download/v8.6.2/dexios-windows-amd64.exe#/dexios.exe",
+            "hash": "d08952e62ee1e9dc57d5a4fbe735bb4afbad29147829edd02b744e56fc827139"
+        }
+    },
+    "bin": "dexios.exe",
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/brxken128/dexios/releases/download/v$version/dexios-windows-amd64.exe#/dexios.exe"
+            }
+        }
+    }
+}
