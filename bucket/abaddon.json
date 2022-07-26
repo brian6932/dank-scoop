@@ -1,6 +1,6 @@
 {
     "version": "0.1.6",
-    "description": " An alternative Discord client made with C++/gtkmm",
+    "description": "An alternative Discord client made with C++/gtkmm",
     "homepage": "https://github.com/uowuo/abaddon",
     "license": "GPL-3.0-or-later",
     "architecture": {
