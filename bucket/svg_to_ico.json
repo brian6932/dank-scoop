@@ -1,6 +1,6 @@
 {
     "version": "1.1.0",
-    "description": " A utility and Rust library to convert SVG icons into Windows ICO files.",
+    "description": "A utility and Rust library to convert SVG icons into Windows ICO files.",
     "homepage": "https://github.com/Ortham/svg_to_ico",
     "license": "MIT",
     "architecture": {
