@@ -12,7 +12,8 @@
     "pre_install": "Get-ChildItem \"$dir\\xxd-rs-x86_64-pc-windows-gnu.exe\" | Rename-Item -NewName { $_.name -Replace '-x86_64-pc-windows-gnu','' }",
     "bin": "xxd-rs.exe",
     "checkver": {
-        "url": "https://github.com/Nicoretti/xxd-rs/releases",
+        "url": "https://api.github.com/repos/Nicoretti/xxd-rs/releases/latest",
+        "jsonpath": "$.tag_name",
         "regex": "xxd-rs-([\\d.]+)"
     },
     "autoupdate": {
