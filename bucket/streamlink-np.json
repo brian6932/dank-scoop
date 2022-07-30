@@ -43,8 +43,8 @@
         "bin\\streamlinkw.exe"
     ],
     "checkver": {
-        "github": "https://github.com/streamlink/windows-installer",
-        "regex": "streamlink-([\\d.-]+)-py310-x86(?:_64)?\\.exe"
+        "url": "https://api.github.com/repositories/472790314/releases/latest",
+        "jsonpath": "$.tag_name"
     },
     "autoupdate": {
         "architecture": {
