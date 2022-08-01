@@ -1,0 +1,33 @@
+{
+    "version": "2776968637",
+    "description": "Chat client for https://twitch.tv",
+    "homepage": "https://github.com/mrauro/chatterino2/tree/dankerino",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://nightly.link/MrAuro/chatterino2/workflows/build/dankerino/chatterino-windows-x86-64-5.12.12.zip.zip",
+            "hash": "8951bf9e2bd51392b1fa2e6ec3028854bda373159b0630e4dd98449b5743ed06",
+            "pre_install": [
+                "Expand-7zipArchive \"$dir\\chatterino-windows-x86-64.zip\" \"$dir\"",
+                "Remove-Item \"$dir\\*.zip\" -Recurse"
+            ]
+        }
+    },
+    "shortcuts": [
+        [
+            "Chatterino2\\chatterino.exe",
+            "Aurorino"
+        ]
+    ],
+    "checkver": {
+        "url": "https://api.github.com/repos/mrauro/chatterino2/actions/workflows/build.yml/runs?branch=dankerino&status=success",
+        "jsonpath": "$.workflow_runs[0].id"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://nightly.link/MrAuro/chatterino2/workflows/build/dankerino/chatterino-windows-x86-64-5.12.12.zip.zip"
+            }
+        }
+    }
+}
