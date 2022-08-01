@@ -19,6 +19,12 @@
             "Aurorino"
         ]
     ],
+    "bin": [
+        [
+            "Chatterino2\\chatterino.exe",
+            "Aurorino"
+        ]
+    ],
     "checkver": {
         "url": "https://api.github.com/repos/mrauro/chatterino2/actions/workflows/build.yml/runs?branch=dankerino&status=success",
         "jsonpath": "$.workflow_runs[0].id"
