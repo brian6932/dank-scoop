@@ -5,8 +5,8 @@
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://nightly.link/MrAuro/chatterino2/workflows/build/dankerino/chatterino-windows-x86-64-5.12.12.zip.zip",
-            "hash": "8951bf9e2bd51392b1fa2e6ec3028854bda373159b0630e4dd98449b5743ed06",
+            "url": "https://nightly.link/MrAuro/chatterino2/workflows/build/dankerino/chatterino-windows-x86-64-5.15.2.zip.zip",
+            "hash": "c9e13edb75f6ce9c9d18f734b202c387191f800a65fa974ac0e337a353dc8b24",
             "pre_install": [
                 "Expand-7zipArchive \"$dir\\chatterino-windows-x86-64.zip\" \"$dir\"",
                 "Remove-Item \"$dir\\*.zip\" -Recurse"
@@ -26,7 +26,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://nightly.link/MrAuro/chatterino2/workflows/build/dankerino/chatterino-windows-x86-64-5.12.12.zip.zip"
+                "url": "https://nightly.link/MrAuro/chatterino2/workflows/build/dankerino/chatterino-windows-x86-64-5.15.2.zip.zip"
             }
         }
     }
