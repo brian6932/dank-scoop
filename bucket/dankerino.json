@@ -5,7 +5,7 @@
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/Mm2PL/dankerino/releases/download/nightly-build/test-cmake-chatterino-windows-x86-64.zip",
+            "url": "https://github.com/Mm2PL/dankerino/releases/download/nightly-build/chatterino-windows-x86-64.zip",
             "hash": "35aacaa7f5920102dc65d60a953973aa7c9a00d20630b81d4457b96a00f2cd12",
             "extract_dir": "Chatterino2"
         }
@@ -24,7 +24,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/Mm2PL/dankerino/releases/download/nightly-build/test-cmake-chatterino-windows-x86-64.zip"
+                "url": "https://github.com/Mm2PL/dankerino/releases/download/nightly-build/chatterino-windows-x86-64.zip"
             }
         }
     }
