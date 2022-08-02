@@ -1,16 +1,16 @@
 {
-    "version": "3.9-220731",
+    "version": "3.9-220801",
     "description": "Nightly builds for spotify-qt",
     "homepage": "https://github.com/kraxarn/spotify-qt-nightly",
     "license": "GPL-3.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/kraxarn/spotify-qt-nightly/releases/download/latest/spotify-qt-v3.9-220731-win64.zip",
-            "hash": "e715bcdeade367948c06aff2569245cbd5e2ab7dc7c23e37cff73b8574118a4e"
+            "url": "https://github.com/kraxarn/spotify-qt-nightly/releases/download/latest/spotify-qt-v3.9-220801-win64.zip",
+            "hash": "dad317c7f601b8e7cab1534f2b86c783bcc62644dd8c7089fb03352fb041d1ab"
         },
         "32bit": {
-            "url": "https://github.com/kraxarn/spotify-qt-nightly/releases/download/latest/spotify-qt-v3.9-220731-win32.zip",
-            "hash": "b59e7358c71b8a59f8e840568638a9fbabc2c981126d913c7e6f1abee010a8da"
+            "url": "https://github.com/kraxarn/spotify-qt-nightly/releases/download/latest/spotify-qt-v3.9-220801-win32.zip",
+            "hash": "7f29252434a63b1b88ca4dedcfd6e82f3d4b262b2bd863facfa022e343128312"
         }
     },
     "shortcuts": [
