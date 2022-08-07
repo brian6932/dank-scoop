@@ -1,12 +1,12 @@
 {
-    "version": "2809503034",
+    "version": "2810814076",
     "description": "A music player and music collection organizer",
     "homepage": "https://www.strawbs.org/",
     "license": "GPL-3.0-only",
     "architecture": {
         "64bit": {
             "url": "https://nightly.link/strawberrymusicplayer/strawberry/workflows/ccpp/master/upload-windows.zip",
-            "hash": "b8c1f80b9b13df23da223068682f29ac7b15e3e83f767d0e88eec9d1e646651d"
+            "hash": "cafc515cb1f742ceded708edc21fad1b74516c71573b835d4954f06d4d4fe253"
         }
     },
     "pre_install": [
