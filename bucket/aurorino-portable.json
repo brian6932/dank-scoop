@@ -1,12 +1,12 @@
 {
-    "version": "2787057002",
+    "version": "2850546648",
     "description": "Chat client for https://twitch.tv",
     "homepage": "https://github.com/mrauro/chatterino2/tree/dankerino",
     "license": "MIT",
     "architecture": {
         "64bit": {
             "url": "https://nightly.link/MrAuro/chatterino2/workflows/build/dankerino/chatterino-windows-x86-64-5.15.2.zip.zip",
-            "hash": "31a1bdf906b26200562e9b1f4850bcbace04448fedf8e44370e9c5f0607e727c",
+            "hash": "ef328c69acd1fb790e1134135885b09888c24f1475bf07cf3caa7b7af48b314a",
             "pre_install": [
                 "Expand-7zipArchive \"$dir\\chatterino-windows-x86-64.zip\" \"$dir\"",
                 "Remove-Item \"$dir\\*.zip\" -Recurse",
