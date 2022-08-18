@@ -7,12 +7,12 @@
         "64bit": {
             "url": "https://github.com/alexhallam/tv/releases/download/1.4.30/tidy-viewer-1.4.30-x86_64-pc-windows-msvc.zip",
             "hash": "1ea5b930eeae7e7d6b7599fc87fb208bc37c291cc5d55804ba2a1a8629b7ea9c",
-            "extract_dir": "tidy-viewer--x86_64-pc-windows-msvc"
+            "extract_dir": "tidy-viewer-1.4.30-x86_64-pc-windows-msvc"
         },
         "32bit": {
             "url": "https://github.com/alexhallam/tv/releases/download/1.4.30/tidy-viewer-1.4.30-i686-pc-windows-msvc.zip",
             "hash": "33bbb28443f12f1a23997794e508600a9e965b2cfdc4035e50b85826b84613e7",
-            "extract_dir": "tidy-viewer--i686-pc-windows-msvc"
+            "extract_dir": "tidy-viewer-1.4.30-i686-pc-windows-msvc"
         }
     },
     "pre_install": "Get-ChildItem \"$dir\\tidy-viewer.exe\" | Rename-Item -NewName { $_.name -Replace 'tidy-viewer','tv' }",
