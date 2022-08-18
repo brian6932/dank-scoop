@@ -17,14 +17,17 @@
     },
     "pre_install": "Get-ChildItem \"$dir\\tidy-viewer.exe\" | Rename-Item -NewName { $_.name -Replace 'tidy-viewer','tv' }",
     "bin": "tv.exe",
-    "checkver": "github",
+    "checkver": {
+        "url": "https://api.github.com/repos/alexhallam/tv/releases",
+        "jsonpath": "$.[0].tag_name"
+    },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/alexhallam/tv/releases/download/$version/tidy-viewer--x86_64-pc-windows-msvc.zip"
+                "url": "https://github.com/alexhallam/tv/releases/download/$version/tidy-viewer-$version-x86_64-pc-windows-msvc.zip"
             },
             "32bit": {
-                "url": "https://github.com/alexhallam/tv/releases/download/$version/tidy-viewer--i686-pc-windows-msvc.zip"
+                "url": "https://github.com/alexhallam/tv/releases/download/$version/tidy-viewer-$version-i686-pc-windows-msvc.zip"
             }
         }
     }

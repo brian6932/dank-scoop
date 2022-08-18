@@ -1,12 +1,12 @@
 {
-    "version": "0.1.6",
+    "version": "0.1.7",
     "description": "An alternative Discord client made with C++/gtkmm",
     "homepage": "https://github.com/uowuo/abaddon",
     "license": "GPL-3.0-or-later",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/uowuo/abaddon/releases/download/v0.1.6/build-windows-msys2-MinSizeRel-fixed.zip",
-            "hash": "06cee333c7c7e37472e7ec026d42e05b9928e32894e701f429a86b249d6592a7"
+            "url": "https://github.com/uowuo/abaddon/releases/download/v0.1.7/build-windows-msys2-MinSizeRel.zip",
+            "hash": "d9dbe04aa520ca4ebadef85403ad83b17b74a3f76f470619af06ce7249fced98"
         }
     },
     "bin": "bin\\abaddon.exe",
@@ -20,7 +20,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/uowuo/abaddon/releases/download/v$version/build-windows-msys2-MinSizeRel-fixed.zip"
+                "url": "https://github.com/uowuo/abaddon/releases/download/v$version/build-windows-msys2-MinSizeRel.zip"
             }
         }
     }
