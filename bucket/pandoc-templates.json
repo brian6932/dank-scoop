@@ -1,10 +1,10 @@
 {
-    "version": "e172676",
+    "version": "7c4f7cb",
     "description": "Templates for pandoc, tagged to release",
     "homepage": "https://github.com/jgm/pandoc-templates",
     "license": "GPL-2.0-or-later,BSD-3-Clause",
     "url": "https://github.com/jgm/pandoc-templates/archive/refs/heads/master.zip",
-    "hash": "2ff261d8c8d1bbd85f9722f82de3667ee765d62b50dfa3e5bba7f59b77ff7e80",
+    "hash": "72b9ea34511cc026428d08595082a2e9ae4aab180da8cf8ed09044fb38cad167",
     "extract_dir": "pandoc-templates-master",
     "post_install": [
         "$installPath = '~\\AppData\\Roaming\\pandoc\\templates'",
