@@ -15,7 +15,10 @@
             "extract_dir": "qView-nightly-win32-2022-01-15.4"
         }
     },
-    "pre_install": "Get-ChildItem \"$dir\\qView-nightly-*.exe\" | Rename-Item -NewName { $_.name -Replace '.+','qView.exe' }",
+    "pre_install": [
+        "Get-ChildItem \"$dir\\qView-nightly-*.exe\" | Rename-Item -NewName { $_.name -Replace '.+','qView.exe' }",
+        "Remove-Item \"$dir\\qView-*.*-win*.exe\""
+    ],
     "bin": "qView.exe",
     "shortcuts": [
         [
