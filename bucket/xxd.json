@@ -1,0 +1,21 @@
+{
+    "version": "1.11",
+    "description": "A hexdump utility by Juergen Weigert, v1.11 by Vadim Vygonets",
+    "homepage": "https://sourceforge.net/projects/xxd-for-windows",
+    "license": "Vim",
+    "url": "https://sourceforge.net/projects/xxd-for-windows/files/xxd-1.11_win32%28static%29.zip",
+    "hash": "md5:99a170dd241ab0cc721f0fd9e3187230",
+    "extract_dir": "xxd-1.11_win32",
+    "bin": "xxd.exe",
+    "checkver": {
+        "url": "https://sourceforge.net/projects/xxd-for-windows/rss?path=",
+        "regex": "xxd-([\\d.]+)_win32\\(static\\).zip"
+    },
+    "autoupdate": {
+        "url": "https://sourceforge.net/projects/xxd-for-windows/files/xxd-$version_win32%28static%29.zip",
+        "hash": {
+            "url": "https://sourceforge.net/projects/xxd-for-windows/rss?path=",
+            "regex": "$url/download\" filesize=\"\\d+\"><media:hash algo=\"md5\">$md5</media:hash>"
+        }
+    }
+}
