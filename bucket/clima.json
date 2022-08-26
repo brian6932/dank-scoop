@@ -5,18 +5,16 @@
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/Canop/clima/releases/download/v1.0.0/clima_1.0.0.zip",
-            "hash": "d87ac2967dca80b10ec2cad8e5f672c4451e78baee3db5c52ff21525c88b8839",
-            "extract_dir": "build",
-            "pre_install": "Get-ChildItem \"$dir\" -Exclude x86_64-pc-windows-gnu | Remove-Item -Recurse"
+            "url": "https://dystroy.org/clima/download/x86_64-pc-windows-gnu/clima.exe",
+            "hash": "1d21c438a9467831e303a9d74e1a59d2303e3eb8ce5fd22f098f97de169180b5"
         }
     },
-    "bin": "x86_64-pc-windows-gnu\\clima.exe",
+    "bin": "clima.exe",
     "checkver": "github",
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/Canop/clima/releases/download/v$version/clima_$version.zip"
+                "url": "https://dystroy.org/clima/download/x86_64-pc-windows-gnu/clima.exe"
             }
         }
     }
