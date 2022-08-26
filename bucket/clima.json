@@ -1,0 +1,23 @@
+{
+    "version": "1.0.0",
+    "description": " A minimal viewer for Termimad",
+    "homepage": "https://github.com/Canop/clima",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/Canop/clima/releases/download/v1.0.0/clima_1.0.0.zip",
+            "hash": "d87ac2967dca80b10ec2cad8e5f672c4451e78baee3db5c52ff21525c88b8839",
+            "extract_dir": "build",
+            "pre_install": "Get-ChildItem \"$dir\" -Exclude x86_64-pc-windows-gnu | Remove-Item -Recurse"
+        }
+    },
+    "bin": "x86_64-pc-windows-gnu\\clima.exe",
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/Canop/clima/releases/download/v$version/clima_$version.zip"
+            }
+        }
+    }
+}
