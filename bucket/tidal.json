@@ -1,0 +1,34 @@
+{
+    "version": "2.32.0",
+    "description": "TIDAL is the first global music streaming service with high fidelity sound, hi-def video quality, along with expertly curated playlists and original content",
+    "homepage": "https://block.xyz",
+    "license": "Proprietary",
+    "url": "https://download.tidal.com/desktop/TIDALSetup.exe",
+    "hash": "cb70ebf48d0ff1558375f11a698ad02e396ed698d2ee8aa3e98f4ed1672202f7",
+    "installer": {
+        "script": [
+            "Expand-7zipArchive \"$dir\\TIDALSetup.exe\" -Removal",
+            "Expand-7zipArchive \"$dir\\TIDAL-$version-full.nupkg\" -ExtractDir 'lib\\net45' -Removal"
+        ]
+    },
+    "shortcuts": [
+        [
+            "TIDAL.exe",
+            "TIDAL"
+        ]
+    ],
+    "bin": "TIDAL.exe",
+    "checkver": {
+        "script": [
+            "$dl_url = 'https://download.tidal.com/desktop/TIDALSetup.exe'",
+            "$dl = cache_path 'Tidal'",
+            "do_dl $dl_url $dl",
+            "$version = (Get-Item $dl).VersionInfo.ProductVersion.split('.')[0..2] -join '.'",
+            "return $version"
+        ],
+        "regex": "([\\d.]+)"
+    },
+    "autoupdate": {
+        "url": "https://download.tidal.com/desktop/TIDALSetup.exe"
+    }
+}
