@@ -6,11 +6,15 @@
     "architecture": {
         "64bit": {
             "url": "https://github.com/graphql-editor/gql/releases/download/v0.1.1/gql-windows-amd64-v0.1.1.tar.gz",
-            "hash": "F89EF7FC1736B9BD61C3F7F883CD4F221E61A239C11F9A2164C2D5E8A5A2F57E"
+            "hash": "f89ef7fc1736b9bd61c3f7f883cd4f221e61a239c11f9a2164c2d5e8a5a2f57e"
         }
     },
     "bin": "gql.exe",
-    "checkver": "github",
+    "checkver": {
+        "url": "https://api.github.com/repos/graphql-editor/gql/releases",
+        "jsonpath": "$.[0].tag_name",
+        "regex": "v([\\d.]+)"
+    },
     "autoupdate": {
         "architecture": {
             "64bit": {

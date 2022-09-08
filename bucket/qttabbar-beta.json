@@ -4,7 +4,7 @@
     "homepage": "http://qttabbar.wikidot.com/",
     "license": "Freeware",
     "url": "http://qttabbar.wdfiles.com/local--files/qttabbar1/QTTabBar%202048%20Beta2.zip",
-    "hash": "4A8AAC9BF84D9B3C09EC099363C1D0A5AFE8532D3540E16CF869A4319B7B7185",
+    "hash": "4a8aac9bf84d9b3c09ec099363c1d0a5afe8532d3540e16cf869a4319b7b7185",
     "depends": "sudo",
     "installer": {
         "script": "sudo Start-Process \"$dir/QTTabBar.exe\" -ArgumentList '/QI' -Wait -NoNewWindow",

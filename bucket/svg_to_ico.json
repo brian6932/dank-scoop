@@ -6,7 +6,7 @@
     "architecture": {
         "64bit": {
             "url": "https://github.com/Ortham/svg_to_ico/releases/download/1.1.0/svg_to_ico.7z",
-            "hash": "B2A3E82591AD4834A253290A76F007E5BAB35E5A97584D29B3A4B5D0FF9ACEF3"
+            "hash": "b2a3e82591ad4834a253290a76f007e5bab35e5a97584d29b3a4b5d0ff9acef3"
         }
     },
     "bin": "svg_to_ico.exe",
