@@ -1,12 +1,12 @@
 {
-    "version": "2843117086",
+    "version": "3010972711",
     "description": "Chat client for twitch.tv. See releases for download. Only nightlies are supported (fork of Chatterino 2).",
     "homepage": "https://github.com/Mm2PL/dankerino",
     "license": "MIT",
     "architecture": {
         "64bit": {
             "url": "https://github.com/Mm2PL/dankerino/releases/download/nightly-build/chatterino-windows-x86-64.zip",
-            "hash": "47501d046d94d42fa58b7448427206506da88663e5b32ed0b82fa363e5356ef2",
+            "hash": "d76cdcb37f339179dc345496ee02ee028fb425518386a04fa7f3975c93d1a843",
             "extract_dir": "Chatterino2",
             "pre_install": "'portable' > \"$dir\\modes\""
         }
