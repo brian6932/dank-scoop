@@ -8,7 +8,7 @@
     "extract_dir": "pandoc-templates-master",
     "post_install": [
         "$installPath = '~\\AppData\\Roaming\\pandoc\\templates'",
-        "if ((Test-Path $installPath) -eq $false) { New-Item -ItemType dir $installPath }",
+        "if ((Test-Path $installPath) -eq $false) { New-Item -ItemType dir $installPath | Out-Null }",
         "Move-Item \"$original_dir\\*\" $installPath -Force"
     ],
     "uninstaller": {

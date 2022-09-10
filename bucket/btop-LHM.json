@@ -14,7 +14,12 @@
             "extract_dir": "btop4win"
         }
     },
-    "pre_install": "Get-ChildItem \"$dir\\btop4win.exe\" | Rename-Item -NewName { $_.name -Replace '4win', '' }",
+    "pre_install": [
+        "Get-ChildItem \"$dir\\btop4win.exe\" | Rename-Item -NewName { $_.name -Replace '4win', '' }",
+        "if (!(Test-Path \"$persist_dir\")) { New-Item -ItemType dir \"$persist_dir\" | Out-Null }",
+        "if (Test-Path \"$persist_dir\\btop.conf\") { Copy-Item \"$persist_dir\\btop.conf\" \"$dir\\\" }"
+    ],
+    "pre_uninstall": "if (Test-Path \"$dir\\btop.conf\") { Copy-Item \"$dir\\btop.conf\" \"$persist_dir\\\" }",
     "bin": "btop.exe",
     "checkver": "github",
     "autoupdate": {
