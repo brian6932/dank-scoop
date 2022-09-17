@@ -15,10 +15,8 @@
         }
     },
     "persist": [
-        "Chatterino2\\Cache",
         "Chatterino2\\Logs",
         "Chatterino2\\Misc",
-        "Chatterino2\\ProfileAvatars",
         "Chatterino2\\Settings"
     ],
     "shortcuts": [

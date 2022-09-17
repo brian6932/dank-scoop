@@ -12,10 +12,8 @@
         }
     },
     "persist": [
-        "Cache",
         "Logs",
         "Misc",
-        "ProfileAvatars",
         "Settings"
     ],
     "shortcuts": [
