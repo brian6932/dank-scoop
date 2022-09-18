@@ -7,10 +7,11 @@
     "hash": "83d9eb3badd140d16baee18cfd5ef2335289e3822c28f6f81c1a71369b67a2db",
     "post_install": [
         "$installPath = '~\\AppData\\Local\\GOG.com\\Galaxy\\plugins\\installed\\GalaxyPluginEpic'",
-        "if ((Test-Path $installPath) -eq $false) { New-Item -ItemType dir $installPath | Out-Null }",
+        "if (!(Test-Path $installPath)) { New-Item -ItemType dir $installPath | Out-Null }",
         "Move-Item \"$original_dir\\*\" $installPath -Force",
-        "$legendaryLocation = where.exe legendary",
-        "if ($legendaryLocation) { (Get-Content $installPath\\config.txt) -replace '(?<=legendary: ).+', $legendaryLocation | Set-Content $installPath\\config.txt }"
+        "$legendaryLocation = where.exe legendary.exe | Select-Object -First 1",
+        "if ($legendaryLocation) { (Get-Content $installPath\\config.txt) -replace '(?<=legendary: ).+', $legendaryLocation | Set-Content $installPath\\config.txt }",
+        "else { error \"$app legendary has to be installed\"; break }"
     ],
     "uninstaller": {
         "script": "Remove-Item '~\\AppData\\Local\\GOG.com\\Galaxy\\plugins\\installed\\GalaxyPluginEpic' -Recurse"

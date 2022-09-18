@@ -26,9 +26,9 @@
     "pre_install": [
         "Expand-Archive \"$dir\\streamlink-$version-py310-x86*.zip\" \"$dir\"",
         "Remove-Item \"$dir\\streamlink-$version-py310-x86*.zip\"",
-        "$python = where.exe py.exe",
+        "$python = where.exe py.exe | Select-Object -First 1",
         "$paths = 'bin', 'pkgs'",
-        "if ($python) { New-Item -ItemType SymbolicLink -Path \"$dir\\Python\" -Target \"$($python | Select-Object -First 1 | Split-Path)\" | Out-Null }",
+        "if ($python) { New-Item -ItemType SymbolicLink -Path \"$dir\\Python\" -Target ($python | Split-Path) | Out-Null }",
         "else { $paths += 'Python' }",
         "$paths | ForEach-Object { Move-Item \"$dir\\streamlink-$version-py310-x86*\\$_\" \"$dir\" }",
         "Remove-Item -Recurse \"$dir\\streamlink-$version-py310-x86*\"",
