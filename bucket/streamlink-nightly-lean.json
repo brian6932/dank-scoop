@@ -4,8 +4,7 @@
     "homepage": "https://streamlink.github.io/",
     "license": "BSD-2-Clause",
     "notes": [
-        "You will find your config file here: '$dir\\config'. To customise it, read the docs here: https://streamlink.github.io/cli/config.html#syntax",
-        "I would like to remove the Python as well, but this is what the maintainers said: https://github.com/streamlink/streamlink/issues/4831"
+        "You will find your config file here: '$dir\\config'. To customise it, read the docs here: https://streamlink.github.io/cli/config.html#syntax"
     ],
     "suggest": {
         "FFmpeg": [
@@ -27,7 +26,11 @@
     "pre_install": [
         "Expand-Archive \"$dir\\streamlink-$version-py310-x86*.zip\" \"$dir\"",
         "Remove-Item \"$dir\\streamlink-$version-py310-x86*.zip\"",
-        "'bin', 'Python', 'pkgs' | ForEach-Object { Move-Item \"$dir\\streamlink-$version-py310-x86*\\$_\" \"$dir\" }",
+        "$python = where.exe py.exe",
+        "$paths = 'bin', 'pkgs'",
+        "if ($python) { New-Item -ItemType SymbolicLink -Path \"$dir\\Python\" -Target \"$($python | Select-Object -First 1 | Split-Path)\" | Out-Null }",
+        "else { $paths += 'Python' }",
+        "$paths | ForEach-Object { Move-Item \"$dir\\streamlink-$version-py310-x86*\\$_\" \"$dir\" }",
         "Remove-Item -Recurse \"$dir\\streamlink-$version-py310-x86*\"",
         "if (!(Test-Path \"$persist_dir\\config\")) {",
         "    if (Test-Path \"$env:APPDATA\\streamlink\\config\") {",
