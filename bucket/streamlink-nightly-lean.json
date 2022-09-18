@@ -1,0 +1,72 @@
+{
+    "version": "5.0.0-1-g14cb86e",
+    "description": "A command-line utility that pipes video streams from various services into a video player.",
+    "homepage": "https://streamlink.github.io/",
+    "license": "BSD-2-Clause",
+    "notes": [
+        "You will find your config file here: '$dir\\config'. To customise it, read the docs here: https://streamlink.github.io/cli/config.html#syntax",
+        "Once streamlink allows https://github.com/streamlink/streamlink/issues/4831, I would like to remove the Python from this package as well."
+    ],
+    "suggest": {
+        "FFmpeg": [
+            "ffmpeg",
+            "ffmpeg-nightly"
+        ],
+        "VLC Player": "extras/vlc"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://nightly.link/streamlink/windows-builds/workflows/nightly/master/streamlink-5.0.0-1-g14cb86e-py310-x86_64.zip.zip",
+            "hash": "d8d3e0d3e3ab70fe2c5bc86efbe9db444eb94c050634282416f40d35e3f41a38"
+        },
+        "32bit": {
+            "url": "https://nightly.link/streamlink/windows-builds/workflows/nightly/master/streamlink-5.0.0-1-g14cb86e-py310-x86.zip.zip",
+            "hash": "2dccebf69b4a8b8adafbaac34dbb873d343230f28a7ba81cda10c6e6b018f5c8"
+        }
+    },
+    "pre_install": [
+        "Expand-Archive \"$dir\\streamlink-$version-py310-x86*.zip.zip\"",
+        "Expand-Archive \"$dir\\streamlink-$version-py310-x86*.zip\" \"$dir\"",
+        "Remove-Item \"$dir\\streamlink-$version-py310-x86*.zip\"",
+        "'bin', 'Python', 'pkgs' | ForEach-Object { Move-Item \"$dir\\streamlink-$version-py310-x86*\\$_\" \"$dir\" }",
+        "Remove-Item -Recurse \"$dir\\streamlink-$version-py310-x86*\"",
+        "if (!(Test-Path \"$persist_dir\\config\")) {",
+        "    if (Test-Path \"$env:APPDATA\\streamlink\\config\") {",
+        "        info 'Copying existing ''config'' from ''%APPDATA%\\streamlink\\config'''",
+        "        Copy-Item \"$env:APPDATA\\streamlink\\config\" \"$dir\\config\"",
+        "    } else {",
+        "        New-Item \"$dir\\config\" | Out-Null",
+        "    }",
+        "}"
+    ],
+    "bin": [
+        [
+            "bin\\streamlink.exe",
+            "streamlink",
+            "--config \"$dir\\config\""
+        ],
+        "bin\\streamlinkw.exe"
+    ],
+    "persist": "config",
+    "checkver": {
+        "script": [
+            "# Need both commit hash and release version",
+            "$release = (Invoke-WebRequest 'https://api.github.com/repositories/472790314/releases/latest').Content | ConvertFrom-Json | Select-Object -ExpandProperty tag_name",
+            "$sha = (((Invoke-WebRequest 'https://api.github.com/repos/streamlink/streamlink/commits').Content | ConvertFrom-Json | Select-Object -ExpandProperty sha)[0]).SubString(0, 7)",
+            "Write-Output $release-g$sha"
+        ],
+        "regex": "(\\S+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://nightly.link/streamlink/windows-builds/workflows/nightly/master/streamlink-$version-py310-x86_64.zip.zip",
+                "extract_dir": "streamlink-$version-py310-x86_64"
+            },
+            "32bit": {
+                "url": "https://nightly.link/streamlink/windows-builds/workflows/nightly/master/streamlink-$version-py310-x86.zip.zip",
+                "extract_dir": "streamlink-$version-py310-x86"
+            }
+        }
+    }
+}
