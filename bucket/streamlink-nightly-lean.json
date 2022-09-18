@@ -5,7 +5,7 @@
     "license": "BSD-2-Clause",
     "notes": [
         "You will find your config file here: '$dir\\config'. To customise it, read the docs here: https://streamlink.github.io/cli/config.html#syntax",
-        "Once streamlink allows https://github.com/streamlink/streamlink/issues/4831, I would like to remove the Python from this package as well."
+        "I would like to remove the Python as well, but this is what the maintainers said: https://github.com/streamlink/streamlink/issues/4831"
     ],
     "suggest": {
         "FFmpeg": [
@@ -25,7 +25,6 @@
         }
     },
     "pre_install": [
-        "Expand-Archive \"$dir\\streamlink-$version-py310-x86*.zip.zip\"",
         "Expand-Archive \"$dir\\streamlink-$version-py310-x86*.zip\" \"$dir\"",
         "Remove-Item \"$dir\\streamlink-$version-py310-x86*.zip\"",
         "'bin', 'Python', 'pkgs' | ForEach-Object { Move-Item \"$dir\\streamlink-$version-py310-x86*\\$_\" \"$dir\" }",
@@ -60,12 +59,10 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://nightly.link/streamlink/windows-builds/workflows/nightly/master/streamlink-$version-py310-x86_64.zip.zip",
-                "extract_dir": "streamlink-$version-py310-x86_64"
+                "url": "https://nightly.link/streamlink/windows-builds/workflows/nightly/master/streamlink-$version-py310-x86_64.zip.zip"
             },
             "32bit": {
-                "url": "https://nightly.link/streamlink/windows-builds/workflows/nightly/master/streamlink-$version-py310-x86.zip.zip",
-                "extract_dir": "streamlink-$version-py310-x86"
+                "url": "https://nightly.link/streamlink/windows-builds/workflows/nightly/master/streamlink-$version-py310-x86.zip.zip"
             }
         }
     }
