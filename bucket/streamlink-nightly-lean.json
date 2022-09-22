@@ -1,11 +1,9 @@
 {
-    "version": "5.0.0-1-g14cb86e",
+    "version": "5.0.1-1",
     "description": "A command-line utility that pipes video streams from various services into a video player.",
     "homepage": "https://streamlink.github.io/",
     "license": "BSD-2-Clause",
-    "notes": [
-        "You will find your config file here: '$dir\\config'. To customise it, read the docs here: https://streamlink.github.io/cli/config.html#syntax"
-    ],
+    "notes": "You will find your config file here: '$dir\\config'. To customise it, read the docs here: https://streamlink.github.io/cli/config.html#syntax",
     "suggest": {
         "FFmpeg": [
             "ffmpeg",
@@ -15,16 +13,17 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://nightly.link/streamlink/windows-builds/workflows/nightly/master/streamlink-5.0.0-1-g14cb86e-py310-x86_64.zip.zip",
-            "hash": "d8d3e0d3e3ab70fe2c5bc86efbe9db444eb94c050634282416f40d35e3f41a38"
+            "url": "https://github.com/streamlink/windows-builds/releases/download/5.0.1-1/streamlink-5.0.1-1-py310-x86_64.zip",
+            "hash": "69f1a8707eed766a96b57a6f97e9561dfbfd238182bc5c2123d70de78e292aca"
         },
         "32bit": {
-            "url": "https://nightly.link/streamlink/windows-builds/workflows/nightly/master/streamlink-5.0.0-1-g14cb86e-py310-x86.zip.zip",
-            "hash": "2dccebf69b4a8b8adafbaac34dbb873d343230f28a7ba81cda10c6e6b018f5c8"
+            "url": "https://github.com/streamlink/windows-builds/releases/download/5.0.1-1/streamlink-5.0.1-1-py310-x86.zip",
+            "hash": "691f6979bed6ed1e5a2175ee1a24de1d1e192ee124aa70653eea11924d2495dc"
         }
     },
     "pre_install": [
-        "Expand-7zipArchive \"$dir\\streamlink-$version-py310-x86*.zip\" \"$dir\" -Removal",
+        "$verSplit = $version.split('-')",
+        "if ($verSplit.Length -eq 3 -and $verSplit[2].startsWith('g')) { Expand-7zipArchive \"$dir\\streamlink-$version-py310-x86*.zip\" \"$dir\" -Removal }",
         "$python = where.exe py.exe | Select-Object -First 1",
         "$paths = 'bin', 'pkgs'",
         "if ($python) { New-Item -ItemType SymbolicLink -Path \"$dir\\Python\" -Target ($python | Split-Path) | Out-Null }",
@@ -51,20 +50,22 @@
     "persist": "config",
     "checkver": {
         "script": [
-            "# Need both commit hash and release version",
-            "$release = (Invoke-WebRequest 'https://api.github.com/repositories/472790314/releases/latest').Content | ConvertFrom-Json | Select-Object -ExpandProperty tag_name",
-            "$sha = (((Invoke-WebRequest 'https://api.github.com/repos/streamlink/streamlink/commits').Content | ConvertFrom-Json | Select-Object -ExpandProperty sha)[0]).SubString(0, 7)",
-            "Write-Output $release-g$sha"
+            "((Invoke-WebRequest 'https://api.github.com/repositories/472790314/actions/artifacts').Content | ConvertFrom-Json).artifacts[0].name -match 'streamlink-([\\w.-]+)-py' | Out-Null",
+            "$verSplit = $matches[1].split('-')",
+            "$zip = '.zip'",
+            "if ($verSplit.Length -eq 3 -and $verSplit[2].startsWith('g')) { $build = 'nightly.link/streamlink/windows-builds/workflows/nightly/master/'; $zip += '.zip' }",
+            "else { $build = \"github.com/streamlink/windows-builds/releases/download/$($matches[1])/\" }",
+            "Write-Output ($build, $matches[1], $zip -join ' ')"
         ],
-        "regex": "(\\S+)"
+        "regex": "^(?<build>\\S+) (\\S+) (?<zip>\\S+)?$"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://nightly.link/streamlink/windows-builds/workflows/nightly/master/streamlink-$version-py310-x86_64.zip.zip"
+                "url": "https://$matchBuildstreamlink-$version-py310-x86_64$matchZip"
             },
             "32bit": {
-                "url": "https://nightly.link/streamlink/windows-builds/workflows/nightly/master/streamlink-$version-py310-x86.zip.zip"
+                "url": "https://$matchBuildstreamlink-$version-py310-x86$matchZip"
             }
         }
     }
