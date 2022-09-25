@@ -16,7 +16,7 @@
         }
     },
     "pre_install": [
-        "Get-ChildItem \"$dir\\qView-nightly-*.exe\" | Rename-Item -NewName { $_.name -Replace '.+','qView.exe' }",
+        "Get-ChildItem \"$dir\\qView-nightly-*.exe\" | Rename-Item -NewName { $_.name -Replace '-nightly.+', '.exe' }",
         "Remove-Item \"$dir\\qView-*.*-win*.exe\""
     ],
     "bin": "qView.exe",
@@ -27,16 +27,21 @@
         ]
     ],
     "checkver": {
-        "url": "https://dev.azure.com/jurplel/qView/_release?_a=deployments&view=mine&definitionId=2",
-        "regex": "\\{\"id\":\"(?<version>\\d+)\",\"name\":\"(?<date>[\\d.-]+)\"\\}"
+        "script": [
+            "$api = ((Invoke-WebRequest 'https://vsrm.dev.azure.com/jurplel/79795e5b-716b-4a59-a698-8605132587c5/_apis/Release/deployments').Content | ConvertFrom-Json).value[0].release.artifacts[0].definitionReference.version",
+            "('id', 'name' | ForEach-Object { $api.$_ }) -join ' '"
+        ],
+        "regex": "^(\\S+) (?<date>\\S+)$"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://dev.azure.com/jurplel/79795e5b-716b-4a59-a698-8605132587c5/_apis/build/builds/$version/artifacts?artifactName=qView-nightly-win64-$matchDate&api-version=7.0&%24format=zip"
+                "url": "https://dev.azure.com/jurplel/79795e5b-716b-4a59-a698-8605132587c5/_apis/build/builds/$version/artifacts?artifactName=qView-nightly-win64-$matchDate&api-version=7.0&%24format=zip",
+                "extract_dir": "qView-nightly-win64-$matchDate"
             },
             "32bit": {
-                "url": "https://dev.azure.com/jurplel/79795e5b-716b-4a59-a698-8605132587c5/_apis/build/builds/$version/artifacts?artifactName=qView-nightly-win32-$matchDate&api-version=7.0&%24format=zip"
+                "url": "https://dev.azure.com/jurplel/79795e5b-716b-4a59-a698-8605132587c5/_apis/build/builds/$version/artifacts?artifactName=qView-nightly-win32-$matchDate&api-version=7.0&%24format=zip",
+                "extract_dir": "qView-nightly-win32-$matchDate"
             }
         }
     }
