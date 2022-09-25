@@ -55,7 +55,7 @@
             "$zip = '.zip'",
             "if ($verSplit.Length -eq 3 -and $verSplit[2].startsWith('g')) { $build = 'nightly.link/streamlink/windows-builds/workflows/nightly/master/'; $zip += '.zip' }",
             "else { $build = \"github.com/streamlink/windows-builds/releases/download/$($matches[1])/\" }",
-            "Write-Output ($build, $matches[1], $zip -join ' ')"
+            "$build, $matches[1], $zip -join ' '"
         ],
         "regex": "^(?<build>\\S+) (\\S+) (?<zip>\\S+)?$"
     },
