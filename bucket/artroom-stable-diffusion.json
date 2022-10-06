@@ -1,0 +1,41 @@
+{
+    "version": "0.4.1",
+    "description": "Stable Diffusion One-Click Install Local GUI",
+    "homepage": "https://github.com/artmamedov/artroom-stable-diffusion",
+    "license": {
+        "identifier": "Freeware",
+        "url": "https://raw.githubusercontent.com/artmamedov/artroom-stable-diffusion/main/LICENSE"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/artmamedov/artroom-stable-diffusion/releases/download/v0.4.1/Artroom-Setup-0.4.1.exe",
+            "hash": "sha512:1ba48dcec1d95bb2c35f515c0ffa78a7e74cf57cd106c0a4e673ac87542ae6bdc9eb52eb81b151049757b3fcb0f4860132b6340469aee29e4d62ab3409f76994"
+        }
+    },
+    "pre_install": [
+        "New-Item -ItemType dir \"$dir\\temp\" | Out-Null",
+        "Expand-7zipArchive \"$dir\\Artroom-Setup-$version.exe\" -Removal \"$dir\\temp\"",
+        "Expand-7zipArchive \"$dir\\temp\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
+        "Remove-Item -Recurse \"$dir\\temp\"",
+        "Start-Process -Wait \"$dir\\py_cuda_install.exe\" -WorkingDirectory \"$dir\" -NoNewWindow"
+    ],
+    "persist": "sd_settings.json",
+    "shortcuts": [
+        [
+            "Artroom.exe",
+            "Artroom"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/artmamedov/artroom-stable-diffusion/releases/download/v$version/Artroom-Setup-$version.exe",
+                "hash": {
+                    "url": "$baseurl/latest.yml",
+                    "regex": "sha512:\\s$base64"
+                }
+            }
+        }
+    }
+}
