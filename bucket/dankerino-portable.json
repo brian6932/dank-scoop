@@ -8,7 +8,10 @@
             "url": "https://github.com/Mm2PL/dankerino/releases/download/nightly-build/chatterino-windows-x86-64.zip",
             "hash": "78da6e2bcc606fc50acbe91bea8bbb519f3516c1a5b657e656de5d53663a9af9",
             "extract_dir": "Chatterino2",
-            "pre_install": "'portable' > \"$dir\\modes\""
+            "pre_install": [
+                "Get-ChildItem \"$dir\\chatterino.exe\" | Rename-Item -NewName { $_.name -Replace 'chatterino','dankerino-portable' }",
+                "'portable' > \"$dir\\modes\""
+            ]
         }
     },
     "persist": [
@@ -18,16 +21,11 @@
     ],
     "shortcuts": [
         [
-            "chatterino.exe",
+            "dankerino-portable.exe",
             "Dankerino-portable"
         ]
     ],
-    "bin": [
-        [
-            "chatterino.exe",
-            "Dankerino-portable"
-        ]
-    ],
+    "bin": "dankerino-portable.exe",
     "checkver": {
         "url": "https://api.github.com/repos/mm2pl/dankerino/actions/workflows/build.yml/runs?branch=dankerino&status=success",
         "jsonpath": "$.workflow_runs[0].id"
