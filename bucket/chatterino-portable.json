@@ -8,7 +8,10 @@
             "url": "https://github.com/Chatterino/chatterino2/releases/download/nightly-build/chatterino-windows-x86-64.zip",
             "hash": "1fc55085f36f2e432fdf9510a8fe40d9babf5c8a8f823c5b8d6f62b6c4cc724e",
             "extract_dir": "Chatterino2",
-            "pre_install": "'portable' > \"$dir\\modes\""
+            "pre_install": [
+                "Expand-7zipArchive \"$dir\\chatterino-windows-x86-64.zip\" \"$dir\" -ExtractDir 'Chatterino2' -Removal",
+                "Get-ChildItem \"$dir\\chatterino.exe\" | Rename-Item -NewName { $_.name -Replace 'o','o-portable' }"
+            ]
         }
     },
     "persist": [
@@ -18,16 +21,11 @@
     ],
     "shortcuts": [
         [
-            "chatterino.exe",
-            "Dankerino-portable"
+            "chatterino-portable.exe",
+            "Chatterino-portable"
         ]
     ],
-    "bin": [
-        [
-            "chatterino.exe",
-            "Dankerino-portable"
-        ]
-    ],
+    "bin": "chatterino-portable.exe",
     "checkver": {
         "url": "https://api.github.com/repos/Chatterino/chatterino2/actions/workflows/build.yml/runs?branch=master&status=success",
         "jsonpath": "$.workflow_runs[0].id"
