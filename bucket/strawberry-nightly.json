@@ -9,7 +9,7 @@
         "Remove-Item \"$dir\\*-Debug-*.exe\"",
         "Expand-7zipArchive \"$dir\\StrawberrySetup-*-msvc-x$($architecture.Substring(0, 2)).exe\" \"$dir\"",
         "Remove-Item \"$dir\\`$PLUGINSDIR\" -Recurse",
-        "Remove-Item \"$dir\\StrawberrySetup-*.exe\""
+        "'StrawberrySetup-*', 'Uninstall' | ForEach-Object { Remove-Item \"$dir\\$_.exe\" }"
     ],
     "bin": "strawberry.exe",
     "shortcuts": [
@@ -18,10 +18,6 @@
             "Strawberry Music Player"
         ]
     ],
-    "uninstaller": {
-        "file": "Uninstall.exe",
-        "args": "/S"
-    },
     "checkver": {
         "url": "https://api.github.com/repos/strawberrymusicplayer/strawberry/actions/workflows/ccpp.yml/runs?branch=master&status=success",
         "jsonpath": "$.workflow_runs[0].id"
