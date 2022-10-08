@@ -27,7 +27,7 @@
     ],
     "bin": "dankerino-portable.exe",
     "checkver": {
-        "url": "https://api.github.com/repos/mm2pl/dankerino/actions/workflows/build.yml/runs?branch=dankerino&status=success",
+        "url": "https://api.github.com/repositories/202738310/actions/workflows/build.yml/runs?branch=dankerino&status=success",
         "jsonpath": "$.workflow_runs[0].id"
     },
     "autoupdate": {

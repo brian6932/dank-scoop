@@ -15,7 +15,7 @@
         "script": "Remove-Item '~\\AppData\\Roaming\\pandoc\\templates' -Recurse"
     },
     "checkver": {
-        "url": "https://api.github.com/repos/jgm/pandoc-templates/commits",
+        "url": "https://api.github.com/repositories/115543137/commits",
         "jsonpath": "$.[0].sha",
         "regex": "^([a-f0-9]{7})"
     },

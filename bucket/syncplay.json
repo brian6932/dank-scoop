@@ -17,7 +17,7 @@
     ],
     "persist": "syncplay.ini",
     "checkver": {
-        "url": "https://api.github.com/repos/Syncplay/syncplay/releases",
+        "url": "https://api.github.com/repositories/4732425/releases",
         "jsonpath": "$.[0].tag_name"
     },
     "autoupdate": {
