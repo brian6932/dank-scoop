@@ -17,10 +17,13 @@
     ],
     "persist": "syncplay.ini",
     "checkver": {
-        "url": "https://api.github.com/repositories/4732425/releases",
-        "jsonpath": "$.[0].tag_name"
+        "script": [
+            "$ver = ((Invoke-WebRequest 'https://api.github.com/repositories/4732425/releases').Content | ConvertFrom-Json)[0].tag_name",
+            "$ver, ($ver -replace '-', '_') -join ' '"
+        ],
+        "regex": "(\\S+) (?<underscore>\\S+)"
     },
     "autoupdate": {
-        "url": "https://github.com/Syncplay/syncplay/releases/download/$version/Syncplay_$matchHead_$preReleaseVersion_Portable.zip"
+        "url": "https://github.com/Syncplay/syncplay/releases/download/$version/Syncplay_$matchUnderscore_Portable.zip"
     }
 }
