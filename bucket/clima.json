@@ -1,6 +1,6 @@
 {
     "version": "1.0.0",
-    "description": " A minimal viewer for Termimad",
+    "description": "A minimal viewer for Termimad",
     "homepage": "https://github.com/Canop/clima",
     "license": "MIT",
     "architecture": {
