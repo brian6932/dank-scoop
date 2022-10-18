@@ -6,7 +6,7 @@
     "architecture": {
         "64bit": {
             "url": "https://github.com/netxs-group/vtm/releases/download/v0.9.6/vtm_windows_amd64.zip",
-            "hash": "f3ea84cff3edc89b08df4d47a605023f187d7e96b930efddd389924d52a695e3",
+            "hash": "3a5c2da37b8a95e6ab954f3ed95e81016690739905f782aa21213a4c005ab848",
             "extract_dir": "vtm_windows_amd64"
         }
     },
