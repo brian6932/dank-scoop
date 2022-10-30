@@ -1,0 +1,49 @@
+{
+    "version": "1.12.22301",
+    "description": "Set of software components that allows the creation of user mode file systems.",
+    "homepage": "https://winfsp.dev/",
+    "license": "GPL-3.0-only",
+    "url": "https://github.com/winfsp/winfsp/releases/download/v1.12/winfsp-1.12.22301.msi#/setup.msi_",
+    "hash": "e42ca8463eb31f3f0dc49a36bbb5096dfc118bbf28b66f4508049c374d23427d",
+    "installer": {
+        "script": "Invoke-ExternalCommand msiexec -ArgumentList @('/i', \"$dir\\setup.msi_\", 'ADDLOCAL=F.Developer', \"/qn /norestart INSTALLLEVEL=1000 INSTALLDIR=$dir\") -RunAs | Out-Null"
+    },
+    "pre_uninstall": "sc.exe stop WinFsp.Launcher | Out-Null",
+    "uninstaller": {
+        "script": "Invoke-ExternalCommand msiexec -ArgumentList @('/x', \"$dir\\setup.msi_\", '/qn /norestart') -RunAs | Out-Null"
+    },
+    "architecture": {
+        "64bit": {
+            "bin": [
+                "bin\\fsptool-x64.exe",
+                "bin\\launchctl-x64.exe",
+                "bin\\launcher-x64.exe",
+                "bin\\memfs-x64.exe"
+            ]
+        },
+        "32bit": {
+            "bin": [
+                "bin\\fsptool-x86.exe",
+                "bin\\launchctl-x86.exe",
+                "bin\\launcher-x86.exe",
+                "bin\\memfs-x86.exe"
+            ]
+        },
+        "arm64": {
+            "bin": [
+                "bin\\fsptool-a64.exe",
+                "bin\\launchctl-a64.exe",
+                "bin\\launcher-a64.exe",
+                "bin\\memfs-a64.exe"
+            ]
+        }
+    },
+    "checkver": {
+        "url": "https://api.github.com/repositories/59151203/releases",
+        "jsonpath": "$.[0].assets[0].browser_download_url",
+        "regex": "v(?<tag>[\\w.]+)/winfsp-([\\d.]+).msi"
+    },
+    "autoupdate": {
+        "url": "https://github.com/winfsp/winfsp/releases/download/v$matchTag/winfsp-$version.msi#/setup.msi_"
+    }
+}
