@@ -1,0 +1,40 @@
+{
+    "version": "3357992407",
+    "description": "Chat client for twitch.tv. Only nightlies are supported (fork of Chatterino 2).",
+    "homepage": "https://github.com/2547techno/technorino",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/2547techno/technorino/releases/download/nightly-build/chatterino-windows-x86-64.zip",
+            "hash": "058a05dbbff4a1f2f8d4223b609a41f29fca6b2a5b1396af48d69939f6048dbc",
+            "extract_dir": "Chatterino2",
+            "pre_install": [
+                "Get-ChildItem \"$dir\\chatterino.exe\" | Rename-Item -NewName { $_.name -Replace 'chatterino', 'technorino-portable' }",
+                "'portable' > \"$dir\\modes\""
+            ]
+        }
+    },
+    "persist": [
+        "Logs",
+        "Misc",
+        "Settings"
+    ],
+    "shortcuts": [
+        [
+            "technorino-portable.exe",
+            "technorino-portable"
+        ]
+    ],
+    "bin": "technorino-portable.exe",
+    "checkver": {
+        "url": "https://api.github.com/repositories/555937665/actions/workflows/build.yml/runs?branch=technorino&status=success",
+        "jsonpath": "$.workflow_runs[0].id"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/2547techno/technorino/releases/download/nightly-build/chatterino-windows-x86-64.zip"
+            }
+        }
+    }
+}

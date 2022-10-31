@@ -9,7 +9,7 @@
             "hash": "78da6e2bcc606fc50acbe91bea8bbb519f3516c1a5b657e656de5d53663a9af9",
             "extract_dir": "Chatterino2",
             "pre_install": [
-                "Get-ChildItem \"$dir\\chatterino.exe\" | Rename-Item -NewName { $_.name -Replace 'chatterino','dankerino-portable' }",
+                "Get-ChildItem \"$dir\\chatterino.exe\" | Rename-Item -NewName { $_.name -Replace 'chatterino', 'dankerino-portable' }",
                 "'portable' > \"$dir\\modes\""
             ]
         }

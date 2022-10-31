@@ -10,7 +10,7 @@
             "extract_dir": "Chatterino2",
             "pre_install": [
                 "Expand-7zipArchive \"$dir\\chatterino-windows-x86-64.zip\" \"$dir\" -ExtractDir 'Chatterino2' -Removal",
-                "Get-ChildItem \"$dir\\chatterino.exe\" | Rename-Item -NewName { $_.name -Replace 'o','o-portable' }"
+                "Get-ChildItem \"$dir\\chatterino.exe\" | Rename-Item -NewName { $_.name -Replace 'o', 'o-portable' }"
             ]
         }
     },

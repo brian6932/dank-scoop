@@ -8,7 +8,7 @@
             "url": "https://github.com/SevenTV/chatterino7/releases/download/nightly-build/chatterino-windows-x86-64.zip",
             "hash": "3d5b964575299d02e322091a571fed6b7f8a24bd9ef4839fe05ec047ad13ab25",
             "extract_dir": "Chatterino2",
-            "pre_install": "Get-ChildItem \"$dir\\chatterino.exe\" | Rename-Item -NewName { $_.name -Replace 'o','o7' }"
+            "pre_install": "Get-ChildItem \"$dir\\chatterino.exe\" | Rename-Item -NewName { $_.name -Replace 'o', 'o7' }"
         }
     },
     "shortcuts": [
