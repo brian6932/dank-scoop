@@ -15,11 +15,11 @@
     },
     "depends": "winfsp-np-beta",
     "installer": {
-        "script": "Invoke-ExternalCommand msiexec -ArgumentList @('/i', \"$dir\\setup.msi_\", \"/qn /norestart INSTALLLEVEL=1000 INSTALLDIR=$dir\") -RunAs | Out-Null"
+        "script": "Invoke-ExternalCommand msiexec.exe -ArgumentList @('/i', \"$dir\\setup.msi_\", \"/qn /norestart INSTALLLEVEL=1000 INSTALLDIR=$dir\") -RunAs | Out-Null"
     },
     "pre_uninstall": "'sshfs*', 'ssh' | ForEach-Object { Stop-Process -Force -Name $_ -ErrorAction SilentlyContinue }",
     "uninstaller": {
-        "script": "Invoke-ExternalCommand msiexec -ArgumentList @('/x', \"$dir\\setup.msi_\", '/qn /norestart') -RunAs | Out-Null"
+        "script": "Invoke-ExternalCommand msiexec.exe -ArgumentList @('/x', \"$dir\\setup.msi_\", '/qn /norestart') -RunAs | Out-Null"
     },
     "bin": [
         "bin\\sshfs.exe",

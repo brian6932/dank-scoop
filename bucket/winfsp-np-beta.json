@@ -6,38 +6,29 @@
     "url": "https://github.com/winfsp/winfsp/releases/download/v1.12/winfsp-1.12.22301.msi#/setup.msi_",
     "hash": "e42ca8463eb31f3f0dc49a36bbb5096dfc118bbf28b66f4508049c374d23427d",
     "installer": {
-        "script": "Invoke-ExternalCommand msiexec -ArgumentList @('/i', \"$dir\\setup.msi_\", 'ADDLOCAL=F.Developer', \"/qn /norestart INSTALLLEVEL=1000 INSTALLDIR=$dir\") -RunAs | Out-Null"
+        "script": [
+            "Invoke-ExternalCommand msiexec.exe -ArgumentList @('/i', \"$dir\\setup.msi_\", 'ADDLOCAL=F.Developer,F.KernelDeveloper', \"/qn /norestart INSTALLLEVEL=1000 INSTALLDIR=$dir\") -RunAs | Out-Null",
+            "if ($architecture -eq 'arm64') { $arch = '-a64' } else { $arch = \"-x$($architecture.Substring(0, 2))\" }",
+            "'fsptool', 'launchctl', 'launcher', 'memfs' | ForEach-Object { Get-ChildItem \"$dir\\bin\\$_$arch.exe\" } | Rename-Item -NewName { $_.name -Replace $arch }"
+        ]
     },
-    "pre_uninstall": "sc.exe stop WinFsp.Launcher | Out-Null",
+    "pre_uninstall": [
+        "'sshfs*', 'ssh', 'explorer' | ForEach-Object { Stop-Process -Force -Name $_ -ErrorAction SilentlyContinue }",
+        "'WinFsp.Launcher', 'WinFsp', 'StorSvc' | ForEach-Object { sc.exe stop $_ | Out-Null }"
+    ],
     "uninstaller": {
-        "script": "Invoke-ExternalCommand msiexec -ArgumentList @('/x', \"$dir\\setup.msi_\", '/qn /norestart') -RunAs | Out-Null"
+        "script": [
+            "Invoke-ExternalCommand msiexec.exe -ArgumentList @('/x', \"$dir\\setup.msi_\", '/qn /norestart') -RunAs | Out-Null",
+            "Start-Process -Wait -NoNewWindow explorer.exe",
+            "sc.exe start StorSvc | Out-Null"
+        ]
     },
-    "architecture": {
-        "64bit": {
-            "bin": [
-                "bin\\fsptool-x64.exe",
-                "bin\\launchctl-x64.exe",
-                "bin\\launcher-x64.exe",
-                "bin\\memfs-x64.exe"
-            ]
-        },
-        "32bit": {
-            "bin": [
-                "bin\\fsptool-x86.exe",
-                "bin\\launchctl-x86.exe",
-                "bin\\launcher-x86.exe",
-                "bin\\memfs-x86.exe"
-            ]
-        },
-        "arm64": {
-            "bin": [
-                "bin\\fsptool-a64.exe",
-                "bin\\launchctl-a64.exe",
-                "bin\\launcher-a64.exe",
-                "bin\\memfs-a64.exe"
-            ]
-        }
-    },
+    "bin": [
+        "bin\\fsptool.exe",
+        "bin\\launchctl.exe",
+        "bin\\launcher.exe",
+        "bin\\memfs.exe"
+    ],
     "checkver": {
         "url": "https://api.github.com/repositories/59151203/releases",
         "jsonpath": "$.[0].assets[0].browser_download_url",
