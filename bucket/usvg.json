@@ -1,0 +1,21 @@
+{
+    "version": "0.25.0",
+    "description": "An SVG preprocessor/simplifier for the resvg project",
+    "homepage": "https://github.com/RazrFalcon/resvg",
+    "license": "MPL-2.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/RazrFalcon/resvg/releases/download/v0.25.0/usvg-win64.zip",
+            "hash": "7652fb1b90ff8278a63aec22b51882b1cfc24b2b1765abe5fe0db6399e04d191"
+        }
+    },
+    "bin": "usvg.exe",
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/RazrFalcon/resvg/releases/download/v$version/usvg-win64.zip"
+            }
+        }
+    }
+}
