@@ -6,7 +6,7 @@
     "architecture": {
         "64bit": {
             "url": "https://github.com/Chatterino/chatterino2/releases/download/nightly-build/chatterino-windows-x86-64.zip",
-            "hash": "e41181bd29618a9c12e1acd3a184d7da9d24da18408a0f0ed165e37793788a03",
+            "hash": "49ecdea1f5925a9e6b25be8ff898bfe11defd65ea03c83be91975dabb114f100",
             "extract_dir": "Chatterino2"
         }
     },
