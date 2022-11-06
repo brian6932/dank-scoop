@@ -3,6 +3,7 @@
     "homepage": "https://github.com/fiatjaf/jiq",
     "description": "Interactive JSON query tool using jq expressions",
     "license": "MIT",
+    "notes": "Maintainer here: I really suggest you use main/jid instead of this, while the concept is interesting, it is very buggy",
     "depends": "jq",
     "architecture": {
         "64bit": {
