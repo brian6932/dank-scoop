@@ -24,10 +24,12 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/alexhallam/tv/releases/download/$version/tidy-viewer-$version-x86_64-pc-windows-msvc.zip"
+                "url": "https://github.com/alexhallam/tv/releases/download/$version/tidy-viewer-$version-x86_64-pc-windows-msvc.zip",
+                "extract_dir": "tidy-viewer-$version-x86_64-pc-windows-msvc"
             },
             "32bit": {
-                "url": "https://github.com/alexhallam/tv/releases/download/$version/tidy-viewer-$version-i686-pc-windows-msvc.zip"
+                "url": "https://github.com/alexhallam/tv/releases/download/$version/tidy-viewer-$version-i686-pc-windows-msvc.zip",
+                "extract_dir": "tidy-viewer-$version-i686-pc-windows-msvc"
             }
         }
     }
