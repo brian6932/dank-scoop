@@ -12,7 +12,7 @@
     "bin": "MemoryChecker.exe",
     "checkver": {
         "script": [
-            "$api = ((Invoke-WebRequest https://api.github.com/repositories/431646642/releases/latest).Content | ConvertFrom-Json)",
+            "$api = Invoke-RestMethod https://api.github.com/repositories/431646642/releases/latest",
             "$api.tag_name, $api.assets[0].updated_at.ToString('yyyy-MM-dd') -join ' '"
         ],
         "regex": "^(\\S+) (?<date>\\S+)$"

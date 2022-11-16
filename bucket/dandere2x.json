@@ -21,7 +21,7 @@
     "persist": "config_files",
     "checkver": {
         "script": [
-            "$api = ((Invoke-WebRequest https://api.github.com/repositories/171577816/releases).Content | ConvertFrom-Json)[0..5] | Where-Object { $_.assets.name.split('.')[0] -match '^\\d+$' }",
+            "$api = (Invoke-RestMethod https://api.github.com/repositories/171577816/releases)[0..5] | Where-Object { $_.assets.name.split('.')[0] -match '^\\d+$' }",
             "$api[0].tag_name, $api.assets[0].name -join ' '"
         ],
         "regex": "^(?<tag>\\S+) ([\\d.]+b?)\\.zip$"
