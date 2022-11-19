@@ -1,21 +1,24 @@
 {
-    "version": "1.11",
-    "description": "A hexdump utility by Juergen Weigert, v1.11 by Vadim Vygonets",
-    "homepage": "https://sourceforge.net/projects/xxd-for-windows",
-    "license": "Vim",
-    "url": "https://sourceforge.net/projects/xxd-for-windows/files/xxd-1.11_win32%28static%29.zip",
-    "hash": "md5:99a170dd241ab0cc721f0fd9e3187230",
-    "extract_dir": "xxd-1.11_win32",
+    "version": "3503490544",
+    "description": "A hexdump utility by Juergen Weigert",
+    "homepage": "https://github.com/ckormanyos/xxd",
+    "license": "Vim,GPL-2.0-only",
+    "architecture": {
+        "64bit": {
+            "url": "https://nightly.link/ckormanyos/xxd/workflows/xxd/main/xxd-win64-msvc.zip",
+            "hash": "5e72bb71c2975f968ad5e9bb808387bed927904f01b93a96bda5c531cbf8a930"
+        }
+    },
     "bin": "xxd.exe",
     "checkver": {
-        "url": "https://sourceforge.net/projects/xxd-for-windows/rss?path=",
-        "regex": "xxd-([\\d.]+)_win32\\(static\\).zip"
+        "url": "https://api.github.com/repositories/475011866/actions/workflows/xxd.yml/runs?branch=main&status=success",
+        "jsonpath": "$.workflow_runs[0].id"
     },
     "autoupdate": {
-        "url": "https://sourceforge.net/projects/xxd-for-windows/files/xxd-$version_win32%28static%29.zip",
-        "hash": {
-            "url": "https://sourceforge.net/projects/xxd-for-windows/rss?path=",
-            "regex": "$url/download\" filesize=\"\\d+\"><media:hash algo=\"md5\">$md5</media:hash>"
+        "architecture": {
+            "64bit": {
+                "url": "https://nightly.link/ckormanyos/xxd/workflows/xxd/main/xxd-win64-msvc.zip"
+            }
         }
     }
 }
