@@ -1,5 +1,5 @@
 {
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Stable Diffusion One-Click Install Local GUI",
     "homepage": "https://github.com/artmamedov/artroom-stable-diffusion",
     "license": {
@@ -8,8 +8,8 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/artmamedov/artroom-stable-diffusion/releases/download/v1.0.0/Artroom-Setup-1.0.0.exe",
-            "hash": "sha512:64fb3e82de70b36464017ae3ff966216ceef682eb798e0e61219347a830872705ea5f5cb993e40cbc2a0dd3e462d141e47f201dd2e7e26f2c9b8da6161a1d08e"
+            "url": "https://github.com/artmamedov/artroom-stable-diffusion/releases/download/v1.0.1/Artroom-Setup-1.0.1.exe",
+            "hash": "sha512:867fe0b7882563dd5e66e2c746455d5fed5a9431f35b8802a9b9975a16533c2b61832555f70689a9d47c71d3af15279f7d29bf86f6d54e3954e49c31b5bd7172"
         }
     },
     "pre_install": [
