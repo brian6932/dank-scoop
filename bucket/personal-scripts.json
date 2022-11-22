@@ -5,11 +5,7 @@
     "url": "https://github.com/brian6932/personal-scripts/archive/refs/heads/main.zip",
     "license": "Unknown",
     "hash": "8b4ba0516aa76fbbf2299fb9445c23c3656129b6cbab37fd24c10a4adbeac56d",
-    "extract_dir": "personal-scripts-main",
-    "pre_install": [
-        "New-Item \"$dir\\bin\" -ItemType directory | Out-Null",
-        "Get-ChildItem \"$dir\" -File | Where-Object { $_.name -notlike '*.json' } | ForEach-Object { Move-Item $_ \"$dir\\bin\" }"
-    ],
+    "pre_install": "Rename-Item \"$dir\\personal-scripts-main\" \"$dir\\bin\"",
     "env_add_path": "bin",
     "checkver": {
         "script": "Get-Date (Invoke-RestMethod https://api.github.com/repositories/465033301/commits/main).commit.committer.date -UFormat %s",
