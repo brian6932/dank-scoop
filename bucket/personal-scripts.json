@@ -1,20 +1,17 @@
 {
-    "version": "0.1.6",
-    "description": "Just some personal scripts that I wanted to add to scoop",
+    "version": "1669095336",
+    "description": "Just some personal scripts",
     "homepage": "https://github.com/brian6932/personal-scripts/",
-    "url": "https://github.com/brian6932/personal-scripts/releases/download/0.1.6/personal-scripts.zip",
+    "url": "https://github.com/brian6932/personal-scripts/archive/refs/heads/main.zip",
     "license": "Unknown",
-    "hash": "eef88aab36595ed699e7f807083d1dbed8b15d8b96a4c4d20c0481f9dea23507",
-    "bin": [
-        "envDupe.ps1",
-        "HShield.ps1",
-        "VODLink.ps1",
-        "CLGrab.ps1",
-        "LCBC.ps1",
-        "iu.ps1"
-    ],
-    "checkver": "github",
+    "hash": "8b4ba0516aa76fbbf2299fb9445c23c3656129b6cbab37fd24c10a4adbeac56d",
+    "extract_dir": "personal-scripts-main",
+    "env_add_path": ".",
+    "checkver": {
+        "script": "Get-Date (Invoke-RestMethod https://api.github.com/repositories/465033301/commits/main).commit.committer.date -UFormat %s",
+        "regex": "^(\\d+)$"
+    },
     "autoupdate": {
-        "url": "https://github.com/brian6932/personal-scripts/releases/download/$version/personal-scripts.zip"
+        "url": "https://github.com/brian6932/personal-scripts/archive/refs/heads/main.zip"
     }
 }
