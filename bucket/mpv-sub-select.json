@@ -5,6 +5,7 @@
     "license": "MIT",
     "url": "https://github.com/CogentRedTester/mpv-sub-select/archive/refs/heads/master.zip",
     "hash": "2f970f46c90dbfa82fad40969412f73603d519a94e00b594d8c08415006f0ff5",
+    "extract_dir": "mpv-sub-select-master",
     "checkver": {
         "script": "Get-Date (Invoke-RestMethod https://api.github.com/repositories/313069059/commits)[0].commit.committer.date -UFormat %s",
         "regex": "^(\\d+)$"
