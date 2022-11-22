@@ -7,7 +7,7 @@
     "hash": "7543b4dbb3935eac618f3b479bd4ab5cdbd24392e4631c5a2acd6b5494c88e0c",
     "extract_dir": "thumbfast-master",
     "checkver": {
-        "script": "Get-Date (Invoke-RestMethod https://api.github.com/repositories/536318034/commits/master)[0].commit.committer.date -UFormat %s",
+        "script": "Get-Date (Invoke-RestMethod https://api.github.com/repositories/536318034/commits/master).commit.committer.date -UFormat %s",
         "regex": "^(\\d+)$"
     },
     "autoupdate": {

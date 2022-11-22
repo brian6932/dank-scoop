@@ -15,7 +15,7 @@
         "script": "Remove-Item '~\\AppData\\Roaming\\pandoc\\templates' -Recurse"
     },
     "checkver": {
-        "script": "Get-Date (Invoke-RestMethod https://api.github.com/repositories/115543137/commits/master)[0].commit.committer.date -UFormat %s",
+        "script": "Get-Date (Invoke-RestMethod https://api.github.com/repositories/115543137/commits/master).commit.committer.date -UFormat %s",
         "regex": "^(\\d+)$"
     },
     "autoupdate": {
