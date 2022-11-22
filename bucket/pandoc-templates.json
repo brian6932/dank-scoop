@@ -1,5 +1,5 @@
 {
-    "version": "7c4f7cb",
+    "version": "1661187475",
     "description": "Templates for pandoc, tagged to release",
     "homepage": "https://github.com/jgm/pandoc-templates",
     "license": "GPL-2.0-or-later,BSD-3-Clause",
@@ -15,9 +15,8 @@
         "script": "Remove-Item '~\\AppData\\Roaming\\pandoc\\templates' -Recurse"
     },
     "checkver": {
-        "url": "https://api.github.com/repositories/115543137/commits",
-        "jsonpath": "$.[0].sha",
-        "regex": "^([a-f0-9]{7})"
+        "script": "Get-Date (Invoke-RestMethod https://api.github.com/repositories/115543137/commits/master)[0].commit.committer.date -UFormat %s",
+        "regex": "^(\\d+)$"
     },
     "autoupdate": {
         "url": "https://github.com/jgm/pandoc-templates/archive/refs/heads/master.zip"
