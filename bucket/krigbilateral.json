@@ -1,14 +1,13 @@
 {
-    "version": "2022-05-30",
+    "version": "1653894736",
     "description": "KrigBilateral (mpv shader) by Shiandow",
-    "homepage": "https://gist.github.com/a015fc885d5c22e6891820ad8955563",
+    "homepage": "https://gist.githubusercontent.com/igv/a015fc885d5c22e6891820ad89555637/raw/KrigBilateral.glsl",
     "license": "GPL-3.0-or-later",
     "url": "https://gist.githubusercontent.com/igv/a015fc885d5c22e6891820ad89555637/raw/KrigBilateral.glsl",
     "hash": "b886cf5f9f672077870bdc1ad4cbf59d06abb54bac3a05da10743203de41493f",
     "checkver": {
-        "url": "https://api.github.com/gists/a015fc885d5c22e6891820ad89555637",
-        "jsonpath": "$.history[0].committed_at",
-        "regex": "([\\d-]+)T"
+        "script": "Get-Date (Invoke-RestMethod https://api.github.com/gists/a015fc885d5c22e6891820ad89555637).history[0].committed_at -UFormat %s",
+        "regex": "^(\\d+)$"
     },
     "autoupdate": {
         "url": "https://gist.githubusercontent.com/igv/a015fc885d5c22e6891820ad89555637/raw/KrigBilateral.glsl"

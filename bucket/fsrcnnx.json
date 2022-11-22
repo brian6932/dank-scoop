@@ -1,5 +1,5 @@
 {
-    "version": "2022-01-08",
+    "version": "1641641053",
     "description": "An implementation of the Fast Super-Resolution Convolutional Neural Network in TensorFlow",
     "homepage": "https://github.com/igv/FSRCNN-TensorFlow",
     "license": "GPL-3.0-only,MIT",
@@ -16,9 +16,9 @@
     "checkver": {
         "script": [
             "$api = Invoke-RestMethod https://api.github.com/repositories/99480330/releases/latest",
-            "$api.assets[0].updated_at.ToString('yyyy-MM-dd'), $api.assets[1].name, $api.tag_name -join ' '"
+            "(Get-Date $api.assets[0].updated_at -UFormat %s), $api.assets[1].name, $api.tag_name -join ' '"
         ],
-        "regex": "^(\\S+) \\w+-(?<shader>[\\d-]+)\\.glsl (?<tag>\\S+)$"
+        "regex": "^(\\d+) \\w+-(?<shader>[\\d-]+)\\.glsl (?<tag>\\S+)$"
     },
     "autoupdate": {
         "url": [
