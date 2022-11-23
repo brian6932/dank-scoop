@@ -1,10 +1,10 @@
 {
-    "version": "1.12.22301",
+    "version": "2.0.22327",
     "description": "Set of software components that allows the creation of user mode file systems.",
     "homepage": "https://winfsp.dev/",
     "license": "GPL-3.0-only",
-    "url": "https://github.com/winfsp/winfsp/releases/download/v1.12/winfsp-1.12.22301.msi#/setup.msi_",
-    "hash": "e42ca8463eb31f3f0dc49a36bbb5096dfc118bbf28b66f4508049c374d23427d",
+    "url": "https://github.com/winfsp/winfsp/releases/download/v2.0B1/winfsp-2.0.22327.msi#/setup.msi_",
+    "hash": "282609e174c22e7222bb7b00dc40b45d8c4c3b42e04b0ecfc1f42eba9d27434e",
     "installer": {
         "script": [
             "Invoke-ExternalCommand msiexec.exe -ArgumentList @('/i', \"$dir\\setup.msi_\", 'ADDLOCAL=F.Developer,F.KernelDeveloper', \"/qn /norestart INSTALLLEVEL=1000 INSTALLDIR=$dir\") -RunAs | Out-Null",
