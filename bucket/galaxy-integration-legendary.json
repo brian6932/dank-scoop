@@ -5,17 +5,15 @@
     "license": "Unknown",
     "url": "https://github.com/currall/galaxy-integration-legendary/releases/download/v0.4/GalaxyPluginEpic.zip",
     "hash": "83d9eb3badd140d16baee18cfd5ef2335289e3822c28f6f81c1a71369b67a2db",
-    "post_install": [
-        "$installPath = '~\\AppData\\Local\\GOG.com\\Galaxy\\plugins\\installed\\GalaxyPluginEpic'",
-        "if (!(Test-Path $installPath)) { New-Item -ItemType dir $installPath | Out-Null }",
-        "Move-Item \"$original_dir\\*\" $installPath -Force",
+    "pre_install": [
         "$legendaryLocation = where.exe legendary.exe | Select-Object -First 1",
-        "if ($legendaryLocation) { (Get-Content $installPath\\config.txt) -replace '(?<=legendary: ).+', $legendaryLocation | Set-Content $installPath\\config.txt }",
-        "else { error \"$app requires legendary to be installed\"; break }"
+        "if (!$legendaryLocation) { error \"$app requires legendary to be installed\"; break }",
+        "$config = \"$dir\\config.txt\"",
+        "(Get-Content $config) -replace '(?<=legendary: ).+', $legendaryLocation | Set-Content $config",
+        "$installPath = \"$HOME\\AppData\\Local\\GOG.com\\Galaxy\\plugins\\installed\\GalaxyPluginEpic\"",
+        "if (!(Test-Path $installPath)) { New-Item -ItemType SymbolicLink -Path $installPath -Target \"$dir\" | Out-Null }"
     ],
-    "uninstaller": {
-        "script": "Remove-Item '~\\AppData\\Local\\GOG.com\\Galaxy\\plugins\\installed\\GalaxyPluginEpic' -Recurse"
-    },
+    "post_uninstall": "Remove-Item '~\\AppData\\Local\\GOG.com\\Galaxy\\plugins\\installed\\GalaxyPluginEpic' -Recurse",
     "checkver": "github",
     "autoupdate": {
         "url": "https://github.com/currall/galaxy-integration-legendary/releases/download/v$version/GalaxyPluginEpic.zip"

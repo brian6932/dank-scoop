@@ -5,15 +5,13 @@
     "license": "GPL-2.0-or-later,BSD-3-Clause",
     "url": "https://github.com/jgm/pandoc-templates/archive/refs/heads/master.zip",
     "hash": "72b9ea34511cc026428d08595082a2e9ae4aab180da8cf8ed09044fb38cad167",
-    "extract_dir": "pandoc-templates-master",
-    "post_install": [
-        "$installPath = '~\\AppData\\Roaming\\pandoc\\templates'",
-        "if ((Test-Path $installPath) -eq $false) { New-Item -ItemType dir $installPath | Out-Null }",
-        "Move-Item \"$original_dir\\*\" $installPath -Force"
+    "pre_install": [
+        "$templates = \"$dir\\templates\"",
+        "Rename-Item \"$dir\\pandoc-templates-master\" $templates",
+        "$installPath = \"$HOME\\AppData\\Roaming\\pandoc\\templates\"",
+        "if (!(Test-Path $installPath)) { New-Item -ItemType SymbolicLink -Path $installPath -Target $templates | Out-Null }"
     ],
-    "uninstaller": {
-        "script": "Remove-Item '~\\AppData\\Roaming\\pandoc\\templates' -Recurse"
-    },
+    "post_uninstall": "Remove-Item -Recurse '~\\AppData\\Roaming\\pandoc\\templates'",
     "checkver": {
         "script": "Get-Date (Invoke-RestMethod https://api.github.com/repositories/115543137/commits/master).commit.committer.date -UFormat %s",
         "regex": "^(\\d+)$"
