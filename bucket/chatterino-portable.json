@@ -9,8 +9,9 @@
             "hash": "66876cff32c0da694948996c41f478923cd78fcea20442703fdadbca8567761f",
             "extract_dir": "Chatterino2",
             "pre_install": [
-                "Expand-7zipArchive \"$dir\\chatterino-windows-x86-64.zip\" \"$dir\" -ExtractDir 'Chatterino2' -Removal",
-                "Get-ChildItem \"$dir\\chatterino.exe\" | Rename-Item -NewName { $_.name -Replace 'o', 'o-portable' }"
+                "Get-ChildItem \"$dir\\chatterino.exe\" | Rename-Item -NewName { $_.name -Replace 'o', 'o-portable' }",
+                "$modes = \"$dir\\modes\"",
+                "\"'portable' >$(if (Test-Path $modes) { '>' }) $modes\" | Invoke-Expression"
             ]
         }
     },

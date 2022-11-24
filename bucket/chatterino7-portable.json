@@ -10,7 +10,8 @@
             "extract_dir": "Chatterino2",
             "pre_install": [
                 "Get-ChildItem \"$dir\\chatterino.exe\" | Rename-Item -NewName { $_.name -Replace 'o', 'o7-portable' }",
-                "'portable' > \"$dir\\modes\""
+                "$modes = \"$dir\\modes\"",
+                "\"'portable' >$(if (Test-Path $modes) { '>' }) $modes\" | Invoke-Expression"
             ]
         }
     },
