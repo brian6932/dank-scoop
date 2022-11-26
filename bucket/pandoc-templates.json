@@ -8,10 +8,10 @@
     "pre_install": [
         "$templates = \"$dir\\templates\"",
         "Rename-Item \"$dir\\pandoc-templates-master\" $templates",
-        "$installPath = \"$HOME\\AppData\\Roaming\\pandoc\\templates\"",
+        "$installPath = \"$env:APPDATA\\pandoc\\templates\"",
         "if (!(Test-Path $installPath)) { New-Item -ItemType SymbolicLink -Path $installPath -Target $templates | Out-Null }"
     ],
-    "post_uninstall": "Remove-Item -Recurse '~\\AppData\\Roaming\\pandoc\\templates'",
+    "post_uninstall": "Remove-Item -Recurse \"$env:APPDATA\\pandoc\\templates\"",
     "checkver": {
         "script": "Get-Date (Invoke-RestMethod https://api.github.com/repositories/115543137/commits/master).commit.committer.date -UFormat %s",
         "regex": "^(\\d+)$"
