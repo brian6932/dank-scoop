@@ -1,10 +1,10 @@
 {
-    "version": "1668132985",
+    "version": "1669638786",
     "description": "Mpv lua script to create and manage playlists",
     "homepage": "https://github.com/jonniek/mpv-playlistmanager",
     "license": "Unlicense",
     "url": "https://github.com/jonniek/mpv-playlistmanager/archive/refs/heads/master.zip",
-    "hash": "ded38de7a244823d7bc187d106f89f3b523ee028abbb3ada0a5e8467a9802e7a",
+    "hash": "54968079d27b2d4127749d22cdcbc1c50587343fdd690ef7bef3149a705ab8a1",
     "extract_dir": "mpv-playlistmanager-master",
     "pre_install": "Get-ChildItem \"$dir\" -Exclude *.json, *.conf, *.lua | Remove-Item -Recurse",
     "checkver": {
