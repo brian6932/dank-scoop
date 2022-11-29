@@ -1,10 +1,10 @@
 {
-    "version": "1668949835",
+    "version": "1669728255",
     "description": "Scripts made for mpv by Eisa01",
     "homepage": "https://github.com/Eisa01/mpv-scripts",
     "license": "BSD-2-Clause",
     "url": "https://github.com/Eisa01/mpv-scripts/archive/refs/heads/master.zip",
-    "hash": "4cdcdda8a8939a20db9f971545078aea5bf4516bb983ba30ebf3ae7bcd328ee3",
+    "hash": "c3a808dd8c1d5a88b41661122bf7b515a8396c28e255fd1eb8140f7fb1523ec4",
     "extract_dir": "mpv-scripts-master",
     "pre_install": "Get-ChildItem \"$dir\" -Exclude scripts, script-opts | Remove-Item -Recurse",
     "checkver": {
