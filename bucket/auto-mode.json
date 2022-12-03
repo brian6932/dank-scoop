@@ -1,5 +1,5 @@
 {
-    "version": "1666694745",
+    "version": "4.0.2",
     "description": "An mpv script that changes options depending on what type of file is played. It uses the file extension to detect if the current file is a video, audio or image file.",
     "homepage": "https://github.com/stax76/mpv-scripts/blob/main/auto-mode.lua",
     "license": "GPL-2.0-only",
