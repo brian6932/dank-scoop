@@ -7,9 +7,11 @@
     "hash": "282609e174c22e7222bb7b00dc40b45d8c4c3b42e04b0ecfc1f42eba9d27434e",
     "installer": {
         "script": [
-            "Invoke-ExternalCommand msiexec.exe -ArgumentList @('/i', \"$dir\\setup.msi_\", 'ADDLOCAL=F.Developer,F.KernelDeveloper', \"/qn /norestart INSTALLLEVEL=1000 INSTALLDIR=$dir\") -RunAs | Out-Null",
+            "$install = \"$dir\\install\"",
+            "New-Item -ItemType dir $install | Out-Null",
+            "Invoke-ExternalCommand msiexec.exe -ArgumentList @('/i', \"$dir\\setup.msi_\", 'ADDLOCAL=F.Developer,F.KernelDeveloper', \"/qn /norestart INSTALLLEVEL=1000 INSTALLDIR=$install\") -RunAs | Out-Null",
             "if ($architecture -eq 'arm64') { $arch = '-a64' } else { $arch = \"-x$($architecture.Substring(0, 2))\" }",
-            "'fsptool', 'launchctl', 'launcher', 'memfs' | ForEach-Object { Get-ChildItem \"$dir\\bin\\$_$arch.exe\" } | Rename-Item -NewName { $_.name -Replace $arch }"
+            "'fsptool', 'launchctl', 'launcher', 'memfs' | ForEach-Object { Get-ChildItem \"$install\\bin\\$_$arch.exe\" } | Rename-Item -NewName { $_.name -Replace $arch }"
         ]
     },
     "pre_uninstall": [
@@ -24,10 +26,10 @@
         ]
     },
     "bin": [
-        "bin\\fsptool.exe",
-        "bin\\launchctl.exe",
-        "bin\\launcher.exe",
-        "bin\\memfs.exe"
+        "install\\bin\\fsptool.exe",
+        "install\\bin\\launchctl.exe",
+        "install\\bin\\launcher.exe",
+        "install\\bin\\memfs.exe"
     ],
     "checkver": {
         "url": "https://api.github.com/repositories/59151203/releases",
