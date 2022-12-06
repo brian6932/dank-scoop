@@ -8,7 +8,7 @@
     "pre_install": "Rename-Item \"$dir\\personal-scripts-main\" \"$dir\\bin\"",
     "env_add_path": "bin",
     "checkver": {
-        "script": "Get-Date (Invoke-RestMethod https://api.github.com/repositories/465033301/commits/main).commit.committer.date -UFormat %s",
+        "script": "(Get-Date (Invoke-RestMethod https://api.github.com/repositories/465033301/commits/main).commit.committer.date -UFormat %s), '' | Select-Object -First 1",
         "regex": "^(\\d+)$"
     },
     "autoupdate": {

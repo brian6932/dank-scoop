@@ -6,7 +6,7 @@
     "url": "https://raw.githubusercontent.com/stax76/mpv-scripts/main/misc.lua",
     "hash": "1a6ebb352ac461264694079e9247ba001bc3a118c8f3224707fe93f7b14553e1",
     "checkver": {
-        "script": "Get-Date (Invoke-RestMethod https://api.github.com/repositories/474184335/commits?path=misc.lua)[0].commit.committer.date -UFormat %s",
+        "script": "(Get-Date (Invoke-RestMethod https://api.github.com/repositories/474184335/commits?path=misc.lua)[0].commit.committer.date -UFormat %s), '' | Select-Object -First 1",
         "regex": "^(\\d+)$"
     },
     "autoupdate": {
