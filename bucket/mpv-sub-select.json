@@ -1,5 +1,5 @@
 {
-    "version": "1667561327",
+    "version": "3.7",
     "description": "An advanced conditional subtitle track selector for mpv player",
     "homepage": "https://github.com/CogentRedTester/mpv-sub-select",
     "license": "MIT",
