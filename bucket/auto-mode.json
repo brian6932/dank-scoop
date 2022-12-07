@@ -1,10 +1,10 @@
 {
-    "version": "1666694745",
+    "version": "1670389519",
     "description": "An mpv script that changes options depending on what type of file is played. It uses the file extension to detect if the current file is a video, audio or image file.",
     "homepage": "https://github.com/stax76/mpv-scripts/blob/main/auto-mode.lua",
     "license": "GPL-2.0-only",
     "url": "https://raw.githubusercontent.com/stax76/mpv-scripts/main/auto-mode.lua",
-    "hash": "520efae8b5634daa05ccfd673cb81509eb3fc7b32286efd4cf9e55dc40c3b82e",
+    "hash": "bff4f5bf1215cba7f560f30e9025194340da1364854bfbc5c591db5a4a5288ae",
     "checkver": {
         "script": "(Get-Date (Invoke-RestMethod https://api.github.com/repositories/474184335/commits?path=auto-mode.lua)[0].commit.committer.date -UFormat %s), '' | Select-Object -First 1",
         "regex": "^(\\d+)$"
