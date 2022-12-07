@@ -1,11 +1,11 @@
 {
-    "version": "3.7",
+    "version": "3.7.4",
     "description": "Dandere2x - Fast Waifu2x Video Upscaling.",
     "homepage": "https://github.com/akai-katto/dandere2x",
     "license": "GPL-3.0-only",
-    "url": "https://github.com/akai-katto/dandere2x/releases/download/3.7/3.7.zip",
-    "hash": "c92d468cb793691d7287b3d04e15bf8022c8b481e121a8f0d2379c85c34c055d",
-    "extract_dir": "3.7",
+    "url": "https://github.com/akai-katto/dandere2x/releases/download/3.7/3.7.4.zip",
+    "hash": "3fa62c7c1707bb4bf6664dfe76a7eb8ae22ab3e31cdff0f299e2afd042165c33",
+    "extract_dir": "3.7.4",
     "bin": [
         [
             "main.exe",
