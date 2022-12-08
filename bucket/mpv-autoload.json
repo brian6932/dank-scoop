@@ -1,5 +1,5 @@
 {
-    "version": "2.34.2",
+    "version": "1666589679",
     "description": "An mpv script that automatically loads playlist entries before and after the the currently played file.",
     "homepage": "https://github.com/mpv-player/mpv/blob/master/TOOLS/lua/autoload.lua",
     "license": "LGPL-2.1-or-later,GPL-2.0-or-later",
