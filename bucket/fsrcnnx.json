@@ -15,8 +15,13 @@
     ],
     "checkver": {
         "script": [
-            "$api = Invoke-RestMethod https://api.github.com/repositories/99480330/releases/latest",
-            "(Get-Date $api.assets[0].updated_at -UFormat %s), $api.assets[1].name, $api.tag_name -join ' '"
+            "try {",
+            "    $api = Invoke-RestMethod https://api.github.com/repositories/99480330/releases/latest",
+            "    (Get-Date $api.assets[0].updated_at -UFormat %s), $api.assets[1].name, $api.tag_name -join ' '",
+            "}",
+            "catch {",
+            "    ''",
+            "}"
         ],
         "regex": "^(\\d+) \\w+-(?<shader>[\\d-]+)\\.glsl (?<tag>\\S+)$"
     },
