@@ -50,11 +50,16 @@
     "persist": "config",
     "checkver": {
         "script": [
-            "$(try { (Invoke-RestMethod https://api.github.com/repositories/472790314/actions/artifacts).artifacts[0].name } catch { '' }) -Match 'streamlink-([\\w.-]+)-py' | Out-Null",
-            "$verSplit = $matches[1].split('-')",
-            "if ($verSplit.Length -eq 3 -and $verSplit[2][0] -eq 'g') { $build = 'nightly' }",
-            "else { $build = 'main' }",
-            "$build, $matches[1] -join ' '"
+            "try {",
+            "    (Invoke-RestMethod https://api.github.com/repositories/472790314/actions/artifacts).artifacts[0].name) -Match 'streamlink-([\\w.-]+)-py' | Out-Null",
+            "    $verSplit = $matches[1].split('-')",
+            "    if ($verSplit.Length -eq 3 -and $verSplit[2][0] -eq 'g') { $build = 'nightly' }",
+            "    else { $build = 'main' }",
+            "    $build, $matches[1] -join ' '",
+            "}",
+            "catch {",
+            "    ''",
+            "}"
         ],
         "regex": "^(?<build>\\S+) (\\S+)$"
     },
