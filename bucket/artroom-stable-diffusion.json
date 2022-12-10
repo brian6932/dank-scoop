@@ -9,7 +9,7 @@
     "architecture": {
         "64bit": {
             "url": "https://github.com/artmamedov/artroom-stable-diffusion/releases/download/v1.0.3/Artroom-Setup-1.0.3.exe",
-            "hash": "sha512:333b6ecf722f26d21e7ca94ba6036e06aa832e61a97c64d70c0905a49ece912561f24cb963faf6b74ac409c10e951f653b42944d57f4e9d42026685d623198ed"
+            "hash": "sha512:b4f128d894f68b7e6799d57441cccff68d3068e7d575ba8166ec3c114a8e16f383054ec7ed85c0b12ecbe45bd93e883a918d11503350a3aa658f283ed4ccb6bf"
         }
     },
     "pre_install": [
