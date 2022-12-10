@@ -20,7 +20,7 @@
             "    ''",
             "}"
         ],
-        "regex": "^(\\S+) (?<date>\\S+)$"
+        "regex": "\\A(\\S+) (?<date>\\S+)\\Z"
     },
     "autoupdate": {
         "architecture": {

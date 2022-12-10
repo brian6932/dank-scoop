@@ -8,7 +8,7 @@
     "bin": "ConvertFrom-SourceTable.ps1",
     "checkver": {
         "script": "try { Get-Date (Invoke-RestMethod https://api.github.com/repositories/135068861/commits?path=ConvertFrom-SourceTable.ps1)[0].commit.committer.date -UFormat %s } catch { '' }",
-        "regex": "^(\\d+)$"
+        "regex": "\\A(\\d+)\\Z"
     },
     "autoupdate": {
         "url": "https://raw.githubusercontent.com/iRon7/ConvertFrom-SourceTable/master/ConvertFrom-SourceTable.ps1"

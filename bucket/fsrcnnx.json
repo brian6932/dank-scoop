@@ -23,7 +23,7 @@
             "    ''",
             "}"
         ],
-        "regex": "^(\\d+) \\w+-(?<shader>[\\d-]+)\\.glsl (?<tag>\\S+)$"
+        "regex": "\\A(\\d+) \\w+-(?<shader>[\\d-]+)\\.glsl (?<tag>\\S+)\\Z"
     },
     "autoupdate": {
         "url": [

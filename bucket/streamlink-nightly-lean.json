@@ -61,7 +61,7 @@
             "    ''",
             "}"
         ],
-        "regex": "^(?<build>\\S+) (\\S+)$"
+        "regex": "\\A(?<build>\\S+) (\\S+)\\Z"
     },
     "autoupdate": {
         "architecture": {

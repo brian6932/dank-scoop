@@ -9,7 +9,7 @@
     "pre_install": "'README', 'LICENSE' | ForEach-Object { Remove-Item \"$dir\\$_\" }",
     "checkver": {
         "script": "try { Get-Date (Invoke-RestMethod https://codeberg.org/api/v1/repos/jouni/mpv_sponsorblock_minimal/commits?sha=master)[0].commit.committer.date -UFormat %s } catch { '' }",
-        "regex": "^(\\d+)$"
+        "regex": "\\A(\\d+)\\Z"
     },
     "autoupdate": {
         "url": "https://codeberg.org/jouni/mpv_sponsorblock_minimal/archive/master.zip"

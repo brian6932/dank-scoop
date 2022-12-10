@@ -30,7 +30,7 @@
             "    ''",
             "}"
         ],
-        "regex": "^(?<tag>\\S+) ([\\d.]+b?)$"
+        "regex": "\\A(?<tag>\\S+) ([\\d.]+b?)\\Z"
     },
     "autoupdate": {
         "url": "https://github.com/akai-katto/dandere2x/releases/download/$matchTag/$version.zip",

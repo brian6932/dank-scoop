@@ -9,7 +9,7 @@
     "pre_install": "Get-ChildItem \"$dir\" -Exclude scripts, script-opts | Remove-Item -Recurse",
     "checkver": {
         "script": "try { Get-Date (Invoke-RestMethod https://api.github.com/repositories/153626229/commits/master).commit.committer.date -UFormat %s } catch { '' }",
-        "regex": "^(\\d+)$"
+        "regex": "\\A(\\d+)\\Z"
     },
     "autoupdate": {
         "url": "https://github.com/Eisa01/mpv-scripts/archive/refs/heads/master.zip"

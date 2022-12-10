@@ -9,7 +9,7 @@
     "pre_install": "Get-ChildItem \"$dir\" -Exclude scripts, script-opts, fonts | Remove-Item -Recurse",
     "checkver": {
         "script": "try { Get-Date (Invoke-RestMethod https://api.github.com/repositories/244438373/commits/main).commit.committer.date -UFormat %s } catch { '' }",
-        "regex": "^(\\d+)$"
+        "regex": "\\A(\\d+)\\Z"
     },
     "autoupdate": {
         "url": "https://github.com/tomasklaen/uosc/archive/refs/heads/main.zip"

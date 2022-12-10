@@ -9,7 +9,7 @@
     "env_add_path": "bin",
     "checkver": {
         "script": "try { Get-Date (Invoke-RestMethod https://api.github.com/repositories/465033301/commits/main).commit.committer.date -UFormat %s } catch { '' }",
-        "regex": "^(\\d+)$"
+        "regex": "\\A(\\d+)\\Z"
     },
     "autoupdate": {
         "url": "https://github.com/brian6932/personal-scripts/archive/refs/heads/main.zip"

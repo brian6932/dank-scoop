@@ -7,7 +7,7 @@
     "hash": "bff4f5bf1215cba7f560f30e9025194340da1364854bfbc5c591db5a4a5288ae",
     "checkver": {
         "script": "try { Get-Date (Invoke-RestMethod https://api.github.com/repositories/474184335/commits?path=auto-mode.lua)[0].commit.committer.date -UFormat %s } catch { '' }",
-        "regex": "^(\\d+)$"
+        "regex": "\\A(\\d+)\\Z"
     },
     "autoupdate": {
         "url": "https://raw.githubusercontent.com/stax76/mpv-scripts/main/auto-mode.lua"
