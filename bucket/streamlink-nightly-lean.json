@@ -51,7 +51,7 @@
     "checkver": {
         "script": [
             "try {",
-            "    (Invoke-RestMethod https://api.github.com/repositories/472790314/actions/artifacts).artifacts[0].name) -Match 'streamlink-([\\w.-]+)-py' | Out-Null",
+            "    (Invoke-RestMethod https://api.github.com/repositories/472790314/actions/artifacts).artifacts[0].name -Match 'streamlink-([\\w.-]+)-py' | Out-Null",
             "    $verSplit = $matches[1].split('-')",
             "    if ($verSplit.Length -eq 3 -and $verSplit[2][0] -eq 'g') { $build = 'nightly' }",
             "    else { $build = 'main' }",
