@@ -1,16 +1,16 @@
 {
-    "version": "0.20.0",
+    "version": "0.20.1",
     "description": "🦜 Accessible image processing and conversion from the terminal. Front-end for image-rs/image.",
     "homepage": "https://github.com/foresterre/sic",
     "license": "Apache-2.0,MIT,BSD-3-Clause,CC0-1.0,zlib-acknowledgement",
     "architecture": {
         "64bit": {
             "url": [
-                "https://github.com/foresterre/sic/releases/download/v0.20.0/sic-0.20.0-x86_64-pc-windows-msvc.zip",
-                "https://github.com/foresterre/sic/releases/download/v0.20.0/shell_completions.zip"
+                "https://github.com/foresterre/sic/releases/download/v0.20.1/sic-0.20.1-x86_64-pc-windows-msvc.zip",
+                "https://github.com/foresterre/sic/releases/download/v0.20.1/shell_completions.zip"
             ],
             "hash": [
-                "9858580ac0c6b23a0875c2b3a5a6e179ec09ba19e9492d938318d5e44951449c",
+                "f91e671fec321211a1b325cfd49b2f76946f37263d199c895d231e48a254bbef",
                 "45dbbc2af3eb18ae05d8aeeff748a15a052fb2fc3b4ca703c193df8aa0b0ee0b"
             ],
             "pre_install": [
