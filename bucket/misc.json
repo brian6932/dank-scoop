@@ -1,10 +1,10 @@
 {
-    "version": "1669409443",
+    "version": "1671021283",
     "description": "stax76's misc mpv lua scripts",
     "homepage": "https://github.com/stax76/mpv-scripts/blob/main/misc.lua",
     "license": "GPL-2.0-only",
     "url": "https://raw.githubusercontent.com/stax76/mpv-scripts/main/misc.lua",
-    "hash": "1a6ebb352ac461264694079e9247ba001bc3a118c8f3224707fe93f7b14553e1",
+    "hash": "ca97d3d9f19da3b74fe09e9c01923ba9a21d161b2928bdb4b2a1682ad3d56d28",
     "checkver": {
         "script": "try { Get-Date (Invoke-RestMethod https://api.github.com/repositories/474184335/commits?path=misc.lua)[0].commit.committer.date -UFormat %s } catch { '' }",
         "regex": "\\A(\\d+)\\Z"
