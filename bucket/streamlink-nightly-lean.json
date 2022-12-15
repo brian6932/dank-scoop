@@ -9,7 +9,10 @@
             "ffmpeg",
             "ffmpeg-nightly"
         ],
-        "VLC Player": "extras/vlc"
+        "mpv": [
+            "extras/mpv",
+            "extras/mpv-git"
+        ]
     },
     "architecture": {
         "64bit": {
