@@ -21,7 +21,6 @@
     "uninstaller": {
         "script": [
             "Invoke-ExternalCommand msiexec.exe -ArgumentList @('/x', \"$dir\\setup.msi_\", '/qn /norestart') -RunAs | Out-Null",
-            "Start-Process -Wait -NoNewWindow explorer.exe",
             "sc.exe start StorSvc | Out-Null"
         ]
     },
