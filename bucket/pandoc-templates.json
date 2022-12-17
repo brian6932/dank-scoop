@@ -11,7 +11,7 @@
         "$installPath = \"$env:APPDATA\\pandoc\\templates\"",
         "if (!(Test-Path $installPath)) { New-Item -ItemType SymbolicLink -Path $installPath -Target $templates | Out-Null }"
     ],
-    "post_uninstall": "Remove-Item -Recurse \"$env:APPDATA\\pandoc\\templates\"",
+    "post_uninstall": "Remove-Item -Recurse -ErrorAction Ignore \"$env:APPDATA\\pandoc\\templates\"",
     "checkver": {
         "script": "try { Get-Date (Invoke-RestMethod https://api.github.com/repositories/115543137/commits/master).commit.committer.date -UFormat %s } catch { '' }",
         "regex": "\\A(\\d+)\\Z"
