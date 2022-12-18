@@ -4,7 +4,7 @@
     "homepage": "https://github.com/stax76/mpv-scripts/blob/main/misc.lua",
     "license": "GPL-2.0-only",
     "url": "https://raw.githubusercontent.com/stax76/mpv-scripts/main/misc.lua",
-    "hash": "7ed0e6dfe7102ea6c013575e95fb88b1a78166f9be3299c384af5c790dab789e",
+    "hash": "597f8340228ce51d4e86d47c2e8680c22b6ea5670c7244a5c8e85f31e46a7b95",
     "checkver": {
         "script": "try { Get-Date (Invoke-RestMethod https://api.github.com/repositories/474184335/commits?path=misc.lua)[0].commit.committer.date -UFormat %s } catch { '' }",
         "regex": "\\A(\\d+)\\Z"
