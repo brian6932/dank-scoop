@@ -6,7 +6,7 @@
     "architecture": {
         "64bit": {
             "url": "https://github.com/Chatterino/chatterino2/releases/download/nightly-build/chatterino-windows-x86-64.zip",
-            "hash": "72ba6e6283cd26f8b6ed96bfd8f6421c198f59a70fe27d5aba4a76208e652ed7",
+            "hash": "1bd6a62980e80c94934f9769c434f23903c19bb544674668e8bf0babc305d6f8",
             "extract_dir": "Chatterino2",
             "pre_install": [
                 "Get-ChildItem \"$dir\\chatterino.exe\" | Rename-Item -NewName { $_.name -Replace 'o', 'o-portable' }",
