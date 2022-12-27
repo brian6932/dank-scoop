@@ -1,12 +1,12 @@
 {
-    "version": "3775766238",
+    "version": "3788997297",
     "description": "Chat client for https://twitch.tv",
     "homepage": "https://github.com/Chatterino/chatterino2",
     "license": "MIT",
     "architecture": {
         "64bit": {
             "url": "https://github.com/Chatterino/chatterino2/releases/download/nightly-build/chatterino-windows-x86-64.zip",
-            "hash": "dbe4a77d301ea486a0a98550bf003ac7340aaecfe966f4ec855e679d1fc868bf",
+            "hash": "dd1c08c0866407869bdc45cca1af26b5476678ac7668d5b3a67a9178e878700c",
             "extract_dir": "Chatterino2",
             "pre_install": [
                 "Get-ChildItem \"$dir\\chatterino.exe\" | Rename-Item -NewName { $_.name -Replace 'o', 'o-portable' }",
