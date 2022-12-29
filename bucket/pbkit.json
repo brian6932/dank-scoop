@@ -1,0 +1,24 @@
+{
+    "version": "0.0.57",
+    "description": "Protobuf toolkit for modern web development",
+    "homepage": "https://github.com/pbkit/pbkit",
+    "license": "Apache-2.0,MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/pbkit/pbkit/releases/download/v0.0.57/pbkit-x86_64-pc-windows-msvc.tar",
+            "hash": "0b10dba510d88d6026bc639369545b4d9c7143240574635e7e65d7ebf8cd33c3"
+        }
+    },
+    "bin": [
+        "pb.exe",
+        "pollapo.exe"
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/pbkit/pbkit/releases/download/v$version/pbkit-x86_64-pc-windows-msvc.tar"
+            }
+        }
+    }
+}
