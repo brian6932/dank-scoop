@@ -17,11 +17,11 @@
     "architecture": {
         "64bit": {
             "url": "https://nightly.link/streamlink/windows-builds/workflows/nightly/master/streamlink-5.1.2-19-gc81ceff-py311-x86_64.zip.zip",
-            "hash": "e0c8b58fdaf7b1ca39c6719f84c144170f8034f1b0cac75c49a1ca43a0440058"
+            "hash": "b8fef8dc1c5bfbed85b5e146aa25abc3f7b0ce0b4a673f3c6f38b9ab0927fc79"
         },
         "32bit": {
             "url": "https://nightly.link/streamlink/windows-builds/workflows/nightly/master/streamlink-5.1.2-19-gc81ceff-py311-x86.zip.zip",
-            "hash": "40bbeb25f0e7e482cb2223b64596ac5886be7ede4a02b632d8ed82ce338fe322"
+            "hash": "9dd1b28559545bc26cc7614ca836be747a0957a863b480722e22c89922d9f936"
         }
     },
     "pre_install": [
