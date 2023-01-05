@@ -1,12 +1,12 @@
 {
-    "version": "0.4.1",
+    "version": "0.4.2",
     "description": "Extremely fast JavaScript minifier, available for Rust and Node.js",
     "homepage": "https://github.com/wilsonzlin/minify-js",
     "license": "Unknown",
     "architecture": {
         "64bit": {
-            "url": "https://static.wilsonl.in/minify-js/cli/0.4.1/windows-x86_64/minify-js.exe",
-            "hash": "58752fad1027421d99301e04c935aa49c231d16ad15698b79b714565ab7d3c89"
+            "url": "https://static.wilsonl.in/minify-js/cli/0.4.2/windows-x86_64/minify-js.exe",
+            "hash": "7e53b6e9bb55a74f7e286cbd063f417239a08f5d60506168cd6c403adfcdbb03"
         }
     },
     "bin": "minify-js.exe",
