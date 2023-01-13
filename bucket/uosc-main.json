@@ -1,10 +1,10 @@
 {
-    "version": "1673381747",
+    "version": "1673635277",
     "description": "Feature-rich minimalist proximity-based UI for MPV player.",
     "homepage": "https://github.com/tomasklaen/uosc",
     "license": "GPL-3.0-only",
     "url": "https://github.com/tomasklaen/uosc/archive/refs/heads/main.zip",
-    "hash": "867557fb77da4ace8707d2b20ed8e763b87ae2cb63f1e4f0e7a18eb53dd927f3",
+    "hash": "604992814daa42d67072a85924425f18d75864c815dee2e8d25b921616df1cb4",
     "extract_dir": "uosc-main",
     "pre_install": "Get-ChildItem \"$dir\" -Exclude scripts, script-opts, fonts | Remove-Item -Recurse",
     "checkver": {
