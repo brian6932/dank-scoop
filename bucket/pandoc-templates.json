@@ -1,10 +1,10 @@
 {
-    "version": "1661187475",
+    "version": "1674077028",
     "description": "Templates for pandoc, tagged to release",
     "homepage": "https://github.com/jgm/pandoc-templates",
     "license": "GPL-2.0-or-later,BSD-3-Clause",
     "url": "https://github.com/jgm/pandoc-templates/archive/refs/heads/master.zip",
-    "hash": "72b9ea34511cc026428d08595082a2e9ae4aab180da8cf8ed09044fb38cad167",
+    "hash": "898e67a9a98a3ebec88c4f18f1cb678e66cc33875959981c21570f3535fc5aa0",
     "pre_install": [
         "$templates = \"$dir\\templates\"",
         "Rename-Item \"$dir\\pandoc-templates-master\" $templates",
