@@ -1,12 +1,12 @@
 {
-    "version": "0.0.58",
+    "version": "0.0.59",
     "description": "Protobuf toolkit for modern web development",
     "homepage": "https://github.com/pbkit/pbkit",
     "license": "Apache-2.0,MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/pbkit/pbkit/releases/download/v0.0.58/pbkit-x86_64-pc-windows-msvc.tar",
-            "hash": "004233813898d664de661f5750ac124660f8b68194b84e2c3078ac48773607fc"
+            "url": "https://github.com/pbkit/pbkit/releases/download/v0.0.59/pbkit-x86_64-pc-windows-msvc.tar",
+            "hash": "5064f1758a8aa5694b7c757f3f2d1feea9a879b815d8634bf0b566ab40ad399f"
         }
     },
     "bin": [
