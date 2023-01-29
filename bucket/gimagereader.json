@@ -1,16 +1,16 @@
 {
-    "version": "3602253389",
+    "version": "4037760750",
     "description": "A Gtk/Qt front-end to tesseract-ocr.",
     "homepage": "https://github.com/manisandro/gImageReader",
     "license": "GPL-3.0-only",
     "architecture": {
         "64bit": {
             "url": "https://github.com/manisandro/gImageReader/releases/download/ci-latest-master/gImageReader_latest_qt5_x86_64_portable.zip",
-            "hash": "b9147423bba373328d18f4827d4b4e676cab54517ee2cf356d1f3aec174527fe"
+            "hash": "93dd02569ac8a42c645af231f87bb056aa44901cbece7df804d870fdd3fa2807"
         },
         "32bit": {
             "url": "https://github.com/manisandro/gImageReader/releases/download/ci-latest-master/gImageReader_latest_qt5_i686_portable.zip",
-            "hash": "ddbaa50039d9accfae9ddec2afb4ce2b4f745eda9043aae3bde12e54ea9ec10d"
+            "hash": "659c73627978ebf63b45ec46b11ba45edc7be9fb08293d706d983d0ac8a13055"
         }
     },
     "shortcuts": [
