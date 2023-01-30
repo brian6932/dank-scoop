@@ -1,10 +1,10 @@
 {
-    "version": "1672610920",
+    "version": "1675084687",
     "description": "zsh-syntax-highlighting for PowerShell.",
     "homepage": "https://github.com/digitalguy99/pwsh-syntax-highlighting",
     "license": "Freeware",
     "url": "https://github.com/digitalguy99/pwsh-syntax-highlighting/archive/refs/heads/main.zip",
-    "hash": "8b3584ec9cd4edb30e51caa2cbc6825fbe99d9af3e353215c12d5147b1672e07",
+    "hash": "2e60b0edb0d71c25832aa26e1c16fc4f12981bb06af1dcb8c9ffe77feef0cd6c",
     "extract_dir": "pwsh-syntax-highlighting-main",
     "pre_install": "Remove-Item \"$dir\\README.md\"",
     "notes": "Add `Import-Module syntax-highlighting` in your Powershell profile",
