@@ -1,6 +1,6 @@
 {
     "version": "1.4",
-    "description": "Get-MediaInfo is a PowerShell MediaInfo solution",
+    "description": "Publishes changes in file system as powershell engine event",
     "homepage": "https://github.com/wgross/fswatcher-engine-event",
     "license": "MIT",
     "url": "https://psg-prod-eastus.azureedge.net/packages/fswatcherengineevent.1.4.0.nupkg",
