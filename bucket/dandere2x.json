@@ -23,7 +23,7 @@
         "script": [
             "try {",
             "    $api = (Invoke-RestMethod https://api.github.com/repositories/171577816/releases)[0..2] | Where-Object { $_.assets.name.split('.')[0] -match '^\\d+$' }",
-            "    $zip = '[\\d.]+b?(?=\\.zip\\Z)'",
+            "    $zip = '[\\d.]+(?=b?\\.zip\\Z)'",
             "    [version]$max = 0.0.0",
             "    foreach ($ver in $api.assets.name) { if ($ver -match $zip -and ($curr = [version][string]$matches.Values) -gt $max) { $max = $curr } }",
             "    $api[0].tag_name, $max -join ' '",
@@ -32,7 +32,7 @@
             "    ''",
             "}"
         ],
-        "regex": "\\A(?<tag>\\S+) ([\\d.]+b?)\\Z"
+        "regex": "\\A(?<tag>\\S+) ([\\d.]+)\\Z"
     },
     "autoupdate": {
         "url": "https://github.com/akai-katto/dandere2x/releases/download/$matchTag/$version.zip",
