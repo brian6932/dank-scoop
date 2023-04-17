@@ -5,8 +5,8 @@
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/SevenTV/chatterino7/releases/download/nightly-build/chatterino-windows-x86-64-Qt-5.15.2.zip",
-            "hash": "5035526828fa5b74a914254b5ad55e5374870a16c31491b8dac7506364dc05f5",
+            "url": "https://github.com/SevenTV/chatterino7/releases/download/nightly-build/EXPERIMENTAL-chatterino-windows-x86-64-Qt-6.5.0.zip",
+            "hash": "d2b05279023405b7896398911755800af2c13fd059cc90d3bc56615866e3e048",
             "extract_dir": "Chatterino2",
             "pre_install": [
                 "Get-ChildItem \"$dir\\chatterino.exe\" | Rename-Item -NewName { $_.name.Replace('o', 'o7-portable') }",
@@ -34,7 +34,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/SevenTV/chatterino7/releases/download/nightly-build/chatterino-windows-x86-64-Qt-5.15.2.zip"
+                "url": "https://github.com/SevenTV/chatterino7/releases/download/nightly-build/EXPERIMENTAL-chatterino-windows-x86-64-Qt-6.5.0.zip"
             }
         }
     }
