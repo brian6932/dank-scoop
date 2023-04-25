@@ -4,7 +4,7 @@
     "homepage": "https://github.com/tomasklaen/uosc",
     "license": "GPL-3.0-only",
     "url": "https://github.com/tomasklaen/uosc/archive/refs/heads/main.zip",
-    "hash": "7b6fa2aaff3bcdddebdf136bc9c54fd6d01485160be836cf494df3bb02710c4c",
+    "hash": "ed4f35e6b4c2d4bd8ed119287e3a09867555fdedf5a043d948042a95b618b92a",
     "extract_dir": "uosc-main",
     "pre_install": "Get-ChildItem \"$dir\" -Exclude scripts, script-opts, fonts | Remove-Item -Recurse",
     "checkver": {
