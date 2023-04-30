@@ -9,6 +9,7 @@
             "hash": "b32d16d4cf9b20f7fa540e55105ea49a508f79b58765b0f1c86daa90e8500a5a"
         }
     },
+    "pre_install": "Expand-InnoArchive (Get-ChildItem \"$dir\\SETUP_*_$version.exe\") -Removal -DestinationPath \"$dir\"",
     "shortcuts": [
         [
             "Glorious Core.exe",
