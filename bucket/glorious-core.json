@@ -3,6 +3,7 @@
     "description": "Glorious CORE is a unified software suite designed to give you full control over your peripherals",
     "homepage": "https://www.gloriousgaming.com/pages/glorious-core",
     "license": "Proprietary",
+    "depends": "innounp",
     "architecture": {
         "64bit": {
             "url": "https://downloads.gloriousgamingservices.com/download/GloriousCore.zip",
