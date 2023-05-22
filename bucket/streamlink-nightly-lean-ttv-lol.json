@@ -1,5 +1,5 @@
 {
-    "version": "5.5.1-13-g3ea8b9f",
+    "version": "5.5.1-2",
     "description": "A command-line utility that pipes video streams from various services into a video player.",
     "homepage": "https://streamlink.github.io/",
     "license": "BSD-2-Clause",
@@ -17,21 +17,21 @@
     "architecture": {
         "64bit": {
             "url": [
-                "https://nightly.link/streamlink/windows-builds/workflows/nightly/master/streamlink-5.5.1-13-g3ea8b9f-py311-x86_64.zip.zip",
+                "https://nightly.link/streamlink/windows-builds/workflows/main/master/streamlink-5.5.1-2-py311-x86_64.zip.zip",
                 "https://raw.githubusercontent.com/2bc4/streamlink-ttvlol/master/twitch.py"
             ],
             "hash": [
-                "f7c4a7cfaffb1f57847f50e64781f0cf6aed0bdf78c731ad723ec83e82dc507b",
+                "e5adc935549ef05017c33758d6cd87549ca05f2162a37aa01599b6b6268115ad",
                 "3816452771569ee274a7506167bd05255742b3c895e066ba783391394f838d51"
             ]
         },
         "32bit": {
             "url": [
-                "https://nightly.link/streamlink/windows-builds/workflows/nightly/master/streamlink-5.5.1-13-g3ea8b9f-py311-x86.zip.zip",
+                "https://nightly.link/streamlink/windows-builds/workflows/main/master/streamlink-5.5.1-2-py311-x86.zip.zip",
                 "https://raw.githubusercontent.com/2bc4/streamlink-ttvlol/master/twitch.py"
             ],
             "hash": [
-                "b86d522a84f823f5cb875c575970b6ba73c3314f9155c551ba7c608de0ad98d5",
+                "06d90330666ee27c7f0122d95815be1e5048ed1a48d47fa6bf7f6dd87a01354b",
                 "3816452771569ee274a7506167bd05255742b3c895e066ba783391394f838d51"
             ]
         }
