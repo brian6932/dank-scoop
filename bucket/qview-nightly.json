@@ -1,0 +1,54 @@
+{
+    "version": "5804212457",
+    "description": "Practical and minimal image viewer",
+    "homepage": "https://github.com/jurplel/qView",
+    "license": "GPL-3.0-only",
+    "architecture": {
+        "64bit": {
+            "url": "https://nightly.link/jurplel/qView/workflows/build/master/qView-nightly-Windows_64-2023-08-09.1.zip",
+            "hash": "3ede6b30d952d9cda088afbd62733a6e2b221241815c4d774ef5f27fab45cb96"
+        },
+        "32bit": {
+            "url": "https://nightly.link/jurplel/qView/workflows/build/master/qView-nightly-Windows_32-2023-08-09.1.zip",
+            "hash": "b677604ec771e54f4d22de61b944343380e9a0ee16fcd6ae0fdd7639e49010f2"
+        }
+    },
+    "pre_install": [
+        "Get-ChildItem \"$dir\\qView-nightly-*.exe\" | Rename-Item -NewName { $_.name -Replace '-nightly.+', '.exe' }",
+        "Remove-Item \"$dir\\qView-*.*-win*.exe\"",
+        "'apng', 'apngd', 'avif', 'jpegxl' | ForEach-Object { $_ = \"imageformats\\q$_.dll\"; if (!(Test-Path \"$persist_dir\\$_\")) { New-Item \"$dir\\$_\" | Out-Null } }"
+    ],
+    "persist": [
+        "imageformats\\qapng.dll",
+        "imageformats\\qapngd.dll",
+        "imageformats\\qavif.dll",
+        "imageformats\\qjpegxl.dll"
+    ],
+    "bin": "qView.exe",
+    "shortcuts": [
+        [
+            "qView.exe",
+            "qView"
+        ]
+    ],
+    "checkver": {
+        "script": [
+            "try {",
+            "    $api = (Invoke-RestMethod 'https://api.github.com/repositories/123522764/actions/workflows/build.yml/runs?branch=master&status=success').workflow_runs[0]",
+            "    ($api.id, $api.updated_at.ToString('yyyy-MM-dd'), $api.run_attempt) -join ' '",
+            "}",
+            "catch { '' }"
+        ],
+        "regex": "\\A(\\d+) (?<date>\\d{4}(?:-\\d{2}){2}) (?<attempt>\\d+)\\Z"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://nightly.link/jurplel/qView/workflows/build/master/qView-nightly-Windows_64-$matchDate.$matchAttempt.zip"
+            },
+            "32bit": {
+                "url": "https://nightly.link/jurplel/qView/workflows/build/master/qView-nightly-Windows_32-$matchDate.$matchAttempt.zip"
+            }
+        }
+    }
+}
