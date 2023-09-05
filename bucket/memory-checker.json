@@ -1,12 +1,12 @@
 {
-    "version": "1.2.3",
+    "version": "1.2.2",
     "description": "Memory Checker is a simple memory stress-testing tool.",
     "homepage": "https://github.com/lordmulder/MemoryChecker",
     "license": "CC0-1.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/lordmulder/MemoryChecker/releases/download/1.2.3/MemoryChecker.2021-12-11.zip",
-            "hash": "4341ee1b1dec31d9b4c6e532ef0605fee9ba92d8e4a188aeb574d3913b7654f5"
+            "url": "https://github.com/lordmulder/MemoryChecker/releases/download/1.2.2/MemoryChecker.2021-12-05.zip",
+            "hash": "df82f7d79d7b0497a0e083a613d629535c83c8add9d8a44a1832c82f8525fefc"
         }
     },
     "bin": "MemoryChecker.exe",
