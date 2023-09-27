@@ -11,8 +11,10 @@
     "pre_install": [
         "$ddu = \"DDU v$version\"",
         "Expand-7zipArchive \"$dir\\$ddu.exe\" \"$dir\" -ExtractDir $ddu -Removal",
-        "Get-ChildItem \"$dir\" -Exclude *.exe, Settings | Remove-Item -Force -Recurse"
+        "Get-ChildItem \"$dir\" -Exclude *.exe, Settings | Remove-Item -Force -Recurse",
+        "if (!(Test-Path \"$persist_dir\\Settings\\Settings.xml\")) { New-Item \"$dir\\Settings\\Settings.xml\" | Out-Null }"
     ],
+    "persist": "Settings\\Settings.xml",
     "shortcuts": [
         [
             "Display Driver Uninstaller.exe",
