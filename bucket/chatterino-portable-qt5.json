@@ -1,12 +1,13 @@
 {
-    "version": "6368722401",
+    "version": "6370824112",
     "description": "Chat client for https://twitch.tv",
     "homepage": "https://github.com/Chatterino/chatterino2",
     "license": "MIT",
+    "notes": "DON'T USE UNLESS YOU'RE BELOW WINDOWS 8 OR EARLIER, UNSAFE! This build suffers from the libwebp buffer overflow exploit!",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/Chatterino/chatterino2/releases/download/nightly-build/EXPERIMENTAL-chatterino-windows-x86-64-Qt-6.5.0.zip",
-            "hash": "5f8c6c3af7efcdaced7f9384f04a7355c18a9cb8f02315233b6fc7e929e478e2",
+            "url": "https://github.com/Chatterino/chatterino2/releases/download/nightly-build/chatterino-windows-old-x86-64-Qt-5.15.2.zip",
+            "hash": "6e07dfd152929e6c39ad827d08c11c7fd5740cba42ae363de97cbb26f889ea28",
             "extract_dir": "Chatterino2",
             "pre_install": [
                 "Get-ChildItem \"$dir\\chatterino.exe\" | Rename-Item -NewName { $_.name.Replace('o', 'o-portable') }",
@@ -35,7 +36,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/Chatterino/chatterino2/releases/download/nightly-build/EXPERIMENTAL-chatterino-windows-x86-64-Qt-6.5.0.zip"
+                "url": "https://github.com/Chatterino/chatterino2/releases/download/nightly-build/chatterino-windows-old-x86-64-Qt-5.15.2.zip"
             }
         }
     }
