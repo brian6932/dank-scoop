@@ -15,7 +15,7 @@
         ]
     },
     "pre_uninstall": [
-        "'sshfs*', 'ssh', 'explorer' | ForEach-Object { Stop-Process -Force -Name $_ -ErrorAction SilentlyContinue }",
+        "'sshfs*', 'ssh' | ForEach-Object { Stop-Process -Force -Name $_ -ErrorAction SilentlyContinue }",
         "'WinFsp.Launcher', 'WinFsp', 'StorSvc' | ForEach-Object { sc.exe stop $_ | Out-Null }"
     ],
     "uninstaller": {
