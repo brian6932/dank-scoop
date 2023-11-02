@@ -15,7 +15,7 @@
         ]
     },
     "pre_uninstall": [
-        "if ($fsptool = where.exe fsptool.exe | Select -First 1) { & $fsptool unload }",
+        "if ($fsptool = where.exe fsptool.exe | Select-Object -First 1) { & $fsptool unload }",
         "'WinFsp.Launcher', 'WinFsp' | ForEach-Object { sc.exe stop $_ | Out-Null }"
     ],
     "uninstaller": {
