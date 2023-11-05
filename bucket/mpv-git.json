@@ -25,7 +25,7 @@
             "hash": "sha1:647a9fcd0443bb99fd99cec9711360dec488c0fe"
         }
     },
-    "pre_install": "Remove-Item \"$dir\\updater.bat\"",
+    "pre_install": "Remove-Item \"$dir/updater.bat\"",
     "env_add_path": ".",
     "shortcuts": [
         [

@@ -37,31 +37,31 @@
         }
     },
     "pre_install": [
-        "Expand-7zipArchive \"$dir\\streamlink-$version-py311-x86*.zip\" \"$dir\" -Removal",
+        "Expand-7zipArchive \"$dir/streamlink-$version-py311-x86*.zip\" \"$dir\" -Removal",
         "$python = try { (py.exe -0p | Select-Object -First 1 | Select-String \\S+\\Z).Matches.Value } catch {}",
         "$paths = 'bin', 'pkgs'",
         "if ($python -and ($ver = [System.Version]((py.exe -V) -Replace '[^\\d.]')) -lt [System.Version]'3.12.0' -and $ver -ge [System.Version]'3.11.0') {",
-        "New-Item -ItemType SymbolicLink -Path \"$dir\\Python\" -Target ($python | Split-Path) | Out-Null",
+        "New-Item -ItemType SymbolicLink -Path \"$dir/Python\" -Target ($python | Split-Path) | Out-Null",
         "} else { $paths += 'Python' }",
-        "$paths | ForEach-Object { Move-Item \"$dir\\streamlink-$version-py311-x86*\\$_\" \"$dir\" }",
-        "Remove-Item -Recurse \"$dir\\streamlink-$version-py311-x86*\"",
-        "Move-Item -Force \"$dir\\twitch.py\" \"$dir\\pkgs\\streamlink\\plugins\"",
-        "if (!(Test-Path \"$persist_dir\\config\")) {",
-        "    if (Test-Path \"$env:APPDATA\\streamlink\\config\") {",
+        "$paths | ForEach-Object { Move-Item \"$dir/streamlink-$version-py311-x86*/$_\" \"$dir\" }",
+        "Remove-Item -Recurse \"$dir/streamlink-$version-py311-x86*\"",
+        "Move-Item -Force \"$dir/twitch.py\" \"$dir/pkgs/streamlink/plugins\"",
+        "if (!(Test-Path \"$persist_dir/config\")) {",
+        "    if (Test-Path \"$env:APPDATA/streamlink/config\") {",
         "        info 'Copying existing ''config'' from ''%APPDATA%\\streamlink\\config'''",
-        "        Copy-Item \"$env:APPDATA\\streamlink\\config\" \"$dir\\config\"",
+        "        Copy-Item \"$env:APPDATA/streamlink/config\" \"$dir/config\"",
         "    } else {",
-        "        New-Item \"$dir\\config\" | Out-Null",
+        "        New-Item \"$dir/config\" | Out-Null",
         "    }",
         "}"
     ],
     "bin": [
         [
-            "bin\\streamlink.exe",
+            "bin/streamlink.exe",
             "streamlink",
             "--config \"$dir\\config\""
         ],
-        "bin\\streamlinkw.exe"
+        "bin/streamlinkw.exe"
     ],
     "persist": "config",
     "checkver": {
