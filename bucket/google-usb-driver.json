@@ -14,7 +14,7 @@
             "$cert = (Get-AuthenticodeSignature \"$dir/androidwinusb$(if ($architecture -eq '32bit') { '86' } else { 'a64' }).cat\").SignerCertificate",
             "if (!(Get-ChildItem Cert:/CurrentUser/TrustedPublisher -Recurse | Where-Object { $_.Thumbprint -eq $cert.Thumbprint })) {",
             "    Write-Host 'Cert not found, adding to trusted store...'",
-            "    $store = [X509Store]::new([StoreName]::TrustedPublisher, [StoreLocation]::CurrentUser)",
+            "    $store = [X509Store]::new([StoreName]::TrustedPublisher, [StoreLocation]::LocalMachine)",
             "    $store.Open([OpenFlags]::ReadWrite)",
             "    $store.Add($cert.Export([X509ContentType]::Cert))",
             "    $store.Close()",
