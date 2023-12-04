@@ -35,9 +35,9 @@
         "script": [
             "if ($cmd -ne 'uninstall') { return }",
             "$null = Invoke-ExternalCommand pnputil -ArgumentList @('/remove-device', 'ROOT\\btrfs\\0000') -RunAs -ContinueExitCodes @{ 3010 = 'A system reboot is required to finalize the uninstallation.' }",
-            "$null = pnputil /delete-driver \"$dir\\btrfs.inf\" /uninstall",
-            "$null = pnputil /delete-driver \"$dir\\btrfs-vol.inf\" /uninstall",
-            "$null = sc delete btrfs"
+            "$null = pnputil.exe /delete-driver \"$dir\\btrfs.inf\" /uninstall",
+            "$null = pnputil.exe /delete-driver \"$dir\\btrfs-vol.inf\" /uninstall",
+            "$null = sc.exe delete btrfs"
         ]
     },
     "checkver": "github",
