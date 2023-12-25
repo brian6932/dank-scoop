@@ -1,6 +1,6 @@
 {
     "version": "0.18.0",
-    "description": "This is a multi-column Bluesky client.",
+    "description": "A multi-column Bluesky client",
     "homepage": "https://github.com/ioriayane/Hagoromo",
     "license": "MIT",
     "suggest": {
