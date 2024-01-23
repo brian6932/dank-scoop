@@ -1,5 +1,5 @@
 {
-    "version": "1705846057",
+    "version": "1705932451",
     "description": "DNS stub resolver, proxy and router with support for DoT, DoH, DoQ, and DTLS",
     "homepage": "https://github.com/folbricht/routedns",
     "license": "BSD-3-Clause",
