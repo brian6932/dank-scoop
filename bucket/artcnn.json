@@ -4,7 +4,7 @@
     "homepage": "https://github.com/Artoriuz/ArtCNN",
     "license": "MIT",
     "url": "https://codeload.github.com/Artoriuz/ArtCNN/zip/refs/heads/main#/_.zip",
-    "hash": "c83a2de730311b4139df20b50be2c8f057cbc33bdeb055b7ecd46520b727c313",
+    "hash": "9afefaeb14898d384853c875dad4b04c3a4779a706f5a775f96dac1b7d232e55",
     "extract_dir": "ArtCNN-main",
     "pre_install": "Get-ChildItem \"$dir\" -Exclude *.glsl | Remove-Item -Recurse",
     "checkver": {
