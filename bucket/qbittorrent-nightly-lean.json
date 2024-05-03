@@ -9,7 +9,7 @@
     "architecture": {
         "64bit": {
             "url": "https://nightly.link/qbittorrent/qBittorrent/workflows/ci_windows.yaml/master/qBittorrent-CI_Windows-x64_libtorrent-2.0.10.zip",
-            "hash": "5ea30c6e16434e7eb11ed7247cd3338b64f8fa242a1dd73079051d1d1895bf73",
+            "hash": "cbb8250a0f950c9895bc0fbf1117c00d521a14377dec3a6c52b10d6fc6777db8",
             "extract_dir": "qBittorrent"
         }
     },
