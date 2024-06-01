@@ -1,10 +1,10 @@
 {
-    "version": "1717263997",
+    "version": "1717279730",
     "description": "CC without the annoying background processes",
     "homepage": "https://github.com/brian6932/CC-Clean-Launcher",
     "license": "GPL-3.0-only",
     "url": "https://raw.githubusercontent.com/brian6932/CC-Clean-Launcher/2023/cc.ps1",
-    "hash": "cb300f89cfc9920fe387d86f866812a222054942185565c6a41b2f18d3ea2675",
+    "hash": "4d46a743c132ab7e40c18faff7642a3d86215c8633ae46cec426a23a9753d2dd",
     "pre_install": "Move-Item \"$dir/cc.ps1\" (New-Item -ItemType Directory \"$dir/bin\")",
     "env_add_path": "bin",
     "checkver": {
