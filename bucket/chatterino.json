@@ -18,13 +18,16 @@
     ],
     "bin": "chatterino.exe",
     "checkver": {
-        "url": "https://api.github.com/repositories/77624593/actions/workflows/build.yml/runs?branch=master&status=success",
-        "jsonpath": "$.workflow_runs[0].id"
+        "script": [
+            "(Invoke-RestMethod 'https://api.github.com/repositories/77624593/actions/workflows/build.yml/runs?branch=master&status=success').workflow_runs[0].id,",
+            "(Invoke-RestMethod https://raw.githubusercontent.com/Chatterino/chatterino2/master/.github/workflows/build.yml | Select-String 'os: windows-latest\\s+qt-version: ([\\d.]+)').Matches.Groups[1].Value -join ' '"
+        ],
+        "regex": "(\\d+) (?<qt>[\\d.]+)"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/Chatterino/chatterino2/releases/download/nightly-build/chatterino-windows-x86-64-Qt-6.7.1.zip"
+                "url": "https://github.com/Chatterino/chatterino2/releases/download/nightly-build/chatterino-windows-x86-64-Qt-$matchQt.zip"
             }
         }
     }
