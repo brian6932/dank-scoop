@@ -33,7 +33,7 @@
         "$null = lessmsi.exe x \"$dir\\AppleMobileDeviceSupport$arch.msi\" \"$dir\\\" $mds",
         "Move-Item \"$SourceDir/Common Files/Apple/Mobile Device Support/Drivers\" ($mds = \"$dir/Mobile Device Support\")",
         "Remove-Item -Recurse $SourceDir",
-        "Remove-Item (Get-ChildItem -File \"$dir\").FullName -Recurse"
+        "Remove-Item (Get-ChildItem -File \"$dir\").FullName -Recurse",
         "",
         "$cert = (Get-AuthenticodeSignature \"$mds/usbaapl$arch.cat\").SignerCertificate",
         "if (!(Get-ChildItem Cert:/CurrentUser/TrustedPublisher -Recurse | Where-Object { $_.Thumbprint -eq $cert.Thumbprint })) {",
