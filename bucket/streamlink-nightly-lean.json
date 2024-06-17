@@ -1,5 +1,5 @@
 {
-    "version": "6.7.4-23-g50d723e",
+    "version": "6.8.0-1",
     "description": "A command-line utility that pipes video streams from various services into a video player.",
     "homepage": "https://streamlink.github.io/",
     "license": "BSD-2-Clause",
@@ -16,12 +16,12 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://nightly.link/streamlink/windows-builds/workflows/nightly/master/streamlink-6.7.4-23-g50d723e-py312-x86_64.zip.zip",
-            "hash": "d72e95e32d99d8d2c52d5df6c90c38d087d3b310179be641cc29f62e30f3af69"
+            "url": "https://nightly.link/streamlink/windows-builds/workflows/main/master/streamlink-6.8.0-1-py312-x86_64.zip.zip",
+            "hash": "6ed4cc12ea5782b602d328da2dcaefb1cd422d4443759ea4f60b148efd7d2d60"
         },
         "32bit": {
-            "url": "https://nightly.link/streamlink/windows-builds/workflows/nightly/master/streamlink-6.7.4-23-g50d723e-py312-x86.zip.zip",
-            "hash": "dce72058457a1058e98d0e22870b5730b3bd0657f13b21e65ede216939b2b45b"
+            "url": "https://nightly.link/streamlink/windows-builds/workflows/main/master/streamlink-6.8.0-1-py312-x86.zip.zip",
+            "hash": "378a0e8b51b4f7575d8663d0305f47d344e16d2308d91f3f7baf4fdc3aded5cd"
         }
     },
     "pre_install": [
