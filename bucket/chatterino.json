@@ -1,12 +1,12 @@
 {
-    "version": "9625596002",
+    "version": "9633424845",
     "description": "Chat client for https://twitch.tv",
     "homepage": "https://github.com/Chatterino/chatterino2",
     "license": "MIT",
     "architecture": {
         "64bit": {
             "url": "https://github.com/Chatterino/chatterino2/releases/download/nightly-build/chatterino-windows-x86-64-Qt-6.7.1.zip",
-            "hash": "0cbf3b54e06905609fa11edcbb771851d8b5238eba85d068120cab09db5c8967",
+            "hash": "ac3835be745ba937b3293799c9864853114ad71bd7b544c6acfc591a11867c0e",
             "extract_dir": "Chatterino2"
         }
     },
