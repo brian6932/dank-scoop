@@ -6,7 +6,7 @@
     "architecture": {
         "64bit": {
             "url": "https://github.com/rustdesk/rustdesk/releases/download/nightly/rustdesk-1.2.6-x86_64.exe",
-            "hash": "d82425605ad4e04c7c65c0cf412863f6f3c8f61542cbeb49ede753e9ee037b02"
+            "hash": "121d892a1f3534419d0e7b1611ce80073580d6e160259f3b6da77f0b0868ab66"
         },
         "32bit": {
             "url": "https://github.com/rustdesk/rustdesk/releases/download/nightly/rustdesk-1.2.6-x86-sciter.exe",
