@@ -1,10 +1,10 @@
 {
-    "version": "1719864347",
+    "version": "1719907068",
     "description": "A recent files menu for mpv",
     "homepage": "https://github.com/po5/memo",
     "license": "GPL-3.0-only",
     "url": "https://codeload.github.com/po5/memo/zip/refs/heads/master#/_.zip",
-    "hash": "08597a9fd26ef750ed67def3a60e99fe06127ec31ab571056e59bd1d513ca62a",
+    "hash": "cb6a619a72275d6fa27428acffc2ca0828a94f1367aa66264acac5d2eaa67a8f",
     "extract_dir": "memo-master",
     "pre_install": "'README.md', 'LICENSE' | ForEach-Object { Remove-Item \"$dir/$_\" }",
     "checkver": {
