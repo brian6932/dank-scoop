@@ -4,6 +4,10 @@
     "homepage": "https://github.com/jdpurcell/qView",
     "license": "GPL-3.0-only",
     "architecture": {
+        "arm64": {
+            "url": "https://nightly.link/jdpurcell/qView/workflows/build/master/qView-JDP-2024-07-05.2882ec0-Windows_arm64.zip",
+            "hash": "60b2fa1cc4e10d0cc80562ff28c26e63968619c9ac681e3bca75b8e3bb73c4cc"
+        },
         "64bit": {
             "url": "https://nightly.link/jdpurcell/qView/workflows/build/master/qView-JDP-2024-07-05.2882ec0-Windows_64.zip",
             "hash": "8cb074c0bab7b098cb3927281c9d826b8609c66dec99c91dddf5f71f1a0e3cc1"
@@ -36,6 +40,9 @@
     },
     "autoupdate": {
         "architecture": {
+            "arm64": {
+                "url": "https://nightly.link/jdpurcell/qView/workflows/build/master/qView-JDP-$matchDate.$matchSha-Windows_arm64.zip"
+            },
             "64bit": {
                 "url": "https://nightly.link/jdpurcell/qView/workflows/build/master/qView-JDP-$matchDate.$matchSha-Windows_64.zip"
             },
