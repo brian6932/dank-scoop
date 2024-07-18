@@ -3,8 +3,8 @@ name: Tests
 on:
   push:
     branches:
-      - 'main'
-      - 'master'
+      - "main"
+      - "master"
   pull_request:
   workflow_dispatch:
 
@@ -21,7 +21,7 @@ jobs:
       - name: Checkout Scoop
         uses: actions/checkout@main
         with:
-          repository: ScoopInstaller/Scoop
+          repository: brian6932/Scoop
           path: scoop_core
       - name: Init Test Suite
         uses: potatoqualitee/psmodulecache@main
@@ -45,7 +45,7 @@ jobs:
       - name: Checkout Scoop
         uses: actions/checkout@main
         with:
-          repository: ScoopInstaller/Scoop
+          repository: brian6932/Scoop
           path: scoop_core
       - name: Init Test Suite
         uses: potatoqualitee/psmodulecache@main
