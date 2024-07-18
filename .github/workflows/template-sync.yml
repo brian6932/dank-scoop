@@ -1,17 +1,24 @@
 on:
   # cronjob trigger
   schedule:
-    - cron: "0 */12 * * *"
+  - cron: "0 */12 * * *"
   # manual trigger
   workflow_dispatch:
 jobs:
   repo-sync:
     runs-on: ubuntu-latest
+    # https://docs.github.com/en/actions/using-jobs/assigning-permissions-to-jobs
+    permissions:
+      contents: write
+      pull-requests: write
 
     steps:
       # To use this repository's private action, you must check out the repository
       - name: Checkout
         uses: actions/checkout@main
+        with:
+          token: ${{ secrets.ACTIONS_TEMPLATE_SYNC }}
+
       - name: actions-template-sync
         uses: AndreasAugustin/actions-template-sync@main
         with:
