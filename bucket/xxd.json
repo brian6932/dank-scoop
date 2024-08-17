@@ -6,7 +6,7 @@
     "architecture": {
         "64bit": {
             "url": "https://nightly.link/ckormanyos/xxd/workflows/xxd/main/xxd-win64-msvc.zip",
-            "hash": "2317456a931507c51a7142c9a9a5cbac38c8b1de7facafea57f02fa88cc03e77"
+            "hash": "5d0ade46c0d31f864b71ba10115bd1e80048605dc51ea29d5dbd40384e67b8de"
         }
     },
     "bin": "xxd.exe",
