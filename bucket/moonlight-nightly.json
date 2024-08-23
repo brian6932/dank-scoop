@@ -1,5 +1,5 @@
 {
-    "version": "2575",
+    "version": "2577",
     "description": "GameStream client for PCs (Windows, Mac, Linux, and Steam Link)",
     "homepage": "https://moonlight-stream.org",
     "license": "GPL-3.0-only",
@@ -8,12 +8,12 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://ci.appveyor.com/api/buildjobs/arlbwgayywnl930f/artifacts/MoonlightPortable-x64-r2575.zip",
-            "hash": "c6eaebeca1a5dad075c3eb483132995a7eb79e85dad5c6bdc458d1191ef5e966"
+            "url": "https://ci.appveyor.com/api/buildjobs/n19l04lu6o7wnv3b/artifacts/MoonlightPortable-x64-r2577.zip",
+            "hash": "57904311cfd61fffc997d8838488c74c4f0bbf881463345ad8050353ed604415"
         },
         "arm64": {
-            "url": "https://ci.appveyor.com/api/buildjobs/arlbwgayywnl930f/artifacts/MoonlightPortable-arm64-r2575.zip",
-            "hash": "7c3df0296b2adee168aeb83afbb5fb2a877cd853313813684dc71c39f5ad29c9"
+            "url": "https://ci.appveyor.com/api/buildjobs/n19l04lu6o7wnv3b/artifacts/MoonlightPortable-arm64-r2577.zip",
+            "hash": "31880c2de56344b991bcfca2d8c1eea26f8808737b292e32e09509f8ec6d0a79"
         }
     },
     "pre_install": [
