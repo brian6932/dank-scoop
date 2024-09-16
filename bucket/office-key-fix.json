@@ -10,6 +10,8 @@
         }
     },
     "bin": "OfficeKeyFix.exe",
+    "post_install": "$null = New-ItemProperty -Path \"HK$(if ($global) { 'LM' } else { 'CU' }):/SOFTWARE/Microsoft/Windows/CurrentVersion/Run\" -Name OfficeKeyFix -Value \"$([char][byte]34)$dir\\OfficeKeyFix.exe$([char][byte]34)\" -PropertyType String -Force",
+    "pre_uninstall": "Remove-ItemProperty \"HK$(if ($global) { 'LM' } else { 'CU' }):/SOFTWARE/Microsoft/Windows/CurrentVersion/Run\" OfficeKeyFix",
     "checkver": "github",
     "autoupdate": {
         "architecture": {
