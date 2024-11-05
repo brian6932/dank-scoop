@@ -13,13 +13,13 @@
             "hash": "32679dede9430cefa522079289343e376dfe7a3263aea670395485f7f7206858"
         }
     },
+    "pre_install": "Get-ChildItem \"$dir\" 'rustdesk-*.exe' | Select-Object -First 1 | Rename-Item -NewName 'RustDesk.exe'",
     "shortcuts": [
         [
             "RustDesk.exe",
             "RustDesk"
         ]
     ],
-    "pre_install": "Get-ChildItem \"$dir\" 'rustdesk-*.exe' | Select-Object -First 1 | Rename-Item -NewName 'RustDesk.exe'",
     "checkver": {
         "script": [
             "try {",
