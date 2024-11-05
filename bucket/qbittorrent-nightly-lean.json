@@ -1,5 +1,5 @@
 {
-    "version": "11677271644",
+    "version": "11685432496",
     "description": "Free and reliable P2P Bittorent client.",
     "homepage": "https://github.com/qbittorrent/qBittorrent",
     "license": {
@@ -9,7 +9,7 @@
     "architecture": {
         "64bit": {
             "url": "https://nightly.link/qbittorrent/qBittorrent/workflows/ci_windows.yaml/master/qBittorrent-CI_Windows-x64_libtorrent-2.0.10.zip",
-            "hash": "ea0631c57dbefa70bc61b24a08b295d0d398f16509ddc2caff0228110a10bf3a",
+            "hash": "469f5435176ed033d1e9d623196bb358d5ebfe4f7d0c65d326cefc8f19202331",
             "extract_dir": "qBittorrent"
         }
     },
