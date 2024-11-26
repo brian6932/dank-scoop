@@ -14,6 +14,7 @@
             "'fsptool', 'launchctl', 'launcher', 'memfs' | ForEach-Object { Get-ChildItem \"$install/bin/$_$arch.exe\" } | Rename-Item -NewName { $_.name.Replace($arch, '') }"
         ]
     },
+    "post_install": "Set-ItemProperty 'HKLM:/System/CurrentControlSet/Services/WinFsp.Launcher' ImagePath \"$dir\\install\\bin\\launcher.exe\"",
     "pre_uninstall": [
         "if ($fsptool = where.exe fsptool.exe | Select-Object -First 1) { & $fsptool unload }",
         "$null = 'WinFsp.Launcher', 'WinFsp' | ForEach-Object { sc.exe stop $_ }"
