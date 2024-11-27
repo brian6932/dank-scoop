@@ -1,10 +1,10 @@
 {
-    "version": "1732666123",
+    "version": "1732736046",
     "description": "Super-Resolution Convolutional Neural Networks as GLSL shaders for mpv",
     "homepage": "https://github.com/Artoriuz/ArtCNN",
     "license": "MIT",
     "url": "https://codeload.github.com/Artoriuz/ArtCNN/zip/refs/heads/main#/_.zip",
-    "hash": "481d2dea965bf45165b04c105ca634965560634e30d9e8235d64e4a8d7421f84",
+    "hash": "5e8079af7297ee9506af3e99abcc367ecd6bb4c8f7a03cf7b8515f2379479849",
     "extract_dir": "ArtCNN-main/GLSL",
     "checkver": {
         "script": "try { Get-Date (Invoke-RestMethod https://api.github.com/repositories/744206798/commits)[0].commit.committer.date -UFormat %s } catch { '' }",
