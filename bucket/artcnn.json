@@ -4,7 +4,7 @@
     "homepage": "https://github.com/Artoriuz/ArtCNN",
     "license": "MIT",
     "url": "https://codeload.github.com/Artoriuz/ArtCNN/zip/refs/heads/main#/_.zip",
-    "hash": "6f008f603072eb733a6e99b42d9c2035aa2410e07ab99794bea4651190083c2a",
+    "hash": "97dcd900b0faf8e8cb89be2e50b4cf20d6ce33bd57a787dc44aefc1ee838a923",
     "extract_dir": "ArtCNN-main/GLSL",
     "checkver": {
         "script": "try { Get-Date (Invoke-RestMethod https://api.github.com/repositories/744206798/commits)[0].commit.committer.date -UFormat %s } catch { '' }",
