@@ -1,12 +1,12 @@
 {
-    "version": "11155547699",
+    "version": "12343075906",
     "description": "Chat client for twitch.tv. Only nightlies are supported (fork of Chatterino 2).",
     "homepage": "https://github.com/2547techno/technorino",
     "license": "MIT",
     "architecture": {
         "64bit": {
             "url": "https://github.com/2547techno/technorino/releases/download/nightly-build/chatterino-windows-x86-64-Qt-6.7.3.zip",
-            "hash": "ea3e35746e90ca5ccbaabbb9eb0fcf6c0e7759ef06924bb502ea6870c0d7ee44",
+            "hash": "4eed8e9e6e38397f3f0ee085b086db13dd1761699b499af0fecfc80777cb8300",
             "extract_dir": "Chatterino2",
             "pre_install": [
                 "Get-ChildItem \"$dir/chatterino.exe\" | Rename-Item -NewName { $_.name.Replace('chatterino', 'technorino-portable') }",
@@ -31,7 +31,7 @@
     "checkver": {
         "script": [
             "try {",
-            "    $null = (Invoke-WebRequest https://raw.githubusercontent.com/2547techno/technorino/master/.github/workflows/build.yml).Content -cmatch 'os: windows-latest\\s+qt-version: ([\\d.]+)'",
+            "    $null = (Invoke-WebRequest https://raw.githubusercontent.com/2547techno/technorino/technorino/.github/workflows/build.yml).Content -cmatch 'os: windows-latest\\s+qt-version: ([\\d.]+)'",
             "    $Matches[1],",
             "    (Invoke-RestMethod 'https://api.github.com/repositories/604452497/actions/workflows/build.yml/runs?branch=technorino&status=success').workflow_runs[0].id -join ' '",
             "}",
