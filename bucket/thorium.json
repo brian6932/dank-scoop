@@ -14,11 +14,15 @@
             "hash": "16924c3d16c37213767f7f7148af56c03088d931b962dce2e13bc975af12662f"
         }
     },
+    "pre_install": [
+        "'THORIUM_SHELL.BAT', 'THORIUM.BAT' | ForEach-Object {",
+        "    $_ = \"$dir/$_\"",
+        "    (Get-Content $_) -Replace '%(?:cd|~dp0)%',$dir | Set-Content $_",
+        "}"
+    ],
     "bin": [
-        [
-            "THORIUM.BAT",
-            "thorium"
-        ]
+        "THORIUM.BAT",
+        "THORIUM_SHELL.BAT"
     ],
     "shortcuts": [
         [
