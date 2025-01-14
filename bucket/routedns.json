@@ -1,12 +1,12 @@
 {
-    "version": "1736807868",
+    "version": "1736843572",
     "description": "DNS stub resolver, proxy and router with support for DoT, DoH, DoQ, and DTLS",
     "homepage": "https://github.com/folbricht/routedns",
     "license": "BSD-3-Clause",
     "architecture": {
         "64bit": {
             "url": "https://github.com/cbuijs/routedns-binaries/raw/master/windows/amd64/routedns.exe",
-            "hash": "ef9f3ca85ab7c4aea799af3c16720a563af59823c2f1a880686eca18c497abba"
+            "hash": "95c4355ca5196015cfba71ef78f47c616841dedae9d06a1c2faca3b83c7c9496"
         }
     },
     "pre_install": "if (!(Test-Path \"$persist_dir$($cfg = '/config.toml')\")) { New-Item \"$dir$cfg\" }",
