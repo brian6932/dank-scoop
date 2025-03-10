@@ -6,11 +6,11 @@
     "architecture": {
         "64bit": {
             "url": "https://github.com/rustdesk/rustdesk/releases/download/nightly/rustdesk-1.3.9-x86_64.exe",
-            "hash": "979058ae862b0a19470ff5f593aff3eb0928569f0b5598ec5fbc50e4688097ca"
+            "hash": "eae57f8a5bc60d3a2636ccf071d9257d2e632735d37baf2f8a7a0dc6575d4530"
         },
         "32bit": {
             "url": "https://github.com/rustdesk/rustdesk/releases/download/nightly/rustdesk-1.3.9-x86-sciter.exe",
-            "hash": "0d62c01cabed664274da5bfb3aef490c5e449d7547d396db2231aa2969d1d018"
+            "hash": "e6ded2058d67dc9ee259fe843af21bb7d09a5f8a0edcc10ea9ec08e67adc0385"
         }
     },
     "pre_install": "Get-ChildItem \"$dir\" 'rustdesk-*.exe' | Select-Object -First 1 | Rename-Item -NewName 'RustDesk.exe'",
