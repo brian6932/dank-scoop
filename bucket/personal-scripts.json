@@ -1,10 +1,10 @@
 {
-    "version": "1742455505",
+    "version": "1742470914",
     "description": "Just some personal scripts",
     "homepage": "https://github.com/brian6932/personal-scripts",
     "url": "https://codeload.github.com/brian6932/personal-scripts/zip/refs/heads/main#/_.zip",
     "license": "Freeware",
-    "hash": "c901a6ca5a08426364b399f5b126a380c09de0ab28209eb67c35f0f3d535efd1",
+    "hash": "b557f728b2c479de80e9742dddfc8ecd929003d4df9cd713d72e5882b0872b99",
     "extract_dir": "personal-scripts-main",
     "env_add_path": "bin",
     "checkver": {
