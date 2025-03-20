@@ -1,11 +1,11 @@
 {
-    "version": "1731874563",
+    "version": "1742454337",
     "description": "Just some personal scripts",
     "homepage": "https://github.com/brian6932/personal-scripts",
     "url": "https://codeload.github.com/brian6932/personal-scripts/zip/refs/heads/main#/_.zip",
     "license": "Freeware",
-    "hash": "98028ba7e9c4a759a7aebf7e207c99fbeb9160a479fc7d7cf003157e83ef9052",
-    "pre_install": "Rename-Item \"$dir/personal-scripts-main\" \"$dir/bin\"",
+    "hash": "f1f234fe8c8685c34a3a209a7bf21cd052e58b120a753c9ada1e9f9aff5e5c27",
+    "extract_dir": "personal-scripts-main",
     "env_add_path": "bin",
     "checkver": {
         "script": "try { Get-Date (Invoke-RestMethod https://api.github.com/repositories/465033301/commits)[0].commit.committer.date -UFormat %s } catch { '' }",
