@@ -1,10 +1,10 @@
 {
-    "version": "1743576294",
+    "version": "1743589945",
     "description": "An advanced conditional subtitle track selector for mpv player",
     "homepage": "https://github.com/CogentRedTester/mpv-sub-select",
     "license": "MIT",
     "url": "https://codeload.github.com/CogentRedTester/mpv-sub-select/zip/refs/heads/master#/_.zip",
-    "hash": "f16c870536f04a62a3f1452bd22859eae2c85331fad0812d7610b6ee0dda4dff",
+    "hash": "7688aa0713a5b5c717960bdbde181fc73940607a26e0be60ae1cd639e46f50d0",
     "extract_dir": "mpv-sub-select-master",
     "pre_install": "'README.md', 'LICENSE' | ForEach-Object { Remove-Item \"$dir/$_\" }",
     "checkver": {
