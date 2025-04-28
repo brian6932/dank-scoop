@@ -1,5 +1,5 @@
 {
-    "version": "2762",
+    "version": "2763",
     "description": "GameStream client for PCs (Windows, Mac, Linux, and Steam Link)",
     "homepage": "https://moonlight-stream.org",
     "license": "GPL-3.0-only",
@@ -8,12 +8,12 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://ci.appveyor.com/api/buildjobs/c4cf69qy0xeaa4jp/artifacts/MoonlightPortable-x64-r2762.zip",
-            "hash": "95090ac1d97998b1a4c872bb91021c7326c547ab6af8063e6b4de11948d5ae86"
+            "url": "https://ci.appveyor.com/api/buildjobs/acrn70rbv9ry4lrb/artifacts/MoonlightPortable-x64-r2763.zip",
+            "hash": "675059bef87f90de16cc4e78f1b690ae04562e2743636bdc8d4c855e2f81877a"
         },
         "arm64": {
-            "url": "https://ci.appveyor.com/api/buildjobs/c4cf69qy0xeaa4jp/artifacts/MoonlightPortable-arm64-r2762.zip",
-            "hash": "c45302894e4452cba7f232de9b4b94980239d398b2353ace45b5fd30bb52ccba"
+            "url": "https://ci.appveyor.com/api/buildjobs/acrn70rbv9ry4lrb/artifacts/MoonlightPortable-arm64-r2763.zip",
+            "hash": "45ec041c745ed25fb18e3f8566f5b1d36713e550d587a9d8d55557d3fa8a8a23"
         }
     },
     "pre_install": "if (!(Test-Path \"$persist_dir$($cfg = '/Moonlight Game Streaming Project')\")) { $null = New-Item -ItemType Directory \"$dir$cfg\" }",
