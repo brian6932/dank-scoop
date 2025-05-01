@@ -1,0 +1,22 @@
+{
+    "version": "0.2.3",
+    "description": "A SOCKS proxy that balances traffic between network interfaces.",
+    "homepage": "https://github.com/alexkirsz/dispatch",
+    "license": "Apache-2.0,MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/alexkirsz/dispatch/releases/download/v0.2.3/dispatch-proxy-x86_64-pc-windows-msvc.tar.gz",
+            "hash": "5540c70cbec0d5331c4f55d846ffd08bd29466dfb8f7aaf9affd64c23b50f6c2",
+            "extract_dir": "dispatch-proxy-x86_64-pc-windows-msvc"
+        }
+    },
+    "bin": "dispatch.exe",
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/alexkirsz/dispatch/releases/download/v$version/dispatch-proxy-x86_64-pc-windows-msvc.tar.gz"
+            }
+        }
+    }
+}
