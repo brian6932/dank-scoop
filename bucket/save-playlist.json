@@ -1,15 +1,15 @@
 {
-    "version": "1624514858",
+    "version": "1752763365",
     "description": "An mpv script for saving m3u playlists based on the current internal playlist.",
-    "homepage": "https://github.com/CogentRedTester/mpv-scripts/blob/master/save-playlist.lua",
+    "homepage": "https://github.com/brian6932/cogent-mpv-scripts/blob/master/save-playlist.lua",
     "license": "MIT",
-    "url": "https://raw.githubusercontent.com/CogentRedTester/mpv-scripts/master/save-playlist.lua",
-    "hash": "b10c058f990573f82b8542306493d010508163142789e4f62013e72d11b9e052",
+    "url": "https://raw.githubusercontent.com/brian6932/cogent-mpv-scripts/master/save-playlist.lua",
+    "hash": "3e355fc66531eccb57775e43a0d3c24f4c454de476ec9291da56d6a43b38d0fb",
     "checkver": {
-        "script": "try { Get-Date (Invoke-RestMethod https://api.github.com/repositories/248175494/commits?path=save-playlist.lua)[0].commit.committer.date -UFormat %s } catch { '' }",
+        "script": "try { Get-Date (Invoke-RestMethod https://api.github.com/repositories/1021533187/commits?path=save-playlist.lua)[0].commit.committer.date -UFormat %s } catch { '' }",
         "regex": "\\A(\\d+)\\Z"
     },
     "autoupdate": {
-        "url": "https://raw.githubusercontent.com/CogentRedTester/mpv-scripts/master/save-playlist.lua"
+        "url": "https://raw.githubusercontent.com/brian6932/cogent-mpv-scripts/master/save-playlist.lua"
     }
 }
