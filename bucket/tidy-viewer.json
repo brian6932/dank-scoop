@@ -6,16 +6,14 @@
     "architecture": {
         "64bit": {
             "url": "https://github.com/alexhallam/tv/releases/download/1.8.92/tidy-viewer-1.8.92-x86_64-pc-windows-msvc.zip",
-            "hash": "f93e184febf1bd594f2c02867734cea0e098816d77dc3019c32948be35646967",
-            "extract_dir": "tidy-viewer-1.8.92-x86_64-pc-windows-msvc"
+            "hash": "f93e184febf1bd594f2c02867734cea0e098816d77dc3019c32948be35646967"
         },
         "32bit": {
             "url": "https://github.com/alexhallam/tv/releases/download/1.8.92/tidy-viewer-1.8.92-i686-pc-windows-msvc.zip",
-            "hash": "840059a22e9941e8b23e6e5e75326814faae81ec0a9cd4b263e3e0abb505b133",
-            "extract_dir": "tidy-viewer-1.8.92-i686-pc-windows-msvc"
+            "hash": "840059a22e9941e8b23e6e5e75326814faae81ec0a9cd4b263e3e0abb505b133"
         }
     },
-    "pre_install": "Get-ChildItem \"$dir/tidy-viewer.exe\" | Rename-Item -NewName { $_.name.Replace('tidy-viewer', 'tv') }",
+    "pre_install": "Rename-Item \"$dir/tidy-viewer.exe\" tv.exe",
     "bin": "tv.exe",
     "checkver": {
         "url": "https://api.github.com/repositories/363146690/releases",
@@ -24,12 +22,10 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/alexhallam/tv/releases/download/$version/tidy-viewer-$version-x86_64-pc-windows-msvc.zip",
-                "extract_dir": "tidy-viewer-$version-x86_64-pc-windows-msvc"
+                "url": "https://github.com/alexhallam/tv/releases/download/$version/tidy-viewer-$version-x86_64-pc-windows-msvc.zip"
             },
             "32bit": {
-                "url": "https://github.com/alexhallam/tv/releases/download/$version/tidy-viewer-$version-i686-pc-windows-msvc.zip",
-                "extract_dir": "tidy-viewer-$version-i686-pc-windows-msvc"
+                "url": "https://github.com/alexhallam/tv/releases/download/$version/tidy-viewer-$version-i686-pc-windows-msvc.zip"
             }
         }
     }
