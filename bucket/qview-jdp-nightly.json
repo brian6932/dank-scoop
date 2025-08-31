@@ -1,20 +1,20 @@
 {
-    "version": "17361041132",
+    "version": "17362226335",
     "description": "Practical and minimal image viewer",
     "homepage": "https://github.com/jdpurcell/qView",
     "license": "GPL-3.0-only",
     "architecture": {
         "arm64": {
-            "url": "https://nightly.link/jdpurcell/qView/workflows/build/master/qView-JDP-2025-08-31.733069f-Windows_arm64.zip",
-            "hash": "0f45531ab504f6542bb5fe62a15fa0d7a04bd7b6e2b64d41ad15c5fe15bc44ce"
+            "url": "https://nightly.link/jdpurcell/qView/workflows/build/master/qView-JDP-2025-08-31.f083481-Windows_arm64.zip",
+            "hash": "be36896c55284c180b82b4cf4ebbd1a6bcd5b9ea0d078fe8aa66a42ccf2dbd82"
         },
         "64bit": {
-            "url": "https://nightly.link/jdpurcell/qView/workflows/build/master/qView-JDP-2025-08-31.733069f-Windows_64.zip",
-            "hash": "09fa9521509e32805c3679812becd3290a5b1b0c60475b2df312eb5d1f11f246"
+            "url": "https://nightly.link/jdpurcell/qView/workflows/build/master/qView-JDP-2025-08-31.f083481-Windows_64.zip",
+            "hash": "840f4b822082791ab3e6ff7735c582ea7d66310469f633fcde4babc2206f8150"
         },
         "32bit": {
-            "url": "https://nightly.link/jdpurcell/qView/workflows/build/master/qView-JDP-2025-08-31.733069f-Windows_32.zip",
-            "hash": "319234f6c20a3fc12962d1343190a179b1facb6a121fb126a279e55490ad0573"
+            "url": "https://nightly.link/jdpurcell/qView/workflows/build/master/qView-JDP-2025-08-31.f083481-Windows_32.zip",
+            "hash": "8cb27a847f518dad084392a26bbd43d116d34c08f1dd77aa9e1642d35179993a"
         }
     },
     "pre_install": [
