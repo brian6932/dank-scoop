@@ -22,7 +22,7 @@
     "env_set": {
         "BGUTIL_CONFIG": "$dir\\config.toml"
     },
-    "pre_install": "if (!(Test-Path \"$persist_dir$($cfg = '/config.toml')\")) { New-Item \"$dir$cfg\" }",
+    "pre_install": "$null = if (!(Test-Path \"$persist_dir$($cfg = '/config.toml')\")) { New-Item \"$dir$cfg\" }",
     "bin": "bgutil-pot.exe",
     "suggest": {
         "yt-dlp": "main/yt-dlp",
