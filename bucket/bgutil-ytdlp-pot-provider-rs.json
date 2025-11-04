@@ -1,17 +1,17 @@
 {
-    "version": "0.5.2",
+    "version": "0.5.3",
     "description": "Proof-of-origin token provider plugin for yt-dlp (Rust)",
     "homepage": "https://github.com/jim60105/bgutil-ytdlp-pot-provider-rs",
     "license": "GPL-3.0-only",
     "architecture": {
         "64bit": {
             "url": [
-                "https://github.com/jim60105/bgutil-ytdlp-pot-provider-rs/releases/download/v0.5.2/bgutil-pot-windows-x86_64.exe#/bgutil-pot.exe",
-                "https://github.com/jim60105/bgutil-ytdlp-pot-provider-rs/releases/download/v0.5.2/bgutil-ytdlp-pot-provider-rs.zip"
+                "https://github.com/jim60105/bgutil-ytdlp-pot-provider-rs/releases/download/v0.5.3/bgutil-pot-windows-x86_64.exe#/bgutil-pot.exe",
+                "https://github.com/jim60105/bgutil-ytdlp-pot-provider-rs/releases/download/v0.5.3/bgutil-ytdlp-pot-provider-rs.zip"
             ],
             "hash": [
-                "c40971fe6a29dac0da680c847b2cdcf97c86897a0d7577de92e3122e8bd8f6e5",
-                "616185367e4ad1aae78718eb803553284e1c86fd343a602f1a8ce6870a96f8cf"
+                "15faa350fe7ab5472e6fe134655e3e18679b3321ea6a23d3e8b026dfd8e85daf",
+                "ec5ac8c9e8c64f6b0f71f1db81ddcdf07b8cd101a876718aae9b471620dd9c68"
             ]
         }
     },
