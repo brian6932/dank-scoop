@@ -28,9 +28,10 @@
     },
     "pre_install": [
         "Expand-7zipArchive \"$dir/streamlink-$version-*.zip\" \"$dir\" -Removal",
-        "$python = try { $null = (py.exe -0p | Select-Object -First 1) -cmatch '\\S+\\Z'; $Matches[1] } catch {}",
+        "$python = try { $null = (py.exe -0p | Select-Object -First 1) -cmatch '\\S+\\Z'; $Matches[0] } catch {}",
+        "$null = $version -cmatch '-py(\\d)(\\d{1,2})\\Z'",
         "$paths = 'bin', 'pkgs'",
-        "if ($python -and ($ver = try { [Version]((py.exe -V) -Replace '[^\\d.]') } catch {}) -lt [Version]'3.14.0' -and $ver -ge [Version]'3.13.0') {",
+        "if ($python -and ($ver = try { [Version]((py.exe -V) -Replace '[^\\d.]') } catch {}) -lt [Version]\"$($Matches[1]).$([byte]$Matches[2] + 1).0\" -and $ver -ge [Version]\"$($Matches[1]).$($Matches[2]).0\") {",
         "    $null = New-Item -ItemType Junction -Path \"$dir/Python\" -Target (Split-Path $python)",
         "}",
         "else { $paths += 'Python' }",
