@@ -1,5 +1,5 @@
 {
-    "version": "7.6.0-1",
+    "version": "7.6.0+60.g0b74ea3-1",
     "description": "A command-line utility that pipes video streams from various services into a video player.",
     "homepage": "https://streamlink.github.io/",
     "license": "BSD-2-Clause",
@@ -17,11 +17,11 @@
     "architecture": {
         "64bit": {
             "url": [
-                "https://nightly.link/streamlink/windows-builds/workflows/main/master/streamlink-7.6.0-1-py313-x86_64.zip.zip",
+                "https://nightly.link/streamlink/windows-builds/workflows/main/master/streamlink-7.6.0+60.g0b74ea3-1-py313-x86_64.zip",
                 "https://raw.githubusercontent.com/2bc4/streamlink-ttvlol/master/twitch.py"
             ],
             "hash": [
-                "6a147d50861bf554c34b3cab709f1f3b619ed408612479df40ed1afbcda5df2e",
+                "a08b78617ab067e3e46a8726de6ec94b05d385d58a3c5fdb544a38b6f60bca50",
                 "aaaad89a582bf1283249de0aa3f66ad23363f009590f1a3ef3b98f3c76944260"
             ]
         }
@@ -58,25 +58,19 @@
     "checkver": {
         "script": [
             "try {",
-            "    $null = (Invoke-RestMethod https://api.github.com/repositories/472790314/actions/artifacts).artifacts[0].name -cmatch 'streamlink-([\\w.-]+)-py'",
-            "    $verSplit = $matches[1].split('-')",
-            "    if ($verSplit.Length -eq 3 -and $verSplit[2][0] -eq 'g') { $build = 'nightly' }",
-            "    else { $build = 'main' }",
-            "    $build, $matches[1] -join ' '",
+            "    $id = (Invoke-RestMethod 'https://api.github.com/repositories/472790314/actions/workflows/main.yml/runs?branch=master&status=success').workflow_runs[0].id",
+            "    (Invoke-RestMethod \"https://api.github.com/repositories/472790314/actions/runs/$id/artifacts\").artifacts[0].name",
             "}",
             "catch {",
             "    ''",
             "}"
         ],
-        "regex": "\\A(?<build>\\S+) (\\S+)\\Z"
+        "regex": "\\Astreamlink-([^h-z]+)-py(?<py>\\d+)"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": [
-                    "https://nightly.link/streamlink/windows-builds/workflows/$matchBuild/master/streamlink-$version-py313-x86_64.zip.zip",
-                    "https://raw.githubusercontent.com/2bc4/streamlink-ttvlol/master/twitch.py"
-                ]
+                "url": "https://nightly.link/streamlink/windows-builds/workflows/main/master/streamlink-$version-py$matchPy-x86_64.zip"
             }
         }
     }
