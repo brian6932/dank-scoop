@@ -1,5 +1,5 @@
 {
-    "version": "7.6.0+60.g0b74ea3-1",
+    "version": "7.6.0+60.g0b74ea3-1-py313",
     "description": "A command-line utility that pipes video streams from various services into a video player.",
     "homepage": "https://streamlink.github.io/",
     "license": "BSD-2-Clause",
@@ -17,7 +17,7 @@
     "architecture": {
         "64bit": {
             "url": [
-                "https://nightly.link/streamlink/windows-builds/workflows/main/master/streamlink-7.6.0+60.g0b74ea3-1-py313-x86_64.zip",
+                "https://nightly.link/streamlink/windows-builds/workflows/main/master/streamlink-7.6.0+60.g0b74ea3-1-py313-x86_64.zip.zip",
                 "https://raw.githubusercontent.com/2bc4/streamlink-ttvlol/master/twitch.py"
             ],
             "hash": [
@@ -27,15 +27,15 @@
         }
     },
     "pre_install": [
-        "Expand-7zipArchive \"$dir/streamlink-$version-py313-x86*.zip\" \"$dir\" -Removal",
+        "Expand-7zipArchive \"$dir/streamlink-$version-*.zip\" \"$dir\" -Removal",
         "$python = try { $null = (py.exe -0p | Select-Object -First 1) -cmatch '\\S+\\Z'; $Matches[1] } catch {}",
         "$paths = 'bin', 'pkgs'",
         "if ($python -and ($ver = try { [Version]((py.exe -V) -Replace '[^\\d.]') } catch {}) -lt [Version]'3.14.0' -and $ver -ge [Version]'3.13.0') {",
         "    $null = New-Item -ItemType Junction -Path \"$dir/Python\" -Target (Split-Path $python)",
         "}",
         "else { $paths += 'Python' }",
-        "$paths | ForEach-Object { Move-Item \"$dir/streamlink-$version-py313-x86*/$_\" \"$dir\" }",
-        "Remove-Item -Recurse \"$dir/streamlink-$version-py313-x86*\"",
+        "$paths | ForEach-Object { Move-Item \"$dir/streamlink-$version-*/$_\" \"$dir\" }",
+        "Remove-Item -Recurse \"$dir/streamlink-$version-*\"",
         "Move-Item -Force \"$dir/twitch.py\" \"$dir/pkgs/streamlink/plugins\"",
         "$session = (Get-ChildItem \"$dir/pkgs/streamlink/session/session.py\").FullName",
         "(Get-Content -Raw $session).Replace('plugins_lazy: bool = True', 'plugins_lazy: bool = False') | Set-Content $session",
@@ -65,12 +65,12 @@
             "    ''",
             "}"
         ],
-        "regex": "\\Astreamlink-([^h-z]+)-py(?<py>\\d+)"
+        "regex": "\\Astreamlink-([^h-z]+-py\\d+)"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://nightly.link/streamlink/windows-builds/workflows/main/master/streamlink-$version-py$matchPy-x86_64.zip"
+                "url": "https://nightly.link/streamlink/windows-builds/workflows/main/master/streamlink-$version-x86_64.zip.zip"
             }
         }
     }
