@@ -1,5 +1,5 @@
 {
-    "version": "1671511901",
+    "version": "1.0.6-1671511901",
     "description": "A free and open-source tool to visualize your keystrokes ⌨️ in real-time.",
     "homepage": "https://github.com/mulaRahul/keyviz",
     "license": "GPL-3.0-only",
@@ -20,13 +20,13 @@
         "script": [
             "try {",
             "    $api = Invoke-RestMethod https://api.github.com/repositories/516753000/releases/latest",
-            "    (Get-Date $api.assets[0].updated_at -UFormat %s), $api.tag_name.Substring(1) -join ' '",
+            "    $api.tag_name.Substring(1) + '-' + (Get-Date $api.assets[0].updated_at -UFormat %s)",
             "}",
             "catch {",
             "    ''",
             "}"
         ],
-        "regex": "\\A(\\d+) (?<ver>[\\w.-]+)\\Z"
+        "regex": "\\A((?<ver>[\\w.-]+)-\\d+)\\Z"
     },
     "autoupdate": {
         "architecture": {
