@@ -1,5 +1,5 @@
 {
-    "version": "15.0.10",
+    "version": "15.0.11",
     "description": "OCCT is a comprehensive stability testing software suite.",
     "homepage": "https://www.ocbase.com/occt/personal",
     "license": {
@@ -9,7 +9,7 @@
     "architecture": {
         "64bit": {
             "url": "https://dl.ocbase.com/per/stable/OCCT.exe",
-            "hash": "083ba8cc4069e631aba5c798e5a6ee6fe53aa3e7e615eead61c714b5dd40418d"
+            "hash": "4330d07d9e0f3a5a4f62e9ff343300dfa8126fb9787ddccd04f06350673451bc"
         }
     },
     "pre_install": "$null = if (!(Test-Path \"$persist_dir$($cfg = '/OCCT.config.json')\")) { Set-Content \"$dir$cfg\" '{\"CheckForUpdates\":\"Disabled\",\"EnableSound\":false,\"AllowOcbaseUpload\":false}' -NoNewline }",
