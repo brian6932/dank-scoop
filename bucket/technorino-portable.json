@@ -1,12 +1,12 @@
 {
-    "version": "20835717608",
+    "version": "20945788233",
     "description": "Chat client for twitch.tv. Only nightlies are supported (fork of Chatterino 2).",
     "homepage": "https://github.com/2547techno/technorino",
     "license": "MIT",
     "architecture": {
         "64bit": {
             "url": "https://github.com/2547techno/technorino/releases/download/nightly-build/chatterino-windows-x86-64-Qt-6.9.3.zip",
-            "hash": "f2b4ee4589ee9db6e30d2c95347a4a074168566f5847f0d3af828a646e5cd87a"
+            "hash": "e7553aadfd74149a4cf6b5b3c0deb94f17510e26665559f7ec0dffbb44471cb9"
         }
     },
     "extract_dir": "Chatterino2",
