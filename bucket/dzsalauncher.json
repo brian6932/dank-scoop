@@ -1,12 +1,12 @@
 {
-    "version": "0.0.5.9",
+    "version": "0.0.6.1",
     "description": "An easy to use launcher for DayZ Standalone (with unofficial mod support).",
     "homepage": "https://dayzsalauncher.com",
     "license": "Freeware",
     "architecture": {
         "64bit": {
-            "url": "https://dayzsalauncher.com/releases/dzsalauncher-0.0.5.9.zip",
-            "hash": "4a41aa0d84f5fb08212a1ef5415fb553387beda6ac2b74f114dd933520582b29"
+            "url": "https://dayzsalauncher.com/releases/dzsalauncher-0.0.6.1.zip",
+            "hash": "60db6d24eb6d34714bbff351913207efc739af94cc523cc669e14e84ec2ad8d9"
         }
     },
     "pre_install": "Remove-Item \"$dir/Updater.exe*\"",
