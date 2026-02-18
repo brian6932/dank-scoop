@@ -1,17 +1,17 @@
 {
     "$schema": "https://raw.githubusercontent.com/brian6932/Scoop/64bit-v2-v3-v4/schema.json",
-    "version": "1.6.1",
+    "version": "1.6.2",
     "description": "Lightweight CLI client for watching low latency Twitch streams with ad blocking",
     "homepage": "https://github.com/2bc4/twitch-hls-client",
     "license": "GPL-3.0-or-later",
     "architecture": {
         "64bit-v3": {
-            "url": "https://github.com/2bc4/twitch-hls-client/releases/download/1.6.1/twitch-hls-client-x86_64-v3-pc-windows-msvc.zip",
-            "hash": "67e1e01439b264b090293bb2e3eb9056c779f8453696817bd18576d148435376"
+            "url": "https://github.com/2bc4/twitch-hls-client/releases/download/1.6.2/twitch-hls-client-x86_64-v3-pc-windows-msvc.zip",
+            "hash": "cfc527468e25e8508d76f03a7666657ce055d0a468caa7487e67b5d7c977d670"
         },
         "64bit": {
-            "url": "https://github.com/2bc4/twitch-hls-client/releases/download/1.6.1/twitch-hls-client-x86_64-pc-windows-msvc.zip",
-            "hash": "60df782056807b607196f5cafc4226ad1f733e8e082e90031996dc85d36dcf02"
+            "url": "https://github.com/2bc4/twitch-hls-client/releases/download/1.6.2/twitch-hls-client-x86_64-pc-windows-msvc.zip",
+            "hash": "b544a838ef8c8382247ce2d75d02990a9a61abd8f7e84e5250fbaaa17ffe6e8f"
         }
     },
     "pre_install": [
