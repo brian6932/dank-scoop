@@ -5,13 +5,21 @@
     "homepage": "https://github.com/2bc4/twitch-hls-client",
     "license": "GPL-3.0-or-later",
     "architecture": {
+        "64bit-v4": {
+            "url": "https://github.com/2bc4/twitch-hls-client/releases/download/1.6.2/twitch-hls-client-x86_64-v4-pc-windows-msvc.zip",
+            "hash": "4328f49d9bfa6fdebfff9ef42d8dc546a3bc2f339201a12c6418402939b8606e"
+        },
         "64bit-v3": {
             "url": "https://github.com/2bc4/twitch-hls-client/releases/download/1.6.2/twitch-hls-client-x86_64-v3-pc-windows-msvc.zip",
-            "hash": "cfc527468e25e8508d76f03a7666657ce055d0a468caa7487e67b5d7c977d670"
+            "hash": "a5fda787dca82961ddbfb28328100ae7ff7d62511ecacdd9c9553ac5e2bc367e"
+        },
+        "64bit-v2": {
+            "url": "https://github.com/2bc4/twitch-hls-client/releases/download/1.6.2/twitch-hls-client-x86_64-v2-pc-windows-msvc.zip",
+            "hash": "009bdf4980257da3532f896e479cb2bccdd56c22fbabfd6324564abe5e496923"
         },
         "64bit": {
             "url": "https://github.com/2bc4/twitch-hls-client/releases/download/1.6.2/twitch-hls-client-x86_64-pc-windows-msvc.zip",
-            "hash": "b544a838ef8c8382247ce2d75d02990a9a61abd8f7e84e5250fbaaa17ffe6e8f"
+            "hash": "6f5cfe795132d7d8e0ee283e9d1688483ebd65493fd22b8239890abe16907283"
         }
     },
     "pre_install": [
@@ -29,8 +37,14 @@
     "checkver": "github",
     "autoupdate": {
         "architecture": {
+            "64bit-v4": {
+                "url": "https://github.com/2bc4/twitch-hls-client/releases/download/$version/twitch-hls-client-x86_64-v4-pc-windows-msvc.zip"
+            },
             "64bit-v3": {
                 "url": "https://github.com/2bc4/twitch-hls-client/releases/download/$version/twitch-hls-client-x86_64-v3-pc-windows-msvc.zip"
+            },
+            "64bit-v2": {
+                "url": "https://github.com/2bc4/twitch-hls-client/releases/download/$version/twitch-hls-client-x86_64-v2-pc-windows-msvc.zip"
             },
             "64bit": {
                 "url": "https://github.com/2bc4/twitch-hls-client/releases/download/$version/twitch-hls-client-x86_64-pc-windows-msvc.zip"
