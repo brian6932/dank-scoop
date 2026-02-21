@@ -1,0 +1,48 @@
+{
+    "version": "0.1.2-1749293297",
+    "description": "A yt-dlp GetPOT token provider",
+    "homepage": "https://codeberg.org/ThetaDev/rustypipe-botguard",
+    "license": "MIT",
+    "suggest": {
+        "yt-dlp": "main/yt-dlp",
+        "yt-dlp-nightly": "versions/yt-dlp-nightly",
+        "yt-dlp-master": "versions/yt-dlp-master"
+    },
+    "architecture": {
+        "64bit": {
+            "url": [
+                "https://codeberg.org/ThetaDev/rustypipe-botguard/releases/download/v0.1.2/rustypipe-botguard-v0.1.2-x86_64-pc-windows-msvc.zip",
+                "https://codeberg.org/ThetaDev/rustypipe-botguard/archive/main:yt_dlp_get_pot_rustypipe.zip#/rustypipe-botguard-main_yt_dlp_get_pot_rustypipe.zip"
+            ],
+            "hash": [
+                "edb9e482ca77e3e4ecd4a2d3270f58c9169f03770db1568b3429cc8cf4c4b279",
+                "8f544ac6eb9c171f60bd270fcf2535332814040ab01957b8043205553f69eb6d"
+            ]
+        }
+    },
+    "notes": [
+        "Run something like:",
+        "New-Item -ItemType Junction -Target \"$(scoop prefix yt-dlp-get-pot-rustypipe)/rustypipe-botguard\" -Path \"$(scoop prefix yt-dlp)/yt-dlp-plugins/rustypipe-botguard\""
+    ],
+    "bin": "rustypipe-botguard.exe",
+    "checkver": {
+        "script": [
+            "try {",
+            "    (Invoke-RestMethod https://codeberg.org/api/v1/repos/ThetaDev/rustypipe-botguard/releases/latest).tag_name,",
+            "    (Get-Date (Invoke-RestMethod 'https://codeberg.org/api/v1/repos/ThetaDev/rustypipe-botguard/commits?sha=main&path=yt_dlp_get_pot_rustypipe')[0].created -UFormat %s) -join '-'",
+            "}",
+            "catch { '' }"
+        ],
+        "regex": "\\Av([\\d.]+-\\d+)\\Z"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": [
+                    "https://codeberg.org/ThetaDev/rustypipe-botguard/releases/download/v$matchHead/rustypipe-botguard-v$matchHead-x86_64-pc-windows-msvc.zip",
+                    "https://codeberg.org/ThetaDev/rustypipe-botguard/archive/main:yt_dlp_get_pot_rustypipe.zip#/rustypipe-botguard-main_yt_dlp_get_pot_rustypipe.zip"
+                ]
+            }
+        }
+    }
+}
