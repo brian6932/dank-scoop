@@ -19,7 +19,7 @@
     "checkver": {
         "script": [
             "try {",
-            "    $api = Invoke-RestMethod https://api.github.com/repositories/516753000/releases/latest",
+            "    $api = Invoke-RestMethod https://api.github.com/repositories/516753000/releases/latest -Headers @{authorization=\"Bearer $(Get-GitHubToken)\"}",
             "    $api.tag_name.Substring(1) + '-' + (Get-Date $api.assets[0].updated_at -UFormat %s)",
             "}",
             "catch {",
