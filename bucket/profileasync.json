@@ -6,6 +6,7 @@
     "url": "https://codeload.github.com/fsackur/ProfileAsync/zip/refs/heads/main#/_.zip",
     "hash": "c8ce22bd68722fd52ee0e22741b98e7d22fdb1c7249ee8d41bf583110a534847",
     "extract_dir": "ProfileAsync-main",
+    "pre_install": "&{ Get-ChildItem \"$dir\" -Exclude public,private,*.ps*1; Get-Item \"$dir/ProfileAsync.build.ps1\" } | Remove-Item -Recurse",
     "psmodule": {
         "name": "ProfileAsync"
     },
