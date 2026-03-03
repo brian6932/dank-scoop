@@ -32,6 +32,8 @@ jobs:
         shell: powershell
         run: |
           $env:SCOOP_HOME="$(Convert-Path '.\scoop_core')"
+          $env:SCOOP_REPO='https://github.com/brian6932/Scoop'
+          $env:SCOOP_BRANCH='64bit-v2-v3-v4'
           .\my_bucket\bin\test.ps1
   test_pwsh:
     name: PowerShell
@@ -56,4 +58,6 @@ jobs:
         shell: pwsh
         run: |
           $env:SCOOP_HOME="$(Convert-Path '.\scoop_core')"
+          $env:SCOOP_REPO='https://github.com/brian6932/Scoop'
+          $env:SCOOP_BRANCH='64bit-v2-v3-v4'
           .\my_bucket\bin\test.ps1

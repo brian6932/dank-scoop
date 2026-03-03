@@ -14,4 +14,6 @@ jobs:
         uses: ScoopInstaller/GithubActions@main
         env:
           GITHUB_TOKEN: ${{ secrets.SCOOP_GH_TOKEN }}
+          SCOOP_REPO: 'https://github.com/brian6932/Scoop'
+          SCOOP_BRANCH: '64bit-v2-v3-v4'
           SKIP_UPDATED: 1

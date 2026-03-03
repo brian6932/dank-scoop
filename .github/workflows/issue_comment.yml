@@ -12,4 +12,6 @@ jobs:
         uses: ScoopInstaller/GithubActions@main
         if: startsWith(github.event.comment.body, '/verify')
         env:
+          SCOOP_REPO: 'https://github.com/brian6932/Scoop'
+          SCOOP_BRANCH: '64bit-v2-v3-v4'
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
