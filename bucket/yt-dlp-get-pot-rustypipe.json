@@ -24,7 +24,7 @@
         "Run something like:",
         "New-Item -ItemType Junction -Target \"$(scoop prefix yt-dlp-get-pot-rustypipe)/rustypipe-botguard\" -Path \"$(scoop prefix yt-dlp)/yt-dlp-plugins/rustypipe-botguard\""
     ],
-    "pre_install": "$null = New-Item -ItemType File \"$dir/snapshot_file\"",
+    "pre_install": "$null = if (!(Test-Path \"$persist_dir$($snapshot = '/snapshot_file')\")) { New-Item -ItemType File \"$dir$snapshot\" }",
     "persist": "snapshot_file",
     "bin": "rustypipe-botguard.exe",
     "checkver": {
