@@ -28,7 +28,6 @@
     },
     "pre_install": [
         "$streamlink_ver = $version.Substring(0, $version.LastIndexOf('-'))",
-        "Expand-7zipArchive \"$dir/streamlink-$streamlink_ver-*.zip\" \"$dir\" -Removal",
         "$python = try { $null = (py.exe -0p | Select-Object -First 1) -cmatch '\\S+\\Z'; $Matches[0] } catch {}",
         "$null = $streamlink_ver -cmatch '-py(\\d)(\\d{1,2})\\Z'",
         "$paths = 'bin', 'pkgs'",
