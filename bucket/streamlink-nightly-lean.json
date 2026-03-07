@@ -16,7 +16,7 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://nightly.link/streamlink/windows-builds/workflows/main/master/streamlink-8.2.1-1-py314-x86_64.zip.zip",
+            "url": "https://nightly.link/streamlink/windows-builds/workflows/main/master/streamlink-8.2.1-1-py314-x86_64.zip",
             "hash": "a1a161bae379757724b77a36cad2ce3c407517b625a94d7899306f5755be8a71"
         }
     },
@@ -61,7 +61,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://nightly.link/streamlink/windows-builds/workflows/main/master/streamlink-$version-x86_64.zip.zip"
+                "url": "https://nightly.link/streamlink/windows-builds/workflows/main/master/streamlink-$version-x86_64.zip"
             }
         }
     }
