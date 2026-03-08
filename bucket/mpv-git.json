@@ -1,6 +1,6 @@
 {
     "$schema": "https://raw.githubusercontent.com/brian6932/Scoop/64bit-v2-v3-v4/schema.json",
-    "version": "20260307-429fdcf",
+    "version": "20260307-1772885337-429fdcf",
     "description": "Video player based on MPlayer/mplayer2 (builds by zhongfly)",
     "homepage": "https://mpv.io",
     "license": "LGPL-2.1-or-later,GPL-2.0-or-later",
@@ -38,10 +38,17 @@
         "MPV_HOME": "$dir\\portable_config"
     },
     "checkver": {
-        "url": "https://api.github.com/repositories/412382551/releases/latest",
-        "jsonpath": "$.tag_name",
-        "regex": "\\A(\\d+)-(\\d{2})-(\\d{2})(-[a-f\\d]+)\\Z",
-        "replace": "${1}${2}${3}${4}"
+        "script": [
+            "try {",
+            "    $api = Invoke-RestMethod https://api.github.com/repositories/412382551/releases/latest -Headers $(if ($auth = Get-GitHubToken) { @{authorization=\"Bearer $auth\"} })",
+            "    $api.tag_name, (Get-Date $api.updated_at -UFormat %s) -join ' '",
+            "}",
+            "catch {",
+            "    ''",
+            "}"
+        ],
+        "regex": "\\A(\\d+)-(\\d{2})-(\\d{2})(-[a-f\\d]+) (\\d+)\\Z",
+        "replace": "${1}${2}${3}-${5}${4}"
     },
     "autoupdate": {
         "architecture": {
