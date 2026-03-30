@@ -1,10 +1,10 @@
 {
-    "version": "2.4.1rc8",
+    "version": "2.3.1rc14",
     "description": "ZFS filesystem driver for Windows",
     "homepage": "https://github.com/openzfsonwindows/openzfs",
     "license": "CDDL",
-    "url": "https://github.com/openzfsonwindows/openzfs/releases/download/zfswin-2.4.1rc8/OpenZFSOnWindows-debug-2.4.1rc8.exe",
-    "hash": "aa2a3f2de5208dc3726ef94ee76b9009dc71dccc753880276b49db91a6c064c7",
+    "url": "https://github.com/openzfsonwindows/openzfs/releases/download/zfswin-2.3.1rc14/OpenZFSOnWindows-debug-2.3.1rc14.exe",
+    "hash": "97c580ed64e463945bd0fcb724dca464fa139aadbd1aa48e0092a8feb3fd2072",
     "innosetup": true,
     "pre_install": [
         "if (!$global) { Write-Host -Foreground Red \"$app should be installed globally.\"; break }",
