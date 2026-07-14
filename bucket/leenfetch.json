@@ -7,7 +7,6 @@
         "64bit": {
             "url": "https://github.com/drunkleen/leenfetch/releases/download/v1.4.2/leenfetch-v1.4.2-windows-x86_64.zip",
             "hash": "d814a52d59d8792a755a1fe2b326d66f2e58763aafb53ac593986781eb4aa55a",
-            "pre_install": "Rename-Item \"$dir/leenfetch-v$version-windows-x86_64.exe\" leenfetch.exe"
         }
     },
     "bin": "leenfetch.exe",
