@@ -9,7 +9,7 @@
     "architecture": {
         "64bit": {
             "url": "https://dl.ocbase.com/per/stable/OCCT.exe",
-            "hash": "0e3c105f6e35b671b5ec3441b59df571958ecbceb5aabec5c380ff55d4e8baa2"
+            "hash": "b55ce9483a761c03d923ba1d09686d1d3d10a01363b92b60971c433ec48fdac0"
         }
     },
     "pre_install": "$null = if (!(Test-Path \"$persist_dir$($cfg = '/OCCT.config.json')\")) { Set-Content \"$dir$cfg\" '{\"CheckForUpdates\":\"Disabled\",\"EnableSound\":false,\"AllowOcbaseUpload\":false}' -NoNewline }",
