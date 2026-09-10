@@ -11,14 +11,21 @@
     },
     "extract_dir": "openkh",
     "pre_install": [
-        "$null = 'mods', 'presets', 'data' | ForEach-Object { if (!(Test-Path \"$persist_dir/$_\")) { New-Item -ItemType Directory \"$dir/$_\" } }",
-        "$null = if (!(Test-Path \"$persist_dir/mods-manager.yml\")) { Set-Content -NoNewline -Encoding utf8 \"$dir/mods-manager.yml\" 'yamlGenPrefs: []' }"
+        "$null = 'mod', 'mods', 'presets', 'data' | ForEach-Object { if (!(Test-Path \"$persist_dir/$_\")) { New-Item -ItemType Directory \"$dir/$_\" } }",
+        "$null = if (!(Test-Path \"$persist_dir/mods-manager.yml\")) { Set-Content -NoNewline -Encoding utf8 \"$dir/mods-manager.yml\" 'yamlGenPrefs: []' }",
+        "$null = 'KH1', 'KH2', 'BBS', 'ReCoM', 'KH3D' | ForEach-Object { $_ = \"/mods-$_.txt\"; if (!(Test-Path \"$persist_dir$_\")) { New-Item -ItemType File \"$dir$_\" } }"
     ],
     "persist": [
         "mods",
+        "mod",
         "presets",
         "data",
-        "mods-manager.yml"
+        "mods-manager.yml",
+        "mods-KH1.txt",
+        "mods-KH2.txt",
+        "mods-BBS.txt",
+        "mods-ReCoM.txt",
+        "mods-KH3D.txt"
     ],
     "shortcuts": [
         [
