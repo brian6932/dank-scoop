@@ -1,12 +1,12 @@
 {
-    "version": "3.8.0",
+    "version": "3.8.1",
     "description": "dysk is a Linux/Mac/Windows utility listing your filesystems. Like df but better.",
     "homepage": "https://dystroy.org/dysk/",
     "license": "MIT",
     "architecture": {
         "64bit": {
             "url": "https://dystroy.org/dysk/download/x86_64-pc-windows-gnu/dysk.exe",
-            "hash": "acb155232d3087cbacbcc71dc987b0e73bfccb5d1b90510f9dafae2d2a8e03ec"
+            "hash": "a425ccb252f6d7145ab2628e749a255fc84abea2f53ae5a3dbaa6e9e8620e5a9"
         }
     },
     "bin": "dysk.exe",
