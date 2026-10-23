@@ -1,5 +1,5 @@
 {
-    "version": "391496",
+    "version": "391678",
     "description": "Microsft's latest OpenConsole & ConPTY builds on the main branch",
     "homepage": "https://github.com/microsoft/terminal",
     "notes": [
@@ -10,18 +10,18 @@
     "license": "MIT",
     "architecture": {
         "arm64": {
-            "url": "https://dev.azure.com/shine-oss/7d07a4e8-65aa-48e9-90cf-7de6554e00a4/_apis/build/builds/391496/artifacts?artifactName=build-arm64-Release&api-version=7.1&%24format=zip#/_.zip",
-            "hash": "ca337c192f69b87e7d4f0207086a4ea97cc94c31665f5f62352a546cc7fa78d7",
+            "url": "https://dev.azure.com/shine-oss/7d07a4e8-65aa-48e9-90cf-7de6554e00a4/_apis/build/builds/391678/artifacts?artifactName=build-arm64-Release&api-version=7.1&%24format=zip#/_.zip",
+            "hash": "a134289f30b0f4d614e77716deee2e3e997b1f0d9887233a0bd2e195290660eb",
             "env_add_path": "build-arm64-Release"
         },
         "64bit": {
-            "url": "https://dev.azure.com/shine-oss/7d07a4e8-65aa-48e9-90cf-7de6554e00a4/_apis/build/builds/391496/artifacts?artifactName=build-x64-Release&api-version=7.1&%24format=zip#/_.zip",
-            "hash": "a6392762ae7a7b176d7aad43488d316d5ec06c07178250d7200eb5c73565e101",
+            "url": "https://dev.azure.com/shine-oss/7d07a4e8-65aa-48e9-90cf-7de6554e00a4/_apis/build/builds/391678/artifacts?artifactName=build-x64-Release&api-version=7.1&%24format=zip#/_.zip",
+            "hash": "45bbe22db097f5c071fbb68d8294350e4a9ad6c9fb12c054caae53854e0ad162",
             "env_add_path": "build-x64-Release"
         },
         "32bit": {
-            "url": "https://dev.azure.com/shine-oss/7d07a4e8-65aa-48e9-90cf-7de6554e00a4/_apis/build/builds/391496/artifacts?artifactName=build-x86-Release&api-version=7.1&%24format=zip#/_.zip",
-            "hash": "afafec46965854ce27a1bc2d7954de7f8e35d028b3b4165f5aac0050289a29cf",
+            "url": "https://dev.azure.com/shine-oss/7d07a4e8-65aa-48e9-90cf-7de6554e00a4/_apis/build/builds/391678/artifacts?artifactName=build-x86-Release&api-version=7.1&%24format=zip#/_.zip",
+            "hash": "735ff57fe47de996ae0ad288da159343ae0db84fad903fa4038e63caf1e120e6",
             "env_add_path": "build-x86-Release"
         }
     },
